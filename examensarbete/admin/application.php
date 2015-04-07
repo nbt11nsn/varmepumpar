@@ -34,9 +34,6 @@ require_once(__DIR__ .'./../../db.php');
 
 <div id="infoframe">
 
-  <form>
-
-
 	<fieldset>
 		<legend><b>Sökande</b></legend>	
 
@@ -90,10 +87,10 @@ require_once(__DIR__ .'./../../db.php');
 		<input required type="text" value = "" name = "teledag" id = "requiredtextframe"/>
 		
 		<label for="alttele">Alternativt telefonnummer(inklusive riktnummer): </label>
-		<input required type="text" value = "" name = "alttele" id = "opentextframe"/>
+		<input type="text" value = "" name = "alttele" id = "opentextframe"/>
 		
 		<label for="epost">E-postadress: </label>
-		<input required type="text" value = "" name = "epost" id = "opentextframe"/>
+		<input type="text" value = "" name = "epost" id = "opentextframe"/>
 	</fieldset>	
 		
 	<fieldset>		
@@ -114,10 +111,10 @@ require_once(__DIR__ .'./../../db.php');
 		<input required type="text" value = "" name = "teledag" id = "requiredtextframe"/>
 		
 		<label for="alttele">Alternativt telefonnummer(inklusive riktnummer): </label>
-		<input required type="text" value = "" name = "alttele" id = "opentextframe"/>
+		<input type="text" value = "" name = "alttele" id = "opentextframe"/>
 		
 		<label for="epost">E-postadress: </label>
-		<input required type="text" value = "" name = "epost" id = "opentextframe"/>
+		<input type="text" value = "" name = "epost" id = "opentextframe"/>
 	</fieldset>	
 		
 	<fieldset>		
@@ -148,19 +145,18 @@ require_once(__DIR__ .'./../../db.php');
 		
 		<label for="frostskyddandel">Andel frostskyddsmedel i köldbärarvätskan, %: </label>
 		<input required type="text" value = "" name = "frostskyddandel" id = "requiredtextframe"/>
-	</fieldset>	
-	  </form>	
+	</fieldset>		
 	<fieldset>		
 		<legend><b>Karta</b></legend>
 		
-		<label for="alttele">Jag skickar kartan via post </label>
+		<label for="chkbox">Jag skickar kartan via post </label>
 		<input type='checkbox' class='checkbox_' id = "chkbox";
 		
 	<div class="upload_pdf" >
 		<form id="upload_form" enctype="multipart/form-data" method="post" action="">
 	<ul>
 		<li class="center"><label for="pdf_fil">Ladda upp en Faktura</label>
-		<input required type="file" name="pdf_fil" id="pdf_fil"/></li>
+		<input type="file" name="pdf_fil" id="pdf_fil"/></li>
 			<li class="center"><input type="reset" name="rst" id="rst" value="Återställ" />
 		<input type="submit" id="upfak" name="upfak" accept="application/pdf" value="Ladda upp Faktura" /></li></ul>
     </fieldset></form>
@@ -168,7 +164,6 @@ require_once(__DIR__ .'./../../db.php');
 </div>
  </form>
 </div><!--main-wrapper-->
-
 
 </body>
 </html>

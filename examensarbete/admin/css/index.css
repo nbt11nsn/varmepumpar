@@ -206,7 +206,8 @@ background: #efefef;
 
 #opentextframe{
 text-align: left;
-
+margin-right: auto;
+margin-left: auto;
 padding-top: 5px;
 background: #efe;
 min-width: 500px;
@@ -214,7 +215,8 @@ min-width: 500px;
 
 #requiredtextframe{	
 text-align: left;
-
+margin-right: auto;
+margin-left: auto;
 padding-top: 5px;
 width: 500px;
 }
