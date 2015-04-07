@@ -154,7 +154,7 @@ require_once(__DIR__ .'./../../db.php');
 		<legend><b>Karta</b></legend>
 		
 		<label for="alttele">Jag skickar kartan via post </label>
-		<input type='checkbox' class='checkbox_';
+		<input type='checkbox' class='checkbox_' id = "chkbox";
 		
 	<div class="upload_pdf" >
 		<form id="upload_form" enctype="multipart/form-data" method="post" action="">
