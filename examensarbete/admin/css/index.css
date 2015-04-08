@@ -1,96 +1,5 @@
-/*
-mobow-färgkoder [fyll gärna i resterande färgkoder]
-#CCC
-#EA005A
-#969
-#F2F2F2
-*/
 
-.Oläst{
-background-color: #FC5E5E;
-font-weight: bold;
-}
-.Mottagen {
-background-color: #FCBD5E;
-}
-.Påbörjad {
-background-color: #FCFC5E;
-}
-.Avslutad {
-background-color: #78FC5E;
-}
 
-fieldset {
-padding-bottom: 10px;
-padding-top: 10px;
-}
-
-#passchange {
-  display: inline-block;
-  text-align: center;
-}
-#accept {
-  display: inline-block;
-  text-align: center;
-}
-#passframe {
-  text-align: center;
-}
-
-#frame { 
-  width: 1024px; 
-  min-height: 800px;
-  height: 100%;
-  background: #fff; 
-  display: inline-block; 
-  text-align: center;
-  padding:25px 0px;
-}
-#frame_edit {
-padding-top: 10px;
-color: black;
-background: #F0F0F0;
-width: 400px;
-min-height: 400px;
-height: 100%;
-text-align: center;
-display: inline-block;  
-  -moz-box-shadow: 0px 0px 10px #888;
-  -o-box-shadow: 0px 0px 10px #888;
-  -webkit-box-shadow: 0px 0px 10px #888;
-  -moz-border-radius: 10px 10px 10px 10px;
-  -o-border-radius: 10px 10px 10px 10px;
-  -webkit-border-radius: 10px 10px 10px 10px;
-}
-#frame_admedit{
-padding-top: 10px;
-float: right;
-color: black;
-background: #F0F0F0;
-width: 400px;
-min-height: 400px;
-height: 100%;
-text-align: center;
-display: inline-block;  
-  -moz-box-shadow: 0px 0px 10px #888;
-  -o-box-shadow: 0px 0px 10px #888;
-  -webkit-box-shadow: 0px 0px 10px #888;
-  -moz-border-radius: 10px 10px 10px 10px;
-  -o-border-radius: 10px 10px 10px 10px;
-  -webkit-border-radius: 10px 10px 10px 10px;
-}
-
-#frame_admedit  input{
-margin: 5px 0;
-}
-#frame_edit  input{
-margin: 5px 0;
-}
-
-#admchange{
-  display: inline-block;
-  text-align: center;
-}
 
 /* #########################FAKTURA BÖRJAN############################# */
 #invoiceframe { 
@@ -117,21 +26,6 @@ background: #efefef;
 
 }
 
-#invoicedropdown{
-	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
-	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
-	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
-	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
-	border-radius: 10px;  
-	width: 170px; 
-	margin-top: 10px;
-	margin-left: 10px;
-	float: left;
-	color: #EA005A; 
-	font: 18px Arial,sans-serif;
-	border: hidden;
-}
-
 #choicebutton{
 	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
 	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
@@ -144,24 +38,6 @@ background: #efefef;
 	border: hidden;
 }
 
-#listframe { 
-  width: 400px;
-  min-height: 400px;
-  height: 100%;  
-  background: #F2F2F2;
-  text-align: center;
-  margin-top: 5px;
-  display: inline-block;
-}
-
-#invoicecontainer {
-width: 90%;
-margin: 0 5%;
-margin-top: 10px;
-margin-bottom: 10px;
-height: 21px;
-}
-
 input[type="checkbox"] {
  -ms-transform: scale(1.5); /* IE */
   -moz-transform: scale(1.5); /* FF */
@@ -169,319 +45,152 @@ input[type="checkbox"] {
   -o-transform: scale(1.5); /* Opera */
 }
 
-
-#invoicelistframe { 
-background: #efefef; 
-	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
-	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
-	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
-	box-shadow: 0px 0px 5px rgba(0,0,0,1);
-	width: 90%;	
-	text-align: center;	
-	float: left;
-	font: 18px Arial,sans-serif;
-	display: inline-block;
-	margin-right: 10px;
-}
-
-#preview{
-	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
-    min-height: 800px;
-	min-width: 500px;
-	width: 100%;
-    height: 100%;	
-	position:relative;
-	border-style: solid;
-    border-width: 5px;
-    border-color: #ff6699;
-	right:500px;bottom:860px;
-}
 /* #########################FAKTURA SLUT############################# */
 /* #########################INFO BÖRJAN############################# */
+
+/* #########################Exjobbet BÖRJAN############################# */
+fieldset {
+padding-bottom: 10px;
+padding-top: 10px;
+ display: inline-block;
+}
+
+#frame { 
+  width: 1024px; 
+  min-height: 800px;
+  height: 100%;
+  background: #fff; 
+  text-align: center;
+  padding:25px 0px;
+}
+
+#rowfix{
+padding-bottom: 15px;
+}
 
 #chkbox{
   display: inline-block;
   margin-left: 10px;
 }
 
+#smallTitle{
+text-align: left;
+font-size: 20px; 
+font-style: bold;
+width: 100%;
+margin-bottom: 10px;
+}
+
+#title{
+text-align: left;
+font-size: 50px; 
+border-bottom: 1px solid #00467F;
+width: 100%;
+margin-bottom: 10px;
+}
+
+#header-wrapper {
+  width: 100%;
+}
+
+nav ul{
+  list-style:none;
+  width: 2048px;
+  position:relative;
+  display:inline-block;
+}
+
 #opentextframe{
 text-align: left;
-margin-right: auto;
-margin-left: auto;
 padding-top: 5px;
-background: #efe;
 min-width: 500px;
+}
+#startDot{
+color: #d81c1c;
 }
 
 #requiredtextframe{	
 text-align: left;
-margin-right: auto;
-margin-left: auto;
 padding-top: 5px;
 width: 500px;
 }
 
-#infologga{
-  display: inline-block;
-  width:50px;
-  float: right;
-  position: relative;
-  bottom: 15px;
-  right: 160px;
-}
-
-#infodropdowntop{
-  display: inline-block;
-}
-#infodropdownbottom fieldset{
-padding: 10px;
-}
-
-#infodropdownbottom{
-  display: inline-block;
-  padding-top: 10px;
-}
-#infotextframebot{
-text-align: center;
-margin-left: auto;
-margin-right: auto;
-padding-top: 5px;
-background: #efe;
-min-width: 500px;
-}
-
-#infochoicebutton{
-  display: inline-block;
-  text-align: center;
-  margin-left: 50px; 
-}
-
-#infolistframe{
-background: #efefef; 
-	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
-	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
-	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
-	box-shadow: 0px 0px 5px rgba(0,0,0,1);
-	width: 510px;
-	height: 350px;
-	position: fixed;
-	padding-left: 5px;
-	padding-top: 25px;
-	margin-top: 20px;
-	text-align: left;
-	margin-right: 10px;	
-	font: 18px Arial,sans-serif;
-	}
-	
 #infoframe {
-  width: 1024px; 
+  width: 2048px; 
   min-height: 800px;
   height: 100%;
   background: #fff; 
-  display: inline-block; 
-  text-align: center;
+  text-align: left;
   padding:25px 0px;
 	}
-/* #########################INFO SLUT############################# */
-/* #########################KONTRAKT BÖRJAN############################# */
-#frame *{
-margin: 0;
-margin-top: 5px;
+
+#overview{
+  display: inline;
+  margin: 0 5px;
+  margin-left:20px;
+  width: 10em;
+  padding: 10px;
+  text-align:center;
 }
 
-#postContracts *{
- text-align: center;
-margin-left: auto;
-margin-right: auto;
-padding-top: 5px;
-vertical-align: middle;
-max-width: 100%;
-}
-
-#savereset*{
-text-align: center;
-margin-left: auto;
-margin-right: auto;
-padding-top: 5px;
-vertical-align: middle;
-max-width: 100%;
-}
-
-#postContracts {
-margin-left: auto;
-margin-right: auto;
-width: 50%;
-}
-
-#postContracts input[type="text"],
-#postContracts textarea,
-#postContracts input[type="date"],
-#postContracts input[type="tel"],
-#postContracts input[type="number"],
-#postContracts input[type="color"],
-#postContracts input[type="url"],
-#postContracts select
-{
-    width:80%;
-}
-
-#postContracts input{
-text-align: left;
-}
-
-#postContracts input[type="reset"]{
-text-align: center;
-}
-
-#postContracts input[type="submit"]{
-text-align: center;
-margin-top: 5px;
-}
-
-#postContracts textarea{
-text-align: left;
-}
-
-#editContract *{
- text-align: center;
-margin-left: auto;
-margin-right: auto;
-padding-top: 5px;
-padding-top: 5px;
-vertical-align: middle;
-max-width: 100%;
-}
-/* #########################KONTRAKT SLUT############################# */
-/* #########################EDITERA KONTRAKT BÖRJAN############################# */
-#editContract {
-margin-left: auto;
-margin-right: auto;
-width: 50%;
-}
-
-#editContract input{
-text-align: left;
-}
-
-#editContract textarea{
-text-align: left;
-}
-
-#messageframecompany {
-  width: 1024px; 
-  height: 250px; 
-  background: #fff;
-}
-#messageframeadmin {
-  width: 1024px;
-  height: 250px;
-  background: #fff;
-}
-#overviewinfo{
-  width: 1024px; 
-  height: 250px; 
-  background: #fff;
-  text-align: left;
-  font: 18px Arial,sans-serif;
-}
-
-*{
-  margin:0;
-  padding:0;
-}
-
-/* ################################################################## */
-/* ################################################################## */
-/* Allting nedan är uppstrukturerat och kontrollerat att det fungerar */
-/* ################################################################## */
-/* ################################################################## */
-
-/* ############### id attribute #<id> ############### */
-
-#center{ 
-    padding: 25px;
-	width: 82%;
-	overflow: auto;
-	margin: 0px auto;
-	}
-#meddelandeuppladdning{	
-	width: 510px;
-	position: absolute;
-	margin-top: -25px;
-	margin-left: -700px;
-	text-align: center;
-	margin-right: 10px;	
-	font: 18px Arial,sans-serif;
-}
-
-/* Huvudområde längst ned på sidan*/
-#footer-wrapper {
-  width: 100%;
-  height: 10px;
-}
-
-#forrmimg{
-  width: 120px;
-  margin-left: 25px;
-}
-#statuskoll{
-	background: #F00;
-	text-align: center;
-	font: 18px Arial,sans-serif;
-}
-/* Huvudområde längst upp på sidan */
-#header-wrapper {
-  width: 100%;
-  height: 110px;
-}
-
-/* generella inställningar för huvudmeny */
+	
 #huvudmeny {
   width: 100%; 
   height: auto;
   padding-bottom:10px;
 }
-
-#logga{
-  width:50px;
-}
-
-/* Snygga till login-wrapper */
-#login-wrapper {
-  margin: 0px auto;
-  width: 400px;
-  height: 200px;
-  padding: 50px;
-  margin-top: 150px;
-  -moz-box-shadow: 0px 0px 10px #888;
-  -o-box-shadow: 0px 0px 10px #888;
-  -webkit-box-shadow: 0px 0px 10px #888;
-  -moz-border-radius: 10px 10px 10px 10px;
-  -o-border-radius: 10px 10px 10px 10px;
-  -webkit-border-radius: 10px 10px 10px 10px;
-}
-
-/* Huvudområdet i mitten av sidan */
 #main-wrapper {
-  width: 100%;
+  width: 1024px;
   height: 100%;
 }
 
-/* Företagslogga längst upp på alla sidor */
-#mobowpic {
-  width: 500px; 
-  height: 103px;
+form *:focus {
+  border: 2px solid #000;
+  outline: none;
 }
 
-#password{
-    width:360px;
+input, textarea, select{
+  font-size: 1em;
+  display: block;
+  margin: 0;
+  padding: .5em;
 }
 
-#rmimg{
-  width: 120px;
-  margin-left: 25px;
+/* Knappar [typ button,reset eller submit] */
+input[type="button"], input[type="reset"], input[type="submit"] {
+  display: inline;
+  margin: 0 5px;
+  margin-left:20px;
+  width: 10em;
+  padding: 10px;
+  text-align:center;
 }
 
+input[type="submit"]:hover, input[type="submit"]:active, input[type="reset"]:hover, input[type="reset"]:active, input[type="button"]:hover, input[type="button"]:active {
+  cursor: pointer;
+  background: #fff;
+  color: #EA005A;
+}
+
+input[type="button"]:active, input[type="button"]:active {
+  background: #eee;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+}
+
+/* style för label */
+label {
+  padding-bottom: 10px;
+  clear: left;
+  text-align: right;
+  width: 15%;
+  font-family: Times New Roman;
+  font-weight: bold;
+  font-size: 16px;
+  color: #606060;
+}
+/* #########################Exjobbet SLUT############################# */
 
 
 #upload_form input[type="text"],
@@ -493,7 +202,7 @@ text-align: left;
   margin: 0 auto;
   width: 75%;
 }
-
+/*återställ/ladda faktura knappen*/
 #username{
     width:360px;
 }
@@ -602,80 +311,7 @@ form * {
 }
 
 /* ändra färg på border när fältet är markerat */
-form *:focus {
-  border: 2px solid #000;
-  outline: none;
-}
 
-/* enskilda fält */
-input, textarea {
-  background: #fee;
-}
-
-select{
-  background: #fff;
-}
-
-input, textarea, select{
-  font-size: 1em;
-  border: 2px solid #999;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  display: block;
-  margin: 0;
-  padding: .5em;
-}
-
-/* Gör bakgrunden lätt grön när fälten är ifyllda */
-input:valid , textarea:valid{
-  background: #efe;
-}
-
-/* Knappar [typ button,reset eller submit] */
-input[type="button"], input[type="reset"], input[type="submit"] {
-  display: inline;
-  margin: 0 5px;
-  margin-left:20px;
-  width: 10em;
-  padding: 10px;
-  border: 2px solid #f06;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
-  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
-  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
-  color: #fff;
-  background: #EA005A;
-  font-weight: bold;
-  -webkit-appearance: none;
-  text-align:center;
-}
-
-input[type="submit"]:hover, input[type="submit"]:active, input[type="reset"]:hover, input[type="reset"]:active, input[type="button"]:hover, input[type="button"]:active {
-  cursor: pointer;
-  background: #fff;
-  color: #EA005A;
-}
-
-input[type="button"]:active, input[type="button"]:active {
-  background: #eee;
-  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
-  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
-  box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
-}
-
-/* style för label */
-label {
-  clear: left;
-  text-align: right;
-  width: 15%;
-  font-family: Times New Roman;
-  font-weight: bold;
-  font-size: 16px;
-  color: #606060;
-}
 
 /*#####################################################*/
 /*#####################################################*/
@@ -685,13 +321,13 @@ label {
 
 /* generella inställningar för nav */
 nav{
-  margin: 50px auto 0;
-  text-align: center;
+  text-align: left;
   width: 1024px;
 }
 
 nav ul{
   list-style:none;
+  width: 2048px;
   position:relative;
   display:inline-block;
 }

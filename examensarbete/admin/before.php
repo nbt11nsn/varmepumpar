@@ -16,7 +16,10 @@ include_once("include/head.php");
 ?>
 </head>
 <body>
-
+<?php
+defined('THE_HEADER') || define('THE_HEADER', TRUE);
+require_once("include/header.php");
+?>
 <div id="main-wrapper">
 <?php
 defined('THE_MENUE') || define('THE_MENUE', TRUE);
@@ -29,7 +32,7 @@ require_once(__DIR__ .'./../../db.php');
 <?php 		
 	   echo '	   
 	   <fieldset>
-		<legend><b>Vad ska man göra innan ansökan</b></legend>	
+		<legend><b>Vad ska man gÃ¶ra innan ansÃ¶kan</b></legend>	
 
 		
 		</fieldset>	';
