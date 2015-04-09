@@ -58,6 +58,11 @@ require_once(__DIR__ .'./../../db.php');
 		<label for="epost">E-postadress</label>
 		<input type="text" value = "" name = "epost" id = "opentextframe"/>
 		</div>	
+		  	
+		<div>	
+		<form><input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;"></form>
+		<form action="overview.php"><input type="submit" value="Nästa"></form>
+		</div>
  </form>
  </div>
 </div><!--main-wrapper-->

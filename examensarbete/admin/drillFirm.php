@@ -67,7 +67,12 @@ require_once(__DIR__ .'./../../db.php');
 		<div id = "rowfix">
 		<label for="epost">E-postadress</label>
 		<input type="text" value = "" name = "epost" id = "opentextframe"/>
-		</div>			
+		</div>	
+
+  	<div>	
+		<form><input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;"></form>
+		<form action="installFirm.php"><input type="submit" value="Nästa"></form>
+		</div>		
  </form>
  </div>
 </div><!--main-wrapper-->

@@ -6,6 +6,7 @@ echo"<div id = 'huvudmeny'>
   <nav>
     <ul>
 	  <li><a href='before.php'>Inför ansökan</a></li>
+	  <li><a href='buildingInfo.php'>Fastighetsbetäckning</a></li>
       <li><a href='personalData.php'>Personuppgifter</a></li>
 	  <li><a href='map.php'>Karta</a></li>
 	  <li><a href='heatPump.php'>Värmepump</a></li>

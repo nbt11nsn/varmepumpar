@@ -36,9 +36,13 @@ require_once(__DIR__ .'./../../db.php');
 
 		
 		</fieldset>	';
-					
-
+				
 ?>	
+
+	<div>	
+		<form action="buildingInfo.php"><input type="submit" value="Nästa"></form>
+		</div>	
+		</div>	
 </div>
  </form>
 </div><!--main-wrapper-->

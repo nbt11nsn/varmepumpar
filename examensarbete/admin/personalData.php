@@ -23,7 +23,7 @@ require_once(__DIR__ .'./../../db.php');
  <div id="infoframe">
  <h1 id = "smallTitle">Personuppgifter</h1>
 
-  <div id = "rowfix">
+	<div id = "rowfix">
 		<label for="namn">Namn </label><strong id="startDot">*</strong>
 		<input required type="text" align="left"  maxlength="50" value = ""  name="namn" id="requiredtextframe"/>
 		</div>
@@ -55,6 +55,12 @@ require_once(__DIR__ .'./../../db.php');
 		<label for="epost">E-postadress</label>
 		<input type="text" value = "" name = "epost" id = "opentextframe"/>	
 		</div>
+		
+	<div>	
+		<form><input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;"></form>
+		<form action="map.php"><input type="submit" value="Nästa"></form>
+		</div>	
+	
  </div>
 </div><!--main-wrapper-->
 

@@ -81,6 +81,11 @@ require_once(__DIR__ .'./../../db.php');
   </fieldset>
   
  </form>
+ 
+   	<div>	
+		<form><input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;"></form>
+		<form action="after.php"><input type="submit" value="Skicka"></form>
+		</div>
  </div>
 </div><!--main-wrapper-->
 

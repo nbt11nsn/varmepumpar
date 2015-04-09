@@ -24,6 +24,11 @@ require_once(__DIR__ .'./../../db.php');
   <h1 id = "smallTitle">Värmepump</h1>
 		
 		<div id = "rowfix">
+		<label for="fab">Typ av anläggning</label><strong id="startDot">*</strong>
+		<input required type="text" value = "" name = "fab" id = "requiredtextframe"/>
+		</div>
+		
+		<div id = "rowfix">
 		<label for="fab">Fabrikat</label><strong id="startDot">*</strong>
 		<input required type="text" value = "" name = "fab" id = "requiredtextframe"/>
 		</div>
@@ -31,6 +36,11 @@ require_once(__DIR__ .'./../../db.php');
 		<div id = "rowfix">
 		<label for="mod">Modell</label><strong id="startDot">*</strong>
 		<input required type="text" value = "" name = "mod" id = "requiredtextframe"/>
+		</div>
+		
+		<div id = "rowfix">
+		<label for="fab">Vinkel/riktning av borrhål(0&deg = rätt ned) </label><strong id="startDot">*</strong>
+		<input required type="text" value = "" name = "fab" id = "requiredtextframe"/>
 		</div>
 		
 		<div id = "rowfix">
@@ -67,6 +77,11 @@ require_once(__DIR__ .'./../../db.php');
 		<label for="frostskyddandel">Andel frostskyddsmedel i köldbärarvätska, %</label><strong id="startDot">*</strong>
 		<input required type="text" value = "" name = "frostskyddandel" id = "requiredtextframe"/>
 		</div>	
+		
+		  	<div>	
+		<form><input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;"></form>
+		<form action="drillFirm.php"><input type="submit" value="Nästa"></form>
+		</div>
  </form>
  </div>
 </div><!--main-wrapper-->
