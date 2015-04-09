@@ -25,11 +25,11 @@ require_once(__DIR__ .'./../../db.php');
 
 	<div id = "rowfix">
 		<label for="namn">Fastighetsbetäckning </label><strong id="startDot">*</strong>
-		<input required type="text" align="left"  maxlength="50" value = ""  name="namn" id="requiredtextframe"/>
+		<input required type="text" align="left"  maxlength="50" value = ""  name="namn" placeholder="ex. Eldkvarnen 1" id="requiredtextframe"/>
 		</div>
 	 <div id = "rowfix">			
 		<label for="persnummer">Fastighetens adress(om annan än sökandes adress)</label>
-		<input type="text" value = "" name = "persnummer" id = "requiredtextframe"/>
+		<input type="text" value = "" name = "persnummer" placeholder="ex. Brunnsgatan 59" id = "requiredtextframe"/>
 		</div>
 	 <div id = "rowfix">		
 		<label for="postnummer">Postnummer(om annan än sökandes postnummer)</label>

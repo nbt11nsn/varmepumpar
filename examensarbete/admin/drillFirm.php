@@ -39,34 +39,29 @@ require_once(__DIR__ .'./../../db.php');
 		<input required type="text" value = "" name = "namn" id = "requiredtextframe"/>
 		</div>
 		
-		<div id = "rowfix">
+	 <div id = "rowfix">	
 		<label for="adress">Gatuadress</label><strong id="startDot">*</strong>
-		<input required type="text" value = "" name = "adress" id = "requiredtextframe"/>
+		<input required type="text" value = "" name = "adress" placeholder="ex. Brunnsgatan 59" id = "requiredtextframe"/>
 		</div>
-		
-		<div id = "rowfix">
+	 <div id = "rowfix">		
 		<label for="postnummer">Postnummer</label><strong id="startDot">*</strong>
-		<input required type="text" value = "" name = "postnummer" id = "requiredtextframe"/>
+		<input required type="text" value = "" name = "postnummer" placeholder="ex. 80252" id = "requiredtextframe"/>
 		</div>
-		
-		<div id = "rowfix">
+	 <div id = "rowfix">	
 		<label for="port">Postort</label><strong id="startDot">*</strong>
-		<input required type="text" value = "" name = "port" id = "requiredtextframe"/>
+		<input required type="text" value = "" name = "port" placeholder="ex. Gävle" id = "requiredtextframe"/>
 		</div>
-		
-		<div id = "rowfix">
-		<label for="teledag">Telefon dagtid(inklusive riktnummer)</label><strong id="startDot">*</strong>
-		<input required type="text" value = "" name = "teledag" id = "requiredtextframe"/>
+	 <div id = "rowfix">	
+		<label for="teledag">Telefonnummer dagtid(inklusive riktnummer)</label><strong id="startDot">*</strong>
+		<input required type="text" value = "" name = "teledag" placeholder="Hemnummer eller mobilnummer" id = "requiredtextframe"/>
 		</div>
-		
-		<div id = "rowfix">
-		<label for="alttele">Alternativt telefonnummer(inklusive riktnummer)
-		<input type="text" value = "" name = "alttele" id = "opentextframe"/>
+	 <div id = "rowfix">	
+		<label for="alttele">Alternativt telefonnummer(inklusive riktnummer)</label>
+		<input type="text" value = "" name = "alttele" placeholder="Hemnummer eller mobilnummer" id = "opentextframe"/>
 		</div>
-		
-		<div id = "rowfix">
+	 <div id = "rowfix">	
 		<label for="epost">E-postadress</label>
-		<input type="text" value = "" name = "epost" id = "opentextframe"/>
+		<input type="text" value = "" name = "epost" placeholder="ex. Niklas@hotmail.com" id = "opentextframe"/>	
 		</div>	
 
   	<div>	
