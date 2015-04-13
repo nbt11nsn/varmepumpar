@@ -58,7 +58,7 @@ require_once(__DIR__ .'./../../db.php');
 		
 	<div>	
 		<form><input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;"></form>
-		<form action="map.php"><input type="submit" value="Nästa"></form>
+		<form action="map.php"><input type="submit" value="Nästa" onclick="document.getElementById('checked2').style.backgroundColor = 'green';"></form>
 		</div>	
 	
  </div>

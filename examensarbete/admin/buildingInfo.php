@@ -24,7 +24,7 @@ require_once(__DIR__ .'./../../db.php');
  <h1 id = "smallTitle">Fastighetsuppgifter</h1>
 
 	<div id = "rowfix">
-		<label for="namn">Fastighetsbetäckning </label><strong id="startDot">*</strong>
+		<label for="namn">Fastighetsbeteckning </label><strong id="startDot">*</strong>
 		<input required type="text" align="left"  maxlength="50" value = ""  name="namn" placeholder="ex. Eldkvarnen 1" id="requiredtextframe"/>
 		</div>
 	 <div id = "rowfix">			
@@ -41,11 +41,13 @@ require_once(__DIR__ .'./../../db.php');
 		</div>
 		
 	<div>	
-		<form><input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;"></form>
-		<form action="personalData.php"><input type="submit" value="Nästa"></form>
-		</div>	
-	
+		<form><input type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;"></form>
+		<form action="personalData.php"><input type="submit" value="Nästa" onclick="document.getElementById('checked1').style.backgroundColor = 'green';"></form>
+		</div>
+
  </div>
+
+</script>
 </div><!--main-wrapper-->
 
 </body>

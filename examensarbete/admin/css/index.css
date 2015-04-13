@@ -154,6 +154,9 @@ input, textarea, select{
   margin: 0;
   padding: .5em;
 }
+#checked{
+background-color: #fff;
+}
 
 #upload_div{
 display: inline;

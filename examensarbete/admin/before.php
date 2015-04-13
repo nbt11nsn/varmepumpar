@@ -32,13 +32,9 @@ require_once(__DIR__ .'./../../db.php');
 <?php 		
 	   echo '	   
 	   <fieldset>
-		<legend><b>Vad ska man göra innan ansökan</b></legend>	
-
-		
-		</fieldset>	';
-				
+		<legend><b>Vad ska man göra innan ansökan</b></legend>		
+		</fieldset>	';			
 ?>	
-
 	<div>	
 		<form action="buildingInfo.php"><input type="submit" value="Nästa"></form>
 		</div>	
