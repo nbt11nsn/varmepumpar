@@ -21,6 +21,7 @@ defined('THE_DB') || define('THE_DB', TRUE);
 require_once(__DIR__ .'./../../db.php');
 ?>
  <div id="infoframe">
+    <form action='' method='post' id ='postContracts' enctype="multipart/form-data">
  <h1 id = "smallTitle">Fastighetsuppgifter</h1>
 
 	<div id = "rowfix">
@@ -29,35 +30,31 @@ require_once(__DIR__ .'./../../db.php');
 		</div>
 	 <div id = "rowfix">			
 		<label for="persnummer">Fastighetens adress(om annan än sökandes adress)</label>
-		<input required type="text" value = "" name ="persnummer" placeholder="ex. Brunnsgatan 59" id = "requiredtextframe"/>
+		<input type="text" value = "" name ="persnummer" placeholder="ex. Brunnsgatan 59" id = "requiredtextframe"/>
 		</div>
 	 <div id = "rowfix">		
 		<label for="postnummer">Postnummer(om annan än sökandes postnummer)</label>
-		<input required type="text" value = "" name ="postnummer" id = "requiredtextframe"/>
+		<input type="text" value = "" name ="postnummer" placeholder="ex. 80252" id = "requiredtextframe"/>
 		</div>
 	 <div id = "rowfix">	
 		<label for="port">Postort(om annan än sökandes postort)</label>
-		<input type="text" value = "" name ="port" id = "requiredtextframe"/>
+		<input type="text" value = "" name ="port" placeholder="ex. Gävle" id = "requiredtextframe"/>
 		</div>
 	
 	<div>	
-		<form><input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;"></form>
-		<input type="submit" name="Nästa" value="Nästa" onclick="document.getElementById('checked1').style.backgroundColor = 'lightgreen';">
+		<input Type="button" value="Tillbaka" onClick="history.go(-1);return true;">
+		<input type="submit" value="Nästa" name ="next" onclick="document.getElementById('checked1').style.backgroundColor = 'lightgreen';">
 		</div>		
-		<input type="submit" name="save" id="save" value="Spara" />
-		
+		</form>
 <?php	
-if(isset($_POST['save'])){
-	echo "tjena hejsan hoppsan";
-
+if(isset($_POST['next'])&&!empty($_POST['beteckning'])){
 	$name=mysqli_real_escape_string($con,$_POST['beteckning']);
     $pers=mysqli_real_escape_string($con,$_POST['persnummer']);
     $post=mysqli_real_escape_string($con,$_POST['postnummer']);
 	$port=mysqli_real_escape_string($con,$_POST['port']);	
 			        
-		$insertContact = "INSERT INTO fastighet values('3'.'".$name."','".$pers."','".$post."','".$port.")";	
-				echo $insertContact;
-        if(mysqli_query($con, $insertContact)){
+		$insertContact = "INSERT INTO fastighet values('1','".$name."','".$pers."','".$post."','".$port."')";		
+		 if(mysqli_query($con, $insertContact)){
             echo "<div class='ok'>Ny användare har skapats</div>";
         }
         else{

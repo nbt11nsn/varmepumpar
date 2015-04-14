@@ -21,12 +21,12 @@ defined('THE_DB') || define('THE_DB', TRUE);
 require_once(__DIR__ .'./../../db.php');
 ?>
  <div id="infoframe">
- 
+      <form action='' method='post' id ='postContracts' enctype="multipart/form-data">
   <h1 id = "smallTitle">Installatör</h1>	
 		
 		<div id = "rowfix">
-		<label for="namn">Kontaktperson</label><strong id="startDot">*</strong>
-		<input required type="text" value = "" name = "namn" id = "requiredtextframe"/>
+		<label for="kontpers">Kontaktperson</label><strong id="startDot">*</strong>
+		<input required type="text" value = "" name = "kontpers" id = "requiredtextframe"/>
 		</div>
 		
 	 <div id = "rowfix">	
@@ -55,10 +55,32 @@ require_once(__DIR__ .'./../../db.php');
 		</div>	
 		  	
 		<div>	
-		<form><input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;"></form>
-		<form action="overview.php"><input type="submit" value="Nästa"></form>
+		<input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;">
+		<input type="submit" value="Nästa" name ="next" onclick="document.getElementById('checked1').style.backgroundColor = 'lightgreen';">
 		</div>
  </form>
+ 
+ <?php	
+if(isset($_POST['next'])&&!empty($_POST['kontpers'])&&!empty($_POST['adress'])&&!empty($_POST['postnummer'])&&!empty($_POST['port'])&&!empty($_POST['teledag'])){
+    $kontpers=mysqli_real_escape_string($con,$_POST['kontpers']);
+	$adress=mysqli_real_escape_string($con,$_POST['adress']);	
+	$postnummer=mysqli_real_escape_string($con,$_POST['postnummer']);
+    $port=mysqli_real_escape_string($con,$_POST['port']);
+	$teledag=mysqli_real_escape_string($con,$_POST['teledag']);	
+	$alttele=mysqli_real_escape_string($con,$_POST['alttele']);
+	$epost=mysqli_real_escape_string($con,$_POST['epost']);
+			        
+		$insertContact = "INSERT INTO installator values('1','".$kontpers."','".$adress."','".$postnummer."','".$port."','".$teledag."','".$alttele."','".$epost."')";
+echo $insertContact;		
+		 if(mysqli_query($con, $insertContact)){
+            echo "<div class='ok'>Ny användare har skapats</div>";
+        }
+        else{
+            echo "<div class='error'>Lyckades inte lägga till en ny användare</div>";
+        }		
+}
+?>    
+
  </div>
 </div><!--main-wrapper-->
 

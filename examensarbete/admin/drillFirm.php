@@ -21,7 +21,7 @@ defined('THE_DB') || define('THE_DB', TRUE);
 require_once(__DIR__ .'./../../db.php');
 ?>
  <div id="infoframe">
- 
+      <form action='' method='post' id ='postContracts' enctype="multipart/form-data">
   <h1 id = "smallTitle">Borrfirma</h1>	
   
 		<div id = "rowfix">
@@ -35,8 +35,8 @@ require_once(__DIR__ .'./../../db.php');
 		</div>
 		
 		<div id = "rowfix">
-		<label for="namn">Kontaktperson</label><strong id="startDot">*</strong>
-		<input required type="text" value = "" name = "namn" id = "requiredtextframe"/>
+		<label for="kontpers">Kontaktperson</label><strong id="startDot">*</strong>
+		<input required type="text" value = "" name = "kontpers" id = "requiredtextframe"/>
 		</div>
 		
 	 <div id = "rowfix">	
@@ -65,10 +65,34 @@ require_once(__DIR__ .'./../../db.php');
 		</div>	
 
   	<div>	
-		<form><input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;"></form>
-		<form action="installFirm.php"><input type="submit" value="Nästa"></form>
+		<input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;">
+		<input type="submit" value="Nästa" name ="next" onclick="document.getElementById('checked1').style.backgroundColor = 'lightgreen';">
 		</div>		
  </form>
+ 
+ <?php	
+if(isset($_POST['next'])&&!empty($_POST['sitac'])&&!empty($_POST['fnamn'])&&!empty($_POST['kontpers'])
+		&&!empty($_POST['adress'])&&!empty($_POST['postnummer'])&&!empty($_POST['port'])&&!empty($_POST['teledag'])){
+	$sitac=mysqli_real_escape_string($con,$_POST['sitac']);
+    $fnamn=mysqli_real_escape_string($con,$_POST['fnamn']);
+    $kontpers=mysqli_real_escape_string($con,$_POST['kontpers']);
+	$adress=mysqli_real_escape_string($con,$_POST['adress']);	
+	$postnummer=mysqli_real_escape_string($con,$_POST['postnummer']);
+    $port=mysqli_real_escape_string($con,$_POST['port']);
+	$teledag=mysqli_real_escape_string($con,$_POST['teledag']);	
+	$alttele=mysqli_real_escape_string($con,$_POST['alttele']);
+	$epost=mysqli_real_escape_string($con,$_POST['epost']);
+			        
+		$insertContact = "INSERT INTO borrfirma values('1','".$sitac."','".$fnamn."','".$kontpers."','".$adress."','".$postnummer."','".$port."','".$teledag."','".$alttele."','".$epost."')";		
+		 if(mysqli_query($con, $insertContact)){
+            echo "<div class='ok'>Ny användare har skapats</div>";
+        }
+        else{
+            echo "<div class='error'>Lyckades inte lägga till en ny användare</div>";
+        }		
+}
+?>    
+
  </div>
 </div><!--main-wrapper-->
 

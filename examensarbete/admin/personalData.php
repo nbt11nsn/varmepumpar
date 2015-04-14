@@ -21,6 +21,7 @@ defined('THE_DB') || define('THE_DB', TRUE);
 require_once(__DIR__ .'./../../db.php');
 ?>
  <div id="infoframe">
+     <form action='' method='post' id ='postContracts' enctype="multipart/form-data">
  <h1 id = "smallTitle">Personuppgifter</h1>
 
 	<div id = "rowfix">
@@ -57,10 +58,31 @@ require_once(__DIR__ .'./../../db.php');
 		</div>
 		
 	<div>	
-		<form><input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;"></form>
-		<form action="map.php"><input type="submit" value="Nästa" onclick="document.getElementById('checked2').style.backgroundColor = 'green';"></form>
+	<input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;">
+		<input type="submit" name ="next" value="Nästa" onclick="document.getElementById('checked2').style.backgroundColor = 'green';">
 		</div>	
-	
+	</form>
+	<?php	
+if(isset($_POST['next'])&&!empty($_POST['namn'])&&!empty($_POST['persnummer'])&&!empty($_POST['adress'])&&!empty($_POST['postnummer'])&&!empty($_POST['port'])&&!empty($_POST['teledag'])){
+	$namn=mysqli_real_escape_string($con,$_POST['namn']);
+    $persnummer=mysqli_real_escape_string($con,$_POST['persnummer']);
+    $adress=mysqli_real_escape_string($con,$_POST['adress']);
+	$postnummer=mysqli_real_escape_string($con,$_POST['postnummer']);	
+	$port=mysqli_real_escape_string($con,$_POST['port']);
+	$teledag=mysqli_real_escape_string($con,$_POST['teledag']);	
+	$alttele=mysqli_real_escape_string($con,$_POST['alttele']);
+	$epost=mysqli_real_escape_string($con,$_POST['epost']);	
+			        
+		$insertContact = "INSERT INTO person values('1','".$namn."','".$persnummer."','".$adress."','".$postnummer."','".$port."','".$teledag."','".$alttele."','".$epost."')";		
+		echo $insertContact;
+		 if(mysqli_query($con, $insertContact)){
+            echo "<div class='ok'>Ny användare har skapats</div>";
+        }
+        else{
+            echo "<div class='error'>Lyckades inte lägga till en ny användare</div>";
+        }		
+}
+?> 
  </div>
 </div><!--main-wrapper-->
 
