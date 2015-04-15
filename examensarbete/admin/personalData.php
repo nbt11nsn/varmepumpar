@@ -74,7 +74,6 @@ if(isset($_POST['next'])&&!empty($_POST['namn'])&&!empty($_POST['persnummer'])&&
 	$epost=mysqli_real_escape_string($con,$_POST['epost']);	
 			        
 		$insertContact = "INSERT INTO person values('1','".$namn."','".$persnummer."','".$adress."','".$postnummer."','".$port."','".$teledag."','".$alttele."','".$epost."')";		
-		echo $insertContact;
 		 if(mysqli_query($con, $insertContact)){
             echo "<div class='ok'>Ny användare har skapats</div>";
         }

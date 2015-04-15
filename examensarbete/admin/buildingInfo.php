@@ -29,8 +29,8 @@ require_once(__DIR__ .'./../../db.php');
 		<input required type="text" align="left"  maxlength="50" value = ""  name="beteckning" placeholder="ex. Eldkvarnen 1" id="requiredtextframe"/>
 		</div>
 	 <div id = "rowfix">			
-		<label for="persnummer">Fastighetens adress(om annan än sökandes adress)</label>
-		<input type="text" value = "" name ="persnummer" placeholder="ex. Brunnsgatan 59" id = "requiredtextframe"/>
+		<label for="adress">Fastighetens adress(om annan än sökandes adress)</label>
+		<input type="text" value = "" name ="adress" placeholder="ex. Brunnsgatan 59" id = "requiredtextframe"/>
 		</div>
 	 <div id = "rowfix">		
 		<label for="postnummer">Postnummer(om annan än sökandes postnummer)</label>
@@ -49,7 +49,7 @@ require_once(__DIR__ .'./../../db.php');
 <?php	
 if(isset($_POST['next'])&&!empty($_POST['beteckning'])){
 	$name=mysqli_real_escape_string($con,$_POST['beteckning']);
-    $pers=mysqli_real_escape_string($con,$_POST['persnummer']);
+    $pers=mysqli_real_escape_string($con,$_POST['adress']);
     $post=mysqli_real_escape_string($con,$_POST['postnummer']);
 	$port=mysqli_real_escape_string($con,$_POST['port']);	
 			        

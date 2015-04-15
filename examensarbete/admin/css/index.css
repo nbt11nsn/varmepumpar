@@ -89,6 +89,43 @@ width: 100%;
 margin-bottom: 10px;
 }
 
+#testing{
+  display:inline-block;
+  width: 1480px; 
+  min-height: 800px;
+  height: 100%;
+  background: #fff; 
+  text-align: left;
+  padding:25px 0px;
+}
+
+#overviewforsta{
+min-height: 250px;
+}
+#overviewandra{
+min-height: 250px;
+}
+#overviewtredje{
+min-height: 250px;
+}
+#forsta{
+display:inline-block;
+padding-right: 300px;
+position:relative;
+}
+
+
+
+#infoframeoverview{
+display:inline-block;
+  width: 1480px; 
+  min-height: 800px;
+  height: 100%;
+  background: #fff; 
+  text-align: left;
+  padding:25px 0px;
+
+}
 #header-wrapper {
   width: 100%;
 }
