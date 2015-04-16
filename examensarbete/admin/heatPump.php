@@ -40,7 +40,7 @@ require_once(__DIR__ .'./../../db.php');
 		</div>
 		
 		<div id = "rowfix">
-		<label for="vinkel">Vinkel/riktning av borrhål(0&deg = rätt ned) </label><strong id="startDot">*</strong>
+		<label for="vinkel">Riktning av borrhål(0&deg = rätt ned) </label><strong id="startDot">*</strong>
 		<input required type="text" value ="" name = "vinkel" id = "requiredtextframe"/>
 		</div>
 		
