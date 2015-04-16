@@ -30,12 +30,7 @@ require_once(__DIR__ .'./../../db.php');
 
 <div id="infoframe">
 <?php 		
-	   echo '	   
-	   <fieldset>
-		<legend><b>Vad händer nu när ansökan är gjord</b></legend>	
 
-		
-		</fieldset>	';
 					
 
 ?>	
