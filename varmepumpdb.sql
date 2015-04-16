@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 16 apr 2015 kl 10:58
+-- Tid vid skapande: 16 apr 2015 kl 12:22
 -- Serverversion: 5.6.20
 -- PHP-version: 5.5.15
 
@@ -127,6 +127,7 @@ CREATE TABLE IF NOT EXISTS `karta` (
 `ID` int(11) NOT NULL,
   `namn` varchar(50) NOT NULL,
   `url` varchar(100) NOT NULL,
+  `svar` varchar(3) NOT NULL,
   `agarid` int(11) NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
@@ -134,8 +135,8 @@ CREATE TABLE IF NOT EXISTS `karta` (
 -- Dumpning av Data i tabell `karta`
 --
 
-INSERT INTO `karta` (`ID`, `namn`, `url`, `agarid`) VALUES
-(1, 'karta', '.../karta', 27);
+INSERT INTO `karta` (`ID`, `namn`, `url`, `svar`, `agarid`) VALUES
+(1, 'karta', '.../karta', 'Nej', 27);
 
 -- --------------------------------------------------------
 

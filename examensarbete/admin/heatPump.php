@@ -70,12 +70,12 @@ require_once(__DIR__ .'./../../db.php');
 		</div>
 		
 		<div id = "rowfix">
-		<label for="fabrikat_koldbararvatska">Frostskyddsmedel i köldbärarvätska, fabrikat</label><strong id="startDot">*</strong>
+		<label for="fabrikat_koldbararvatska">Frostskyddsmedel i köldbärarvätskan, fabrikat</label><strong id="startDot">*</strong>
 		<input required type="text" value ="" name ="fabrikat_koldbararvatska" id = "requiredtextframe"/>
 		</div>
 		
 		<div id = "rowfix">
-		<label for="andel_frostskyddsmedel">Andel frostskyddsmedel i köldbärarvätska, %</label><strong id="startDot">*</strong>
+		<label for="andel_frostskyddsmedel">Frostskyddsmedel i köldbärarvätskan, andel(%)</label><strong id="startDot">*</strong>
 		<input required type="text" value ="" name ="andel_frostskyddsmedel" id = "requiredtextframe"/>
 		</div>	
 		

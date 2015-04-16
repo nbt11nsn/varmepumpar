@@ -63,7 +63,7 @@ require_once(__DIR__ .'./../../db.php');
 <fieldset>
 	<legend id "overview">Karta</legend> ';
   
-   echo ' <label for="namn">Jag har skickat kartan via post: </label>'; echo $irows2['namn'];
+   echo ' <label for="namn">Jag har skickat kartan via post: </label>'; echo $irows2['svar'];
    echo ' <br><label for="url">Bifogad karta: </label>'; echo $irows2['url']; 
    echo '</fieldset>'; 
 		}
@@ -88,7 +88,7 @@ require_once(__DIR__ .'./../../db.php');
   echo ' <br><label for="postnum">Postnummer: </label>'; echo $irows2['postnum'];
   echo ' <br><label for="postort">Postort: </label>'; echo $irows2['postort'];
   echo ' <br><label for="tele">Telefonnummer dagtid: </label>'; echo $irows2['tele'];
-  echo ' <br><label for="alt_tele">Alternativ telefonnummer: </label>'; echo $irows2['alt_tele'];
+  echo ' <br><label for="alt_tele">Alternativt telefonnummer: </label>'; echo $irows2['alt_tele'];
   echo ' <br><label for="epost">E-postadress: </label>'; echo $irows2['epost'];
   echo '</fieldset><br>';
 		}	
@@ -110,7 +110,7 @@ require_once(__DIR__ .'./../../db.php');
   echo ' <br><label for="postnum">Postnummer: </label>'; echo $irows2['postnum'];
   echo ' <br><label for="postort">Postort: </label>'; echo $irows2['postort'];
   echo ' <br><label for="tele">Telefonnummer dagtid: </label>'; echo $irows2['tele'];
-  echo ' <br><label for="alt_tele">Alternativ telefonnummer: </label>'; echo $irows2['alt_tele'];
+  echo ' <br><label for="alt_tele">Alternativt telefonnummer: </label>'; echo $irows2['alt_tele'];
   echo ' <br><label for="epost">E-postadress: </label>'; echo $irows2['epost'];
   echo '</fieldset><br>';
 		}
@@ -132,7 +132,7 @@ require_once(__DIR__ .'./../../db.php');
 	<legend id "overview">Värmepump</legend> ';
   
   echo ' <label for="anlaggning">Anläggning: </label>'; echo $irows2['anlaggning'];
-  echo ' <label for="fabrikat">Fabrikat: </label>'; echo $irows2['fabrikat'];
+  echo ' <br><label for="fabrikat">Fabrikat: </label>'; echo $irows2['fabrikat'];
   echo ' <br><label for="modell">Modell: </label>'; echo $irows2['modell'];
   echo ' <br><label for="vinkel">Vinkel, &deg: </label>'; echo $irows2['vinkel'];
   echo ' <br><label for="effekt">Effekt, kW: </label>'; echo $irows2['effekt'];
@@ -141,7 +141,7 @@ require_once(__DIR__ .'./../../db.php');
   echo ' <br><label for="volym_koldbararvatska">Total volym köldbärarvätska i kollektorn, liter: </label>'; echo $irows2['volym_koldbararvatska'];
   echo ' <br><label for="namn_koldbararvatska">Frostskyddsmedel i kölbärarvätska, namn: </label>'; echo $irows2['namn_koldbararvatska'];
   echo ' <br><label for="fabrikat_koldbararvatska">Frostskyddsmedel i kölbärarvätska, fabrikat: </label>'; echo $irows2['fabrikat_koldbararvatska'];
-  echo ' <br><label for="andel_frostskyddsmedel">Andel Frostskyddsmedel i kölbärarvätska, %: </label>'; echo $irows2['andel_frostskyddsmedel'];
+  echo ' <br><label for="andel_frostskyddsmedel">Frostskyddsmedel i kölbärarvätska, andel(%): </label>'; echo $irows2['andel_frostskyddsmedel'];
   echo '</fieldset><br>';
 		}
 	}
@@ -158,14 +158,14 @@ require_once(__DIR__ .'./../../db.php');
 	       <fieldset>
 	<legend id "overview">Borrfirma</legend> ';
   
-  echo ' <label for="cert_num">SITAC certifieringsnumer:: </label>'; echo $irows2['cert_num'];
+  echo ' <label for="cert_num">SITAC certifieringsnummer: </label>'; echo $irows2['cert_num'];
   echo ' <br><label for="namn">Företagsnamn: </label>'; echo $irows2['namn'];
   echo ' <br><label for="kontaktperson">Kontaktperson: </label>'; echo $irows2['kontaktperson'];
   echo ' <br><label for="adress">Gatuadress: </label>'; echo $irows2['adress'];
   echo ' <br><label for="postnum">Postnummer: </label>'; echo $irows2['postnum'];
   echo ' <br><label for="postort">Postort: </label>'; echo $irows2['postort'];
   echo ' <br><label for="tele">Telefonnummer dagtid: </label>'; echo $irows2['tele'];
-  echo ' <br><label for="alt_tele">Alternativ telefonnummer: </label>'; echo $irows2['alt_tele'];
+  echo ' <br><label for="alt_tele">Alternativt telefonnummer: </label>'; echo $irows2['alt_tele'];
   echo ' <br><label for="epost">E-postadress: </label>'; echo $irows2['epost'];
   echo '</fieldset><br>';
 	   
