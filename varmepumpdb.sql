@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 15 apr 2015 kl 11:38
+-- Tid vid skapande: 16 apr 2015 kl 10:58
 -- Serverversion: 5.6.20
 -- PHP-version: 5.5.15
 
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `ansokning` (
   `borrfirma_ID` varchar(20) NOT NULL,
   `fastighet_ID` varchar(20) NOT NULL,
   `datum` date NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Dumpning av Data i tabell `ansokning`
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `borrfirma` (
 --
 
 INSERT INTO `borrfirma` (`ID`, `cert_num`, `namn`, `kontaktperson`, `adress`, `postnum`, `postort`, `tele`, `alt_tele`, `epost`) VALUES
-(1, '54875485454', 'borr AB', 'borrnisse', 'apansson', '85458', 'Gävle', '0215478548', '', '');
+(1, '123456789', 'Borr AB', 'Adam Adamsson', 'Gävlegatan 5', '80253', 'Gävle', '0123456789', '02612458', 'Adam@borrfirman.se');
 
 -- --------------------------------------------------------
 
@@ -84,14 +84,14 @@ CREATE TABLE IF NOT EXISTS `fastighet` (
   `fastighet_adress` varchar(30) NOT NULL,
   `fastighet_postnr` varchar(10) NOT NULL,
   `fastighet_postort` varchar(30) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Dumpning av Data i tabell `fastighet`
 --
 
 INSERT INTO `fastighet` (`ID`, `fastighetsbeteckning`, `fastighet_adress`, `fastighet_postnr`, `fastighet_postort`) VALUES
-(1, 'Eldkvarnen 1', 'Eldgatan 51', '78452', 'Stockholm');
+(1, 'Eldkvarnen 1', 'Eldgatan 5', '85621', 'Stockholm');
 
 -- --------------------------------------------------------
 
@@ -115,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `installator` (
 --
 
 INSERT INTO `installator` (`ID`, `kontaktperson`, `adress`, `postnum`, `postort`, `tele`, `alt_tele`, `epost`) VALUES
-(1, 'hans huldt', 'hulish', '8598', 'Gefle', '0261452145', '074587821', '');
+(1, 'Bertil Bertilsson', 'Bertilsgatan 3', '80254', 'Gävle', '0721548658', '026312548', 'Bertil@installator.se');
 
 -- --------------------------------------------------------
 
@@ -128,7 +128,14 @@ CREATE TABLE IF NOT EXISTS `karta` (
   `namn` varchar(50) NOT NULL,
   `url` varchar(100) NOT NULL,
   `agarid` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumpning av Data i tabell `karta`
+--
+
+INSERT INTO `karta` (`ID`, `namn`, `url`, `agarid`) VALUES
+(1, 'karta', '.../karta', 27);
 
 -- --------------------------------------------------------
 
@@ -181,7 +188,7 @@ CREATE TABLE IF NOT EXISTS `varmepump` (
 --
 
 INSERT INTO `varmepump` (`ID`, `anlaggning`, `fabrikat`, `modell`, `vinkel`, `effekt`, `typ_koldmedium`, `mangd_koldmedium`, `volym_koldbararvatska`, `namn_koldbararvatska`, `fabrikat_koldbararvatska`, `andel_frostskyddsmedel`) VALUES
-(1, 'Bergvärme', 'AP73', 'bergvärme200', '20', '50', 'superkallt', 5, '30', 'superfrostskyddet', 'H2Okiller', '15');
+(2, 'Bergvärme', 'Panasonic', 'NE9', '0', '25', 'R410A', 1, '30', 'Propylenglykol', 'monopropylenglykol', '20');
 
 --
 -- Index för dumpade tabeller
@@ -237,7 +244,7 @@ ALTER TABLE `varmepump`
 -- AUTO_INCREMENT för tabell `ansokning`
 --
 ALTER TABLE `ansokning`
-MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT för tabell `borrfirma`
 --
@@ -247,7 +254,7 @@ MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT för tabell `fastighet`
 --
 ALTER TABLE `fastighet`
-MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT för tabell `installator`
 --
@@ -257,7 +264,7 @@ MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT för tabell `karta`
 --
 ALTER TABLE `karta`
-MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT för tabell `person`
 --
