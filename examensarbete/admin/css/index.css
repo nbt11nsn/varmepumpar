@@ -100,23 +100,19 @@ margin-bottom: 10px;
 }
 
 #overviewforsta{
-min-height: 250px;
+padding-bottom: 50px;
 }
 #overviewandra{
-
-min-height: 250px;
+padding-bottom: 50px;
 }
 #overviewtredje{
 
-min-height: 250px;
 }
 #forsta{
 display:inline-block;
 padding-right: 200px;
 position:relative;
 }
-
-
 
 #infoframeoverview{
 display:inline-block;
