@@ -3,7 +3,7 @@
 
 /* #########################FAKTURA BÖRJAN############################# */
 #invoiceframe { 
-  width: 1024px; 
+  width: 1280px; 
   min-height: 800px;
   height: 100%;
   background: #fcfcfc; 
@@ -56,7 +56,7 @@ padding-top: 10px;
 }
 
 #frame { 
-  width: 1024px; 
+  width: 1280px; 
   min-height: 800px;
   height: 100%;
   background: #fff; 
@@ -103,14 +103,16 @@ margin-bottom: 10px;
 min-height: 250px;
 }
 #overviewandra{
+
 min-height: 250px;
 }
 #overviewtredje{
+
 min-height: 250px;
 }
 #forsta{
 display:inline-block;
-padding-right: 300px;
+padding-right: 200px;
 position:relative;
 }
 
@@ -176,7 +178,7 @@ width: 500px;
   padding-bottom:10px;
 }
 #main-wrapper {
-  width: 1024px;
+  width: 1280px;
   height: 100%;
 }
 
@@ -269,7 +271,7 @@ label {
     color: #000;
     font-weight: bold;
     display: inline-block;
-    width: 1024px;
+    width: 1280px;
 }
 
 /* dölj innehåll */
@@ -283,7 +285,7 @@ label {
     color: #000;
     font-weight: bold;
     display: inline-block;
-    width: 1024px;
+    width: 1280px;
 }
 
 /* generella inställningar för submit */
@@ -374,7 +376,7 @@ form * {
 /* generella inställningar för nav */
 nav{
   text-align: left;
-  width: 1024px;
+  width: 1280px;
 }
 
 nav ul{
@@ -466,11 +468,13 @@ nav > ul > li.selected:last-child:after{
   border-radius:0 5px 5px 0;
 }
 nav ul li a{
+width: 121px;
   display:block;
   text-decoration:none;
   color: #5d5d5d;
   font: 18px Arial,sans-serif;
-  padding: 10px 30px 10px;
+  padding: 10px 10px; 
+  text-align: center;
   position: relative;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
   z-index:2;

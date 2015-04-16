@@ -56,7 +56,7 @@ require_once(__DIR__ .'./../../db.php');
 		  	
 		<div>	
 		<input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;">
-		<input type="submit" value="Nästa" name ="next" onclick="document.getElementById('checked1').style.backgroundColor = 'lightgreen';">
+		<input type="submit" value="Nästa" name ="next" onclick="document.getElementById('checked6').style.backgroundColor = 'lightgreen';">
 		</div>
  </form>
  
@@ -72,10 +72,10 @@ if(isset($_POST['next'])&&!empty($_POST['kontpers'])&&!empty($_POST['adress'])&&
 			        
 		$insertContact = "INSERT INTO installator values('1','".$kontpers."','".$adress."','".$postnummer."','".$port."','".$teledag."','".$alttele."','".$epost."')";		
 		 if(mysqli_query($con, $insertContact)){
-            echo "<div class='ok'>Ny användare har skapats</div>";
+            echo "<div class='ok'>Informationen har sparats</div>";
         }
         else{
-            echo "<div class='error'>Lyckades inte lägga till en ny användare</div>";
+            echo "<div class='error'>Lyckades inte spara informationen</div>";
         }		
 }
 ?>    

@@ -55,10 +55,10 @@ if(isset($_POST['next'])&&!empty($_POST['beteckning'])){
 			        
 		$insertContact = "INSERT INTO fastighet values('1','".$name."','".$pers."','".$post."','".$port."')";		
 		 if(mysqli_query($con, $insertContact)){
-            echo "<div class='ok'>Ny användare har skapats</div>";
+            echo "<div class='ok'>Informationen har sparats</div>";
         }
         else{
-            echo "<div class='error'>Lyckades inte lägga till en ny användare</div>";
+            echo "<div class='error'>Lyckades inte spara informationen</div>";
         }		
 }
 ?>    

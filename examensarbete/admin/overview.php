@@ -56,23 +56,16 @@ require_once(__DIR__ .'./../../db.php');
 	<div id ="forsta">
 	<?php
 	mysqli_free_result($iresult);
-		$iresult = mysqli_query($con, $isqlborr);
+		$iresult = mysqli_query($con, $isqlkarta);
 	if (mysqli_num_rows($iresult) != 0) {
       while($irows2 = mysqli_fetch_assoc($iresult)) {	
 	   echo '
-    <fieldset>
-	<legend id "overview">Borrfirma</legend> ';
+<fieldset>
+	<legend id "overview">Karta</legend> ';
   
-  echo ' <label for="cert_num">SITAC certifieringsnumer:: </label>'; echo $irows2['cert_num'];
-  echo ' <br><label for="namn">Företagsnamn: </label>'; echo $irows2['namn'];
-  echo ' <br><label for="kontaktperson">Kontaktperson: </label>'; echo $irows2['kontaktperson'];
-  echo ' <br><label for="adress">Gatuadress: </label>'; echo $irows2['adress'];
-  echo ' <br><label for="postnum">Postnummer: </label>'; echo $irows2['postnum'];
-  echo ' <br><label for="postort">Postort: </label>'; echo $irows2['postort'];
-  echo ' <br><label for="tele">Telefonnummer dagtid: </label>'; echo $irows2['tele'];
-  echo ' <br><label for="alt_tele">Alternativ telefonnummer: </label>'; echo $irows2['alt_tele'];
-  echo ' <br><label for="epost">E-postadress: </label>'; echo $irows2['epost'];
-  echo '</fieldset><br>';
+   echo ' <label for="namn">Jag har skickat kartan via post: </label>'; echo $irows2['namn'];
+   echo ' <br><label for="url">Bifogad karta: </label>'; echo $irows2['url']; 
+   echo '</fieldset>'; 
 		}
 	}
 	?>
@@ -158,16 +151,24 @@ require_once(__DIR__ .'./../../db.php');
 	<?php 
 	mysqli_free_result($iresult);
 	
-		$iresult = mysqli_query($con, $isqlkarta);
+		$iresult = mysqli_query($con, $isqlborr);
 	if (mysqli_num_rows($iresult) != 0) {
       while($irows2 = mysqli_fetch_assoc($iresult)) {	
 	   echo '
-	<fieldset>
-	<legend id "overview">Karta</legend> ';
+	       <fieldset>
+	<legend id "overview">Borrfirma</legend> ';
   
-   echo ' <label for="namn">Jag har skickat kartan via post: </label>'; echo $irows2['namn'];
-   echo ' <br><label for="url">Bifogad karta: </label>'; echo $irows2['url']; 
-   echo '</fieldset>'; 
+  echo ' <label for="cert_num">SITAC certifieringsnumer:: </label>'; echo $irows2['cert_num'];
+  echo ' <br><label for="namn">Företagsnamn: </label>'; echo $irows2['namn'];
+  echo ' <br><label for="kontaktperson">Kontaktperson: </label>'; echo $irows2['kontaktperson'];
+  echo ' <br><label for="adress">Gatuadress: </label>'; echo $irows2['adress'];
+  echo ' <br><label for="postnum">Postnummer: </label>'; echo $irows2['postnum'];
+  echo ' <br><label for="postort">Postort: </label>'; echo $irows2['postort'];
+  echo ' <br><label for="tele">Telefonnummer dagtid: </label>'; echo $irows2['tele'];
+  echo ' <br><label for="alt_tele">Alternativ telefonnummer: </label>'; echo $irows2['alt_tele'];
+  echo ' <br><label for="epost">E-postadress: </label>'; echo $irows2['epost'];
+  echo '</fieldset><br>';
+	   
 		}
 	}
 	mysqli_free_result($iresult);

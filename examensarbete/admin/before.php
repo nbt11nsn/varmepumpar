@@ -45,10 +45,10 @@ if(isset($_POST['next'])&&!empty($_POST['persnum'])){
 	$persn=mysqli_real_escape_string($con,$_POST['persnum']);			        
 		$insertContact = "INSERT INTO ansokning values('1','".$persn."','".$persn."','".$persn."','".$persn."','".$persn."','".$persn."',2015-01-01)";		
 		 if(mysqli_query($con, $insertContact)){
-            echo "<div class='ok'>Ny användare har skapats</div>";		
+            echo "<div class='ok'>Informationen har sparats</div>";
         }
         else{
-            echo "<div class='error'>Lyckades inte lägga till en ny användare</div>";
+            echo "<div class='error'>Lyckades inte spara informationen</div>";
         }		
 }
 ?>    

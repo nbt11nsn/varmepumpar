@@ -81,14 +81,12 @@ require_once(__DIR__ .'./../../db.php');
 		
 		  	<div>	
 		<input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;">
-		<input type="submit" name ="next" value="Nästa" onclick="document.getElementById('checked2').style.backgroundColor = 'green';">
+		<input type="submit" name ="next" value="Nästa" onclick="document.getElementById('checked4').style.backgroundColor = 'lightgreen';">
 		</div>
  </form>
  
  <?php	
-if(isset($_POST['next'])&&!empty($_POST['anlaggning'])&&!empty($_POST['fabrikat'])&&!empty($_POST['modell'])&&!empty($_POST['vinkel'])&&!empty($_POST['effekt'])
-						&&!empty($_POST['typ_koldmedium'])&&!empty($_POST['mangd_koldmedium'])&&!empty($_POST['volym_koldbararvatska'])&&!empty($_POST['namn_koldbararvatska'])
-						&&!empty($_POST['fabrikat_koldbararvatska'])&&!empty($_POST['andel_frostskyddsmedel'])){
+if(isset($_POST['next'])){
 				
 	$anlaggning=mysqli_real_escape_string($con,$_POST['anlaggning']);
     $fabrikat=mysqli_real_escape_string($con,$_POST['fabrikat']);
@@ -106,11 +104,11 @@ if(isset($_POST['next'])&&!empty($_POST['anlaggning'])&&!empty($_POST['fabrikat'
 		'".$fabrikat_koldbararvatska."','".$andel_frostskyddsmedel."')";		
 		
 		 if(mysqli_query($con, $insertContact)){
-            echo "<div class='ok'>Ny användare har skapats</div>";
+            echo "<div class='ok'>Informationen har sparats</div>";
         }
         else{
-            echo "<div class='error'>Lyckades inte lägga till en ny användare</div>";
-        }		
+            echo "<div class='error'>Lyckades inte spara informationen</div>";
+        }	
 }
 ?>    
  </div>

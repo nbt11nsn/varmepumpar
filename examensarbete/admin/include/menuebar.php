@@ -6,8 +6,8 @@ echo"<div id = 'huvudmeny'>
   <nav>
     <ul>
 	  <li><a href='before.php'>Inför ansökan</a></li>
-	  <li><a href='buildingInfo.php' id = 'checked1'>Fastighetsbeteckning</a></li>
-      <li><a href='personalData.php' id = 'checked2'>Personuppgifter</a></li>
+	  <li><a href='buildingInfo.php' id = 'checked1'>Fastighet</a></li>
+      <li><a href='personalData.php' id = 'checked2'>Ansökande</a></li>
 	  <li><a href='map.php' id = 'checked1'>Karta</a></li>
 	  <li><a href='heatPump.php' id = 'checked4'>Värmepump</a></li>
 	  <li><a href='drillFirm.php' id = 'checked5'>Borrfirma</a></li>
