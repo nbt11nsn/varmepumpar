@@ -91,7 +91,7 @@ margin-bottom: 10px;
 
 #testing{
   display:inline-block;
-  width: 1480px; 
+  width: 1280px; 
   min-height: 800px;
   height: 100%;
   background: #fff; 
@@ -118,7 +118,7 @@ position:relative;
 
 #infoframeoverview{
 display:inline-block;
-  width: 1480px; 
+  width: 1280px; 
   min-height: 800px;
   height: 100%;
   background: #fff; 
@@ -132,7 +132,7 @@ display:inline-block;
 
 nav ul{
   list-style:none;
-  width: 1480px;
+  width: 1280px;
   position:relative;
   display:inline-block;
 }
@@ -153,7 +153,7 @@ width: 500px;
 }
 
 #infoframe {
-  width: 1480px; 
+  width: 1280px; 
   min-height: 800px;
   height: 100%;
   background: #fff; 
@@ -379,7 +379,7 @@ nav{
 
 nav ul{
   list-style:none;
-  width: 1480;
+  width: 1280px;
   position:relative;
   display:inline-block;
 }
