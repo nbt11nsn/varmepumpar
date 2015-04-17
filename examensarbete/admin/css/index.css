@@ -108,10 +108,79 @@ padding-bottom: 50px;
 #overviewtredje{
 
 }
+
+/*overview testet*/
 #forsta{
 display:inline-block;
 padding-right: 200px;
 position:relative;
+}
+
+#applicantframe{
+margin-left: 50px;
+margin-right: 50px;
+border-right: 1px solid black;
+border-left: 1px solid black;
+border-bottom: 1px solid black;
+}
+
+#first{
+width: 800px;
+float: left;
+border-right: 1px solid black;
+}
+
+#second{
+border-right: 1px solid black;
+width: 50%;
+float: left;
+}
+#third{
+}
+#fourth{
+
+}
+#overviewboxfull{
+width: 1161px;
+border: none;
+/*background-color: #E0FFFF;*/
+}
+#overviewboxlong{
+width: 783px;
+border: none;
+/*background-color: #E0FFFF;*/
+}
+#overviewboxmedium{
+width: 572px;
+border: none;
+/*background-color: #E0FFFF;*/
+}
+#overviewboxsmall{
+width: 360px;
+border: none;
+/*background-color: #E0FFFF;*/
+}
+
+#overviewareatitle2{
+text-align: left;
+margin-left: 50px;
+margin-top: 20px;
+font-size: 20px;
+width: 100%;
+}
+
+#overviewareatitle{
+text-align: left;
+margin-left: 50px;
+font-size: 20px;
+width: 100%;
+}
+#overviewtitle{
+border-top: 1px solid black;
+text-align: left;
+font-size: 20px;
+width: 100%;
+margin-bottom: 10px;
 }
 
 #infoframeoverview{

@@ -22,8 +22,134 @@ require_once(__DIR__ .'./../../db.php');
 
 ?>
 <div id="infoframeoverview">	
+<h1 id ="overviewareatitle">Sökande</h1>
+<div id ="applicantframe">
+
+<div id ="first">
+
+<div id ="overviewtitle">Förnamn</div>
+<input type="box" value ="" name ="fornamn" id ="overviewboxlong"/>
+<div id ="overviewtitle">Efternamn</div>
+<input type="box" value ="" name ="efternamn" id ="overviewboxlong"/>
+<div id ="overviewtitle">Utdelningsadress</div>
+<input type="box" value ="" name ="utdelningsadress" id ="overviewboxlong"/>
+</div>
+
+<div>
+<div id ="overviewtitle">Person-/Organisationsnummer</div>
+<input type="box" value ="" name ="persnum" id ="overviewboxsmall"/>
+<div id ="overviewtitle">Telefonnummer</div>
+<input type="box" value ="" name ="tele" id ="overviewboxsmall"/>
+<div id ="overviewtitle">Mobilnummer</div>
+<input type="box" value ="" name ="mobil" id ="overviewboxsmall"/>
+</div>
+
+<div id ="second">
+<div id ="overviewtitle">Postnummer</div>
+<input type="box" value ="" name ="pnum" id ="overviewboxmedium"/>
+</div>
+<div>
+<div id ="overviewtitle">Postort</div>
+<input type="box" value ="" name ="port" id ="overviewboxmedium"/>
+</div>
+
+<div id ="third">
+<div id ="overviewtitle">E-Postadress</div>
+<input type="box" value ="" name ="epost" id ="overviewboxfull"/>
+</div>
+
+<div id ="second">
+<div id ="overviewtitle">Fakturamottagare(om annan än ovanstående)</div>
+<input type="box" value ="" name ="pnum" id ="overviewboxmedium"/>
+</div>
+<div>
+<div id ="overviewtitle">Organisations-/Postnummer(om annan än ovanstående)</div>
+<input type="box" value ="" name ="port" id ="overviewboxmedium"/>
+</div>
+
+<div id ="third">
+<div id ="overviewtitle">Utdelningsadress(data,box,etc.)</div>
+<input type="box" value ="" name ="epost" id ="overviewboxfull"/>
+</div>
+
+<div id ="second">
+<div id ="overviewtitle">Postnummer(om annan än ovanstående)</div>
+<input type="box" value ="" name ="pnum" id ="overviewboxmedium"/>
+</div>
+<div>
+<div id ="overviewtitle">Postort(om annan än ovanstående)</div>
+<input type="box" value ="" name ="port" id ="overviewboxmedium"/>
+</div>
+</div>
+
+<h1 id ="overviewareatitle2">Fastighet där installation skall ske</h1>
+<div id ="applicantframe">
+
+<div id ="second">
+<div id ="overviewtitle">Fastighetsbeteckning</div>
+<input type="box" value ="" name ="epost" id ="overviewboxmedium"/>
+</div>
+<div>
+<div id ="overviewtitle">Fastighetens adress(om annan än utdelningsadress)</div>
+<input type="box" value ="" name ="epost" id ="overviewboxmedium"/>
+</div>
+
+<div id ="second">
+<div id ="overviewtitle">Postnummer(om annan än utdelningsadress)</div>
+<input type="box" value ="" name ="pnum" id ="overviewboxmedium"/>
+</div>
+<div>
+<div id ="overviewtitle">Postort(om annan än utdelningsadress)</div>
+<input type="box" value ="" name ="port" id ="overviewboxmedium"/>
+</div>
+</div>
+
+<h1 id ="overviewareatitle2">Anläggning</h1>
+<div id ="applicantframe">
+<div id ="overviewtitle">Typ av anläggning</div>
+<input type="box" value ="" name ="epost" id ="overviewboxfull"/>
+
+<div id ="second">
+<div id ="overviewtitle">Vinkel/riktning av borrhål(0&deg = rätt ned. Markera riktning på karta)</div>
+<input type="box" value ="" name ="epost" id ="overviewboxmedium"/>
+</div>
+
+<div>
+<div id ="overviewtitle">Effekt</div>
+<input type="box" value ="" name ="port" id ="overviewboxsmall"/>
+</div>
+</div>
+
+<div id ="applicantframe">
+<div id ="second">
+<div>
+<div id ="overviewtitle">Borrdjup</div>
+<input type="box" value ="" name ="pnum" id ="overviewboxsmall"/>
+</div>
+<div>
+<div id ="overviewtitle">Köldbärartyp</div>
+<input type="box" value ="" name ="port" id ="overviewboxsmall"/>
+</div>
+<div>
+<div id ="overviewtitle">Kölmedietyp</div>
+<input type="box" value ="" name ="port" id ="overviewboxsmall"/>
+</div>
+<div>
+<div id ="overviewtitle">Kölmediemängd</div>
+<input type="box" value ="" name ="port" id ="overviewboxsmall"/>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
 	<?php 
-	$isqlpers = "SELECT * FROM person";
+	$isqlpers = "SELECT * FROM person, fakturamottagare";
 	$isqlfastighet = "SELECT * FROM fastighet";
 	$isqvarmepump = "SELECT * FROM varmepump";
 	$isqlborr = "SELECT * FROM borrfirma";
@@ -52,7 +178,7 @@ require_once(__DIR__ .'./../../db.php');
 	}
 	?>
 	</div>
-		
+
 	<div id ="forsta">
 	<?php
 	mysqli_free_result($iresult);
@@ -176,6 +302,10 @@ require_once(__DIR__ .'./../../db.php');
 	</div>
 </div>
 </div><!--main-wrapper-->
+<?php
+defined('THE_FOOTER') || define('THE_FOOTER', TRUE);
+require_once("include/footer.php");
+?>
 </body>
 </html>
 

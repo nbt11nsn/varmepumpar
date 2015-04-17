@@ -14,6 +14,7 @@ echo"<div id = 'huvudmeny'>
 	  <li><a href='installFirm.php' id = 'checked6'>Installatör</a></li>
 	  <li><a href='overview.php' id = 'checked7'>Översikt</a></li>
 	  <li><a href='after.php' id = 'checked8'>Efter ansökan</a></li>
+	  <li><a href='test.php' id = 'checked8'>test</a></li>
     </ul>
   </nav>
 </div> ";
