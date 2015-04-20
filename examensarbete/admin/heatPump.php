@@ -57,6 +57,11 @@ require_once(__DIR__ .'./../../db.php');
 		<label for="typ_koldmedium">Typ av köldmedium</label><strong id="startDot">*</strong>
 		<input required type="text" value ="" name ="typ_koldmedium" id = "requiredtextframe"/>
 		</div>
+		
+		<div id = "rowfix">
+		<label for="typ_koldbarare">Typ av köldbärare</label><strong id="startDot">*</strong>
+		<input required type="text" value ="" name ="typ_koldbarare" id = "requiredtextframe"/>
+		</div>
 		  
 		<div id = "rowfix">
 		<label for="mangd_koldmedium">Mängd köldmedium, kg</label><strong id="startDot">*</strong>
@@ -93,6 +98,7 @@ if(isset($_POST['next'])){
 	$vinkel=mysqli_real_escape_string($con,$_POST['vinkel']);
     $effekt=mysqli_real_escape_string($con,$_POST['effekt']);
     $typ_koldmedium=mysqli_real_escape_string($con,$_POST['typ_koldmedium']);
+	$typ_koldbarare=mysqli_real_escape_string($con,$_POST['typ_koldbarare']);
 	$mangd_koldmedium=mysqli_real_escape_string($con,$_POST['mangd_koldmedium']);
 	$volym_koldbararvatska=mysqli_real_escape_string($con,$_POST['volym_koldbararvatska']);
     $namn_koldbararvatska=mysqli_real_escape_string($con,$_POST['namn_koldbararvatska']);
@@ -100,7 +106,7 @@ if(isset($_POST['next'])){
 	$andel_frostskyddsmedel=mysqli_real_escape_string($con,$_POST['andel_frostskyddsmedel']);    
 	
 		$insertContact = "INSERT INTO varmepump values('3','".$anlaggning."','".$fabrikat."','".$modell."',
-		'".$vinkel."','".$effekt."','".$typ_koldmedium."','".$mangd_koldmedium."','".$volym_koldbararvatska."','".$namn_koldbararvatska."',
+		'".$vinkel."','".$effekt."','".$typ_koldmedium."','".$typ_koldbarare."','".$mangd_koldmedium."','".$volym_koldbararvatska."','".$namn_koldbararvatska."',
 		'".$fabrikat_koldbararvatska."','".$andel_frostskyddsmedel."')";		
 		 if(mysqli_query($con, $insertContact)){
             echo "<div class='ok'>Informationen har sparats</div>";

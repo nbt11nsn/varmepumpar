@@ -73,7 +73,7 @@ require_once(__DIR__ .'./../../db.php');
 		</div>
 		</div>
 
-  	<div>	
+  	<div id= "buttons">		
 		<input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;">
 		<input type="submit" value="Nästa" name ="next" onclick="document.getElementById('checked5').style.backgroundColor = 'lightgreen';">
 		</div>	

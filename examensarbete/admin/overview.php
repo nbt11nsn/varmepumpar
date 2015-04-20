@@ -138,7 +138,7 @@ echo '<div id="infoframeoverview">
 
 <div id ="thirdframe">
 <div id ="overviewtitle">Köldbärartyp</div>
-<input type="box" value ="" name ="port" id ="overviewboxsmini"/>
+<input type="box" value ="" name ="" id ="overviewboxsmini"/>
 </div>
 
 <div id ="thirdframe">
