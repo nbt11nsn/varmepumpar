@@ -25,7 +25,7 @@ require_once(__DIR__ .'./../../db.php');
  <h1 id = "smallTitle">Fastighetsuppgifter</h1>
 
 	<div id = "rowfix">
-		<label for="namn">Fastighetsbeteckning </label><strong id="startDot">*</strong>
+		<label for="beteckning">Fastighetsbeteckning </label><strong id="startDot">*</strong>
 		<input required type="text" align="left"  maxlength="50" value = ""  name="beteckning" placeholder="ex. Eldkvarnen 1" id="requiredtextframe"/>
 		</div>
 	 <div id = "rowfix">			
@@ -48,12 +48,12 @@ require_once(__DIR__ .'./../../db.php');
 		</form>
 <?php	
 if(isset($_POST['next'])&&!empty($_POST['beteckning'])){
-	$name=mysqli_real_escape_string($con,$_POST['beteckning']);
-    $pers=mysqli_real_escape_string($con,$_POST['adress']);
-    $post=mysqli_real_escape_string($con,$_POST['postnummer']);
+	$beteckning=mysqli_real_escape_string($con,$_POST['beteckning']);
+    $adress=mysqli_real_escape_string($con,$_POST['adress']);
+    $postnummer=mysqli_real_escape_string($con,$_POST['postnummer']);
 	$port=mysqli_real_escape_string($con,$_POST['port']);	
 			        
-		$insertContact = "INSERT INTO fastighet values('1','".$name."','".$pers."','".$post."','".$port."')";		
+		$insertContact = "INSERT INTO fastighet values('1','".$name."','".$adress."','".$postnummer."','".$port."')";		
 		 if(mysqli_query($con, $insertContact)){
             echo "<div class='ok'>Informationen har sparats</div>";
         }

@@ -25,35 +25,18 @@ require_once(__DIR__ .'./../../db.php');
   <h1 id = "smallTitle">Installatör</h1>	
 		
 		<div id = "rowfix">
-		<label for="kontpers">Kontaktperson</label><strong id="startDot">*</strong>
+		<label for="kontpers">Företagsnamn</label><strong id="startDot">*</strong>
 		<input required type="text" value = "" name = "kontpers" id = "requiredtextframe"/>
 		</div>
-		
-	 <div id = "rowfix">	
-		<label for="adress">Gatuadress</label><strong id="startDot">*</strong>
-		<input required type="text" value = "" name = "adress" placeholder="ex. Brunnsgatan 59" id = "requiredtextframe"/>
-		</div>
-	 <div id = "rowfix">		
-		<label for="postnummer">Postnummer</label><strong id="startDot">*</strong>
-		<input required type="text" value = "" name = "postnummer" placeholder="ex. 80252" id = "requiredtextframe"/>
-		</div>
-	 <div id = "rowfix">	
-		<label for="port">Postort</label><strong id="startDot">*</strong>
-		<input required type="text" value = "" name = "port" placeholder="ex. Gävle" id = "requiredtextframe"/>
-		</div>
+	
 	 <div id = "rowfix">	
 		<label for="teledag">Telefonnummer dagtid(inklusive riktnummer)</label><strong id="startDot">*</strong>
 		<input required type="text" value = "" name = "teledag" placeholder="Hemnummer eller mobilnummer" id = "requiredtextframe"/>
 		</div>
-	 <div id = "rowfix">	
-		<label for="alttele">Alternativt telefonnummer(inklusive riktnummer)</label>
+			 <div id = "rowfix">	
+		<label for="alttele">Har företaget certifikat?</label>
 		<input type="text" value = "" name = "alttele" placeholder="Hemnummer eller mobilnummer" id = "opentextframe"/>
 		</div>
-	 <div id = "rowfix">	
-		<label for="epost">E-postadress</label>
-		<input type="text" value = "" name = "epost" placeholder="ex. Niklas@hotmail.com" id = "opentextframe"/>	
-		</div>	
-		  	
 		<div>	
 		<input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;">
 		<input type="submit" value="Nästa" name ="next" onclick="document.getElementById('checked6').style.backgroundColor = 'lightgreen';">

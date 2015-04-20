@@ -22,52 +22,62 @@ require_once(__DIR__ .'./../../db.php');
 ?>
  <div id="infoframe">
       <form action='' method='post' id ='postContracts' enctype="multipart/form-data">
-  <h1 id = "smallTitle">Borrfirma</h1>	
+	  <div id = "splitscreen">
+	  <div id ="rightscreen">
+	<h1 id = "smallTitle">Borrfirma</h1>	
   
-		<div id = "rowfix">
-		<label for="sitac">SITACS certifieringsnummer</label><strong id="startDot">*</strong>
-	    <input required type="text" value = "" name = "sitac" id = "requiredtextframe"/>
-	    </div>
-		
 		<div id = "rowfix">
 		<label for="fnamn">Företagsnamn</label><strong id="startDot">*</strong>
 		<input required type="text" value = "" name = "fnamn" id = "requiredtextframe"/>
 		</div>
 		
-		<div id = "rowfix">
-		<label for="kontpers">Kontaktperson</label><strong id="startDot">*</strong>
-		<input required type="text" value = "" name = "kontpers" id = "requiredtextframe"/>
-		</div>
-		
-	 <div id = "rowfix">	
-		<label for="adress">Gatuadress</label><strong id="startDot">*</strong>
-		<input required type="text" value = "" name = "adress" placeholder="ex. Brunnsgatan 59" id = "requiredtextframe"/>
-		</div>
-	 <div id = "rowfix">		
-		<label for="postnummer">Postnummer</label><strong id="startDot">*</strong>
-		<input required type="text" value = "" name = "postnummer" placeholder="ex. 80252" id = "requiredtextframe"/>
-		</div>
-	 <div id = "rowfix">	
-		<label for="port">Postort</label><strong id="startDot">*</strong>
-		<input required type="text" value = "" name = "port" placeholder="ex. Gävle" id = "requiredtextframe"/>
-		</div>
 	 <div id = "rowfix">	
 		<label for="teledag">Telefonnummer dagtid(inklusive riktnummer)</label><strong id="startDot">*</strong>
 		<input required type="text" value = "" name = "teledag" placeholder="Hemnummer eller mobilnummer" id = "requiredtextframe"/>
 		</div>
 	 <div id = "rowfix">	
-		<label for="alttele">Alternativt telefonnummer(inklusive riktnummer)</label>
-		<input type="text" value = "" name = "alttele" placeholder="Hemnummer eller mobilnummer" id = "opentextframe"/>
+		<label for="alttele">Har företaget certifikat?</label>
+		<div id ="radiodesignyes">
+		<label for="yes">Ja</label>
+		<input type="radio" value = "" name = "yes" id = "radiobutton"/>
+			</div>
+			<div id ="radiodesignno">
+		<label for="yes">Nej</label>
+		<input type="radio" value = "" name = "alttele" id = "radiobutton"/>
 		</div>
+		</div>
+		</div>
+		
+		<h1 id = "smallTitle">Installatör</h1>	
+  
+		<div id = "rowfix">
+		<label for="fnamn">Företagsnamn</label><strong id="startDot">*</strong>
+		<input required type="text" value = "" name = "fnamn" id = "requiredtextframe"/>
+		</div>
+		
 	 <div id = "rowfix">	
-		<label for="epost">E-postadress</label>
-		<input type="text" value = "" name = "epost" placeholder="ex. Niklas@hotmail.com" id = "opentextframe"/>	
-		</div>	
+		<label for="teledag">Telefonnummer dagtid(inklusive riktnummer)</label><strong id="startDot">*</strong>
+		<input required type="text" value = "" name = "teledag" placeholder="Hemnummer eller mobilnummer" id = "requiredtextframe"/>
+		</div>
+		
+	 <div id = "rowfix">	
+		<label for="alttele">Har företaget certifikat?</label>
+		<div id ="radiodesignyes">
+				<label for="yes">Ja</label>
+		<input type="radio" value = "" name = "yes" id = "radiobutton"/>
+		</div>
+		<div id ="radiodesignno">
+		<label for="yes">Nej</label>
+		<input type="radio" value = "" name = "alttele" id = "radiobutton"/>
+		</div>
+		</div>
+		</div>
 
   	<div>	
 		<input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;">
 		<input type="submit" value="Nästa" name ="next" onclick="document.getElementById('checked5').style.backgroundColor = 'lightgreen';">
-		</div>		
+		</div>	
+</div>		
  </form>
  
  <?php	
