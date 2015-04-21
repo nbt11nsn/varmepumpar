@@ -27,23 +27,21 @@ require_once(__DIR__ .'./../../db.php');
 	<h1 id = "smallTitle">Borrfirma</h1>	
   
 		<div id = "rowfix">
-		<label for="fnamn">Företagsnamn</label><strong id="startDot">*</strong>
-		<input required type="text" value = "" name = "fnamn" id = "requiredtextframe"/>
+		<label for="borr_namn">Företagsnamn</label><strong id="startDot">*</strong>
+		<input required type="text" value = "" name ="borr_namn" id = "requiredtextframe"/>
 		</div>
 		
 	 <div id = "rowfix">	
-		<label for="teledag">Telefonnummer dagtid(inklusive riktnummer)</label><strong id="startDot">*</strong>
-		<input required type="text" value = "" name = "teledag" placeholder="Hemnummer eller mobilnummer" id = "requiredtextframe"/>
+		<label for="borr_tele">Telefonnummer dagtid(inklusive riktnummer)</label><strong id="startDot">*</strong>
+		<input required type="text" value = "" name ="borr_tele" placeholder="Hemnummer eller mobilnummer" id = "requiredtextframe"/>
 		</div>
 	 <div id = "rowfix">	
-		<label for="alttele">Har företaget certifikat?</label>
-		<div id ="radiodesignyes">
-		<label for="yes">Ja</label>
-		<input type="radio" value = "" name = "yes" id = "radiobutton"/>
-			</div>
-			<div id ="radiodesignno">
-		<label for="yes">Nej</label>
-		<input type="radio" value = "" name = "alttele" id = "radiobutton"/>
+		<label for="borr_certifiering">Har företaget certifikat?</label>
+		<div id ="radiobuttons">
+		<INPUT TYPE="radio" NAME="borr_certifiering" VALUE="Ja">Ja
+		<div id="radiomargin">
+		<INPUT TYPE="radio" NAME="borr_certifiering" VALUE="Nej">Nej
+		</div>
 		</div>
 		</div>
 		</div>
@@ -51,24 +49,22 @@ require_once(__DIR__ .'./../../db.php');
 		<h1 id = "smallTitle">Installatör</h1>	
   
 		<div id = "rowfix">
-		<label for="fnamn">Företagsnamn</label><strong id="startDot">*</strong>
-		<input required type="text" value = "" name = "fnamn" id = "requiredtextframe"/>
+		<label for="install_namn">Företagsnamn</label><strong id="startDot">*</strong>
+		<input required type="text" value = "" name ="install_namn" id = "requiredtextframe"/>
 		</div>
 		
 	 <div id = "rowfix">	
-		<label for="teledag">Telefonnummer dagtid(inklusive riktnummer)</label><strong id="startDot">*</strong>
-		<input required type="text" value = "" name = "teledag" placeholder="Hemnummer eller mobilnummer" id = "requiredtextframe"/>
+		<label for="install_tele">Telefonnummer dagtid(inklusive riktnummer)</label><strong id="startDot">*</strong>
+		<input required type="text" value = "" name ="install_tele" placeholder="Hemnummer eller mobilnummer" id = "requiredtextframe"/>
 		</div>
 		
 	 <div id = "rowfix">	
-		<label for="alttele">Har företaget certifikat?</label>
-		<div id ="radiodesignyes">
-				<label for="yes">Ja</label>
-		<input type="radio" value = "" name = "yes" id = "radiobutton"/>
+		<label for="install_certifiering">Har företaget certifikat?</label>
+		<div id ="radiobuttons">
+		<INPUT TYPE="radio" NAME="install_certifiering" VALUE="Ja">Ja
+		<div id="radiomargin">
+		<INPUT TYPE="radio" NAME="install_certifiering" VALUE="Nej">Nej
 		</div>
-		<div id ="radiodesignno">
-		<label for="yes">Nej</label>
-		<input type="radio" value = "" name = "alttele" id = "radiobutton"/>
 		</div>
 		</div>
 		</div>
@@ -81,20 +77,18 @@ require_once(__DIR__ .'./../../db.php');
  </form>
  
  <?php	
-if(isset($_POST['next'])&&!empty($_POST['sitac'])&&!empty($_POST['fnamn'])&&!empty($_POST['kontpers'])
-		&&!empty($_POST['adress'])&&!empty($_POST['postnummer'])&&!empty($_POST['port'])&&!empty($_POST['teledag'])){
-	$sitac=mysqli_real_escape_string($con,$_POST['sitac']);
-    $fnamn=mysqli_real_escape_string($con,$_POST['fnamn']);
-    $kontpers=mysqli_real_escape_string($con,$_POST['kontpers']);
-	$adress=mysqli_real_escape_string($con,$_POST['adress']);	
-	$postnummer=mysqli_real_escape_string($con,$_POST['postnummer']);
-    $port=mysqli_real_escape_string($con,$_POST['port']);
-	$teledag=mysqli_real_escape_string($con,$_POST['teledag']);	
-	$alttele=mysqli_real_escape_string($con,$_POST['alttele']);
-	$epost=mysqli_real_escape_string($con,$_POST['epost']);
+if(isset($_POST['next'])&&!empty($_POST['borr_namn'])&&!empty($_POST['borr_tele'])&&!empty($_POST['borr_certifiering'])
+		&&!empty($_POST['install_namn'])&&!empty($_POST['install_tele'])&&!empty($_POST['install_certifiering'])){
+	$borr_namn=mysqli_real_escape_string($con,$_POST['borr_namn']);
+    $borr_tele=mysqli_real_escape_string($con,$_POST['borr_tele']);
+    $borr_certifiering=mysqli_real_escape_string($con,$_POST['borr_certifiering']);
+	$install_namn=mysqli_real_escape_string($con,$_POST['install_namn']);	
+	$install_tele=mysqli_real_escape_string($con,$_POST['install_tele']);
+    $install_certifiering=mysqli_real_escape_string($con,$_POST['install_certifiering']);
 			        
-		$insertContact = "INSERT INTO borrfirma values('1','".$sitac."','".$fnamn."','".$kontpers."','".$adress."','".$postnummer."','".$port."','".$teledag."','".$alttele."','".$epost."')";		
-		 if(mysqli_query($con, $insertContact)){
+		$insertContact = "INSERT INTO borrfirma values('3','".$borr_namn."','".$borr_tele."','".$borr_certifiering."')";		
+		$insertContact2 = "INSERT INTO installator values('3','".$install_namn."','".$install_tele."','".$install_certifiering."')";
+		 if(mysqli_query($con, $insertContact) && mysqli_query($con, $insertContact2)){
             echo "<div class='ok'>Informationen har sparats</div>";
         }
         else{

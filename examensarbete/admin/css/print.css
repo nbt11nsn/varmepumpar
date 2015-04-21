@@ -1,7 +1,6 @@
-
 #invoiceframe { 
-  width: 1280px; 
-  min-height: 800px;
+  width: 1000px; 
+  min-height: 600px;
   height: 100%;
   background: #fcfcfc; 
   display: inline-block; 
@@ -11,6 +10,29 @@
 background: #efefef; 
 }
 
+#uploadbutton{
+	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+	border-radius: 10px;  	
+	padding: 10px 20px;
+	color: #EA005A; 
+	font: 18px Arial,sans-serif;
+}
+
+#choicebutton{
+	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+	border-radius: 10px;  	
+	color: #EA005A;
+	margin-top: 10px;	
+	font: 18px Arial,sans-serif;
+	border: hidden;
+}
+
 input[type="checkbox"] {
  -ms-transform: scale(1.5); /* IE */
   -moz-transform: scale(1.5); /* FF */
@@ -18,6 +40,10 @@ input[type="checkbox"] {
   -o-transform: scale(1.5); /* Opera */
 }
 
+/* #########################FAKTURA SLUT############################# */
+/* #########################INFO BÖRJAN############################# */
+
+/* #########################Exjobbet BÖRJAN############################# */
 fieldset {
 padding-bottom: 10px;
 padding-top: 10px;
@@ -25,8 +51,8 @@ padding-top: 10px;
 }
 
 #frame { 
-  width: 1280px; 
-  min-height: 800px;
+  width: 1000px; 
+  min-height: 600px;
   height: 100%;
   background: #fff; 
   text-align: center;
@@ -71,8 +97,8 @@ margin-bottom: 10px;
 
 #testing{
   display:inline-block;
-  width: 1280px; 
-  min-height: 800px;
+  width: 1000px; 
+  min-height: 600px;
   height: 100%;
   background: #fff; 
   text-align: left;
@@ -89,6 +115,7 @@ padding-bottom: 50px;
 
 }
 
+/*overview testet*/
 #forsta{
 display:inline-block;
 padding-right: 200px;
@@ -104,53 +131,57 @@ border-bottom: 1px solid black;
 }
 
 #first{
-width: 800px;
+width: 600px;
 float: left;
 border-right: 1px solid black;
 }
 
 #second{
 border-right: 1px solid black;
+
 width: 50%;
 float: left;
 }
 
 #thirdframe{
-border-right: 1px solid black;
 width: 25%;
 float: left;
 }
 
-#third{
-}
-#fourth{
-
+#makespace{
+margin-bottom: 340px;
 }
 
 #overviewboxfull{
-width: 1161px;
+width: 830px;
+max-height: 20px;
 border: none;
-
 }
 #overviewboxlong{
-width: 783px;
+width: 480px;
 border: none;
-
+margin-left: 5px;
+margin-bottom: 5px;
 }
 #overviewboxmedium{
-width: 572px;
+width: 380px;
 border: none;
+margin-left: 5px;
+margin-bottom: 5px;
 }
 #overviewboxsmall{
-width: 360px;
+width: 180px;
 border: none;
+margin-left: 5px;
+margin-bottom: 5px;
 }
 #overviewboxsmini{
-width: 275px;
+width: 170px;
 border: none;
-
+border-right: 1px solid black;
+margin-left: 1px;
+margin-bottom: 1px;
 }
-
 #overviewareatitle3{
 text-align: left;
 margin-left: 50px;
@@ -183,8 +214,8 @@ margin-bottom: 10px;
 
 #infoframeoverview{
   display:inline-block;
-  width: 1280px; 
-  min-height: 800px;
+  width: 1000px; 
+  min-height: 600px;
   height: 100%;
   background: #fff; 
   text-align: left;
@@ -211,12 +242,12 @@ input[type="checkbox"]:checked ~ .reveal-if-active {
 }
 
 #header-wrapper {
-  width: 1280px;
+  width: 1000px;
   height: 100%;
 }
 
 #footer-wrapper{
-  width: 1280px;
+  width: 1000px;
   height: 100%;
 }
 #radiomargin{
@@ -228,42 +259,18 @@ padding-bottom: 3px;
 padding-top: 5px;
 display: flex;
 }
-input[type="radio"] {
-   height: 18px;
-   width: 18px;
-   display: inline-block;
-   cursor: pointer;
-   vertical-align: middle;
-   background: #FFF;
-   border: 1px solid #d2d2d2;
-   border-radius: 100%;
-}
+
 nav ul{
   list-style:none;
-  width: 1280px;
+  width: 1000px;
   position:relative;
   display:inline-block;
 }
 
-#opentextframe{
-text-align: left;
-padding-top: 5px;
-min-width: 500px;
-}
-
-#startDot{
-color: #d81c1c;
-}
-
-#requiredtextframe{	
-text-align: left;
-padding-top: 5px;
-width: 500px;
-}
 
 #infoframe {
-  width: 1280px; 
-  min-height: 800px;
+  width: 1000px; 
+  min-height: 600px;
   height: 100%;
   background: #fff; 
   text-align: left;
@@ -285,7 +292,7 @@ width: 500px;
   padding-bottom:10px;
 }
 #main-wrapper {
-  width: 1280px;
+  width: 1000px;
   height: 100%;
 }
 
@@ -339,7 +346,7 @@ input[type="button"]:active, input[type="button"]:active {
 
 }
 
-/* style fÃ¶r label */
+/* style för label */
 label {
   padding-bottom: 10px;
   clear: left;
@@ -363,7 +370,7 @@ label {
   width: 75%;
   float: left;
 }
-/*Ã¥terstÃ¤ll/ladda faktura knappen*/
+/*återställ/ladda faktura knappen*/
 #username{
     width:360px;
 }
@@ -378,10 +385,10 @@ label {
     color: #000;
     font-weight: bold;
     display: inline-block;
-    width: 1280px;
+    width: 1000px;
 }
 
-/* dÃ¶lj innehÃ¥ll */
+/* dölj innehåll */
 .hide{
     display:none;
 }
@@ -392,10 +399,10 @@ label {
     color: #000;
     font-weight: bold;
     display: inline-block;
-    width: 1280px;
+    width: 1000px;
 }
 
-/* generella instÃ¤llningar fÃ¶r submit */
+/* generella inställningar för submit */
 .submit {
   text-align: center;
   margin-top: 20px;
@@ -446,7 +453,7 @@ b{
     font-weight:bold;
 }
 
-/* generella instÃ¤llningar fÃ¶r body */
+/* generella inställningar för body */
 body{
   background: #F2F2F2; 
   color:#969;
@@ -454,7 +461,7 @@ body{
   text-align: center;
 }
 
-/* Form hÃ¶jd, marginal och padding */
+/* Form höjd, marginal och padding */
 form ul {
   list-style: none;
   margin: 0;
@@ -471,7 +478,7 @@ form * {
   text-align:left;
 }
 
-/* Ã¤ndra fÃ¤rg pÃ¥ border nÃ¤r fÃ¤ltet Ã¤r markerat */
+/* ändra färg på border när fältet är markerat */
 
 
 /*#####################################################*/
@@ -480,15 +487,15 @@ form * {
 /*#####################################################*/
 /*#####################################################*/
 
-/* generella instÃ¤llningar fÃ¶r nav */
+/* generella inställningar för nav */
 nav{
   text-align: left;
-  width: 1280px;
+  width: 1000px;
 }
 
 nav ul{
   list-style:none;
-  width: 1280px;
+  width: 1000px;
   position:relative;
   display:inline-block;
 }
@@ -575,7 +582,7 @@ nav > ul > li.selected:last-child:after{
   border-radius:0 5px 5px 0;
 }
 #extendmenuebarbig{
-width: 241px;
+width: 80px;
   display:block;
   text-decoration:none;
   color: #5d5d5d;
@@ -589,7 +596,7 @@ width: 241px;
   white-space:nowrap;
 }
 #extendmenuebarsmall{
-width: 133px;
+width: 50px;
   display:block;
   text-decoration:none;
   color: #5d5d5d;
@@ -603,7 +610,7 @@ width: 133px;
   white-space:nowrap;
 }
 nav ul li a{
-width: 121px;
+width: 40px;
   display:block;
   text-decoration:none;
   color: #5d5d5d;

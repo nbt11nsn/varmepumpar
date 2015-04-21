@@ -40,11 +40,67 @@ require_once(__DIR__ .'./../../db.php');
 		<label for="port">Postort(om annan än sökandes postort)</label>
 		<input type="text" value = "" name ="port" placeholder="ex. Gävle" id = "requiredtextframe"/>
 		</div>
+		
+			 <div id = "rowfix">	
+		<label for="port">Finns anslutning inom skyddsområde för dricksvattentäkt</label><strong id="startDot">*</strong>
+		<div id ="radiobuttons">
+		<INPUT required TYPE="radio" NAME="q1" VALUE="Ja, inre">Ja, inre
+		<div id="radiomargin">
+		<INPUT TYPE="radio" NAME="q1" VALUE="Ja, yttre">Ja, yttre
+		</div>
+		<div id="radiomargin">
+		<INPUT TYPE="radio" NAME="q1" VALUE="Nej">Nej
+		</div>
+		</div>	
+	</div>
 	
-	<div>	
+	 <div id = "rowfix">	
+		<label for="port">Finns anslutning till kommunalt vatten</label><strong id="startDot">*</strong>
+		<div id ="radiobuttons">
+		<INPUT required TYPE="radio" NAME="q2" VALUE="Ja">Ja
+		<div id="radiomargin">
+		<INPUT TYPE="radio" NAME="q2" VALUE="Nej">Nej
+		</div>
+		</div>
+	</div>
+		
+	 <div id = "rowfix">	
+		<label for="port">Finns anslutning till kommunalt avlopp</label><strong id="startDot">*</strong>
+		<div id ="radiobuttons">
+		<INPUT required TYPE="radio" NAME="q3" VALUE="Ja">Ja
+		<div id="radiomargin">
+		<INPUT TYPE="radio" NAME="q3" VALUE="Nej">Nej
+		</div>	
+		</div>	
+	</div>
+		
+	 <div id = "rowfix">	
+		<label for="port">Finns anslutning inom skyddsområde för dricksvattentäkt</label><strong id="startDot">*</strong>
+		<div id ="radiobuttons">	
+		<INPUT required TYPE="radio" NAME="q4" VALUE="Ja">Ja
+		<div id="radiomargin">
+		<INPUT TYPE="radio" NAME="q4" VALUE="Nej">Nej
+		</div>
+		</div>
+	</div>
+		
+	 <div id = "rowfix">	
+		<label for="port">Fastigheten har tidigare oljeuppvärmning</label><strong id="startDot">*</strong>
+		<div id ="radiobuttons">
+		<INPUT required TYPE="radio" NAME="q5" VALUE="Ja, cistern tas bort">Ja, cistern tas bort
+		<div id="radiomargin">
+		<INPUT TYPE="radio" NAME="q5" VALUE="Ja, cistern kvar">Ja, cistern kvar
+		</div>	
+		<div id="radiomargin">
+		<INPUT TYPE="radio" NAME="q5" VALUE="Nej">Nej
+		</div>	
+		</div>	
+	</div>
+		
+			<div>	
 		<input Type="button" value="Tillbaka" onClick="history.go(-1);return true;">
 		<input type="submit" value="Nästa" name ="next" onclick="document.getElementById('checked1').style.backgroundColor = 'lightgreen';">
-		</div>		
+		</div>	
 		</form>
 <?php	
 if(isset($_POST['next'])&&!empty($_POST['beteckning'])){
@@ -52,8 +108,15 @@ if(isset($_POST['next'])&&!empty($_POST['beteckning'])){
     $adress=mysqli_real_escape_string($con,$_POST['adress']);
     $postnummer=mysqli_real_escape_string($con,$_POST['postnummer']);
 	$port=mysqli_real_escape_string($con,$_POST['port']);	
+	$q1=mysqli_real_escape_string($con,$_POST['q1']);
+    $q2=mysqli_real_escape_string($con,$_POST['q2']);
+    $q3=mysqli_real_escape_string($con,$_POST['q3']);
+	$q4=mysqli_real_escape_string($con,$_POST['q4']);
+	$q5=mysqli_real_escape_string($con,$_POST['q5']);
+
 			        
-		$insertContact = "INSERT INTO fastighet values('1','".$name."','".$adress."','".$postnummer."','".$port."')";		
+		$insertContact = "INSERT INTO fastighet values('2','".$beteckning."','".$adress."','".$postnummer."','".$port."','".$q1."','".$q2."','".$q3."','".$q4."','".$q5."')";
+		echo $insertContact;		
 		 if(mysqli_query($con, $insertContact)){
             echo "<div class='ok'>Informationen har sparats</div>";
         }
