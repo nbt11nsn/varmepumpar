@@ -1,3 +1,54 @@
+#printheader{
+  width: 1024px; 
+  min-height: 300px;
+  height: 100%;
+  background: #fff; 
+  text-align: left;
+  padding:25px 10%;
+}
+
+#printTitle{
+position: absolute;
+top:150px;
+left:250px;
+font-size: 28px; 
+font-style: bold;
+
+}
+#image{
+position: absolute;
+top:80px;
+left:100px;
+}
+#date{
+position: absolute;
+top:240px;
+left:704px;
+font-size: 20px; 
+}
+#question{
+font-size: 23px; 
+color: #111;
+font-style: bold;
+}
+#info{
+font-size: 20px; 
+}
+#infotext{
+position: absolute;
+top:270px;
+left:380px;
+}
+#infotext1{
+float: left;
+}
+
+#infotext2{
+padding-left: 100px;
+float: left;
+}
+
+
 #invoiceframe { 
   width: 1000px; 
   min-height: 600px;
@@ -149,7 +200,7 @@ float: left;
 }
 
 #makespace{
-margin-bottom: 340px;
+margin-bottom: 300px;
 }
 
 #overviewboxfull{

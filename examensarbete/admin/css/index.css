@@ -1,3 +1,55 @@
+#printheader{
+  width: 1024px; 
+  min-height: 300px;
+  height: 100%;
+  background: #fff; 
+  text-align: left;
+  padding:25px 10%;
+}
+
+#printTitle{
+position: absolute;
+top:280px;
+left:250px;
+font-size: 33px; 
+font-style: bold;
+
+}
+#image{
+position: absolute;
+top:210px;
+left:100px;
+}
+#date{
+position: absolute;
+top:370px;
+left:704px;
+font-size: 20px; 
+}
+#question{
+font-size: 23px; 
+color: #111;
+font-style: bold;
+}
+#info{
+font-size: 20px; 
+}
+#infotext{
+position: absolute;
+top:400px;
+left:380px;
+}
+#infotext1{
+float: left;
+}
+
+#infotext2{
+padding-left: 100px;
+float: left;
+}
+
+
+
 
 #invoiceframe { 
   width: 1280px; 

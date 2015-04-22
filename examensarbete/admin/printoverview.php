@@ -11,10 +11,12 @@ include_once("include/head.php");
 <script language="javascript" type="text/javascript" src = "include/print.js?"></script>
 </head>
 <body>
+
 <?php
 defined('THE_HEADER') || define('THE_HEADER', TRUE);
 require_once("include/header.php");
 ?>
+
 <div id="main-wrapper">
 <?php
 defined('THE_MENUE') || define('THE_MENUE', TRUE);
@@ -25,9 +27,37 @@ require_once(__DIR__ .'./../../db.php');
 ?>
 		<a href="overview.php"><input type="button" name ="next" value="Översikt" onclick="">
 		<a href="printoverview.php"><input type="button" name ="next" value="Skriv ut ansökan" onclick="">
+		<input type="button" onclick="printDiv('printableArea')" value="Skriv ut" />
 	<?php 
 	$isqlpers = "SELECT * FROM person, fakturamottagare, fastighet, varmepump, borrfirma, installator";
-	?>
+	?>		
+<div id="printableArea">
+<div id ="printheader">
+<div id="image">
+<img src="images/gavle.png" width="80" height="140" alt="My Pic">
+</div>
+<div id ="printTitle">Tillstånd för inrättande av värmepumpsanläggning, ansökan</div>
+
+<div id ="date">Datum: <?php
+echo date("Y/m/d");
+?></div>
+
+<div id ="infotext">
+<div id="infotext1">
+<div id ="question">Har du frågor?</div>
+<div id ="info">Samhällsbyggnad Gävle</div>
+<div id ="info">Telefon 026-178000</div>
+<div id ="info">samhallsbyggnad@gavle.se</div>
+</div>
+<div id="infotext2">
+<div id ="question">Skickas till</div>
+<div id ="info">Gävle kommun</div>
+<div id ="info">Samhällsbyggnad Gävle</div>
+<div id ="info">801 84 GÄVLE</div>
+</div>
+</div>
+</div>
+
 	<?php 	
 	$iresult = mysqli_query($con, $isqlpers);
 	if (mysqli_num_rows($iresult) != 0) {
@@ -167,7 +197,7 @@ echo '<div id="infoframeoverview">
 </div>
 
 <div id ="third">
-<div id ="overviewtitle">Fastigheten ligger inom skyddsområde för dricksvattentäkt</div>
+<div id ="overviewtitle">Fastigheten ligger inom skyddsomåde för dricksvattentäkt</div>
 <input type="box" value ="'.$irows2["q3"].'" name ="q3" id ="overviewboxfull"/>
 </div>
 
@@ -218,14 +248,43 @@ echo '<div id="infoframeoverview">
 <h1 id ="overviewareatitle2">Bilagor</h1>
 <div id ="applicantframe">
 
-<div id ="third">
+<div id ="second">
 <div id ="overviewtitle">Karta skickas via post</div>
 <input type="box" value ="" name ="skickakarta" id ="overviewboxmedium"/>
 </div>
 
-<div id ="third">
+<div>
 <div id ="overviewtitle">Bifogad karta</div>
 <input type="box" value ="" name ="bifogakarta" id ="overviewboxmedium"/>
+</div>
+</div>
+
+<h1 id ="overviewareatitle2">Avgifter</h1>
+<div id ="applicantframe">
+<div id ="overviewtitle"> </div>
+<input type="box" value ="En avgift enligt kommunfullmäktiges fastställda taxa tas ut för handläggning av ansökan." name ="bifogakarta" id ="overviewboxfull"/>
+</div>
+
+<h1 id ="overviewareatitle2">Personuppgiftslagen</h1>
+<div id ="applicantframe">
+<div id ="overviewtitle"> </div>
+<input type="box" value ="Ovanstående personuppgifter kommer att behandlas enligt personuppgiftslagen (PUL)." name ="bifogakarta" id ="overviewboxfull"/>
+</div>
+
+<h1 id ="overviewareatitle2">Underskrift</h1>
+<div id ="applicantframe">
+<div id ="third">
+<div id ="overviewtitle">Datum</div>
+<input type="box" value ="" name ="install_certifiering" id ="overviewboxfull"/>
+</div>
+<div id ="second">
+<div id ="overviewtitle">Underskrift</div>
+<input type="box" value ="" name ="install_namn" id ="overviewboxmedium"/>
+</div>
+
+<div>
+<div id ="overviewtitle">Namnförtydligande</div>
+<input type="box" value ="" name ="install_tele" id ="overviewboxmedium"/>
 </div>
 </div>';
 		}	
@@ -233,11 +292,13 @@ echo '<div id="infoframeoverview">
 		?>
 		</div>
 
-</div><!--main-wrapper-->
+<!--main-wrapper-->
 <?php
 defined('THE_FOOTER') || define('THE_FOOTER', TRUE);
 require_once("include/footer.php");
 ?>
+</div>
+</div>
 </body>
 </html>
 
