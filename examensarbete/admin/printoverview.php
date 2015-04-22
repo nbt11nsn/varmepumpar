@@ -25,9 +25,20 @@ defined('THE_DB') || define('THE_DB', TRUE);
 require_once(__DIR__ .'./../../db.php');
 
 ?>
-		<a href="overview.php"><input type="button" name ="next" value="Översikt" onclick="">
-		<a href="printoverview.php"><input type="button" name ="next" value="Skriv ut ansökan" onclick="">
-		<input type="button" onclick="printDiv('printableArea')" value="Skriv ut" />
+
+<form method="get" action="overview.php">
+<button type="submit" id ="overviewbuttonsmall">Översikt</button>
+</form>
+
+<form method="get" action="printoverview.php">
+<button type="submit" id ="overviewbuttonbig">Skriv ut ansökan</button>
+</form>
+
+<form method="get" onclick="printDiv('printableArea')">
+<button type="submit" id ="overviewbuttonsmall">Skriv ut</button>
+</form>
+
+		
 	<?php 
 	$isqlpers = "SELECT * FROM person, fakturamottagare, fastighet, varmepump, borrfirma, installator";
 	?>		

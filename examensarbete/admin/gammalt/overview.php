@@ -23,14 +23,8 @@ defined('THE_DB') || define('THE_DB', TRUE);
 require_once(__DIR__ .'./../../db.php');
 
 ?>
-<form method="get" action="overview.php">
-    <button type="submit" id ="overviewbuttonsmall">Översikt</button>
-</form>
-<form method="get" action="printoverview.php">
-    <button type="submit" id ="overviewbuttonbig">Skriv ut ansökan</button>
-</form>
-
-		
+		<a href="overview.php"><input type="button" name ="next" value="Översikt" onclick="">
+		<a href="printoverview.php"><input type="button" name ="next" value="Skriv ut ansökan" onclick="">
 	<?php 
 	$isqlpers = "SELECT * FROM person, fakturamottagare, fastighet, varmepump, borrfirma, installator";
 	?>
@@ -44,8 +38,8 @@ echo '<div id="infoframeoverview">
 
 <div id ="first">
 
-<div id ="overviewtitle">Namn</div>
-<input type="box" value ="'.$irows2["fornamn"].'" "'.$irows2["efternamn"].'" name ="fornamn" id ="overviewboxlong"/>
+<div id ="overviewtitle">Förnamn</div>
+<input type="box" value ="'.$irows2["fornamn"].'" name ="fornamn" id ="overviewboxlong"/>
 <div id ="overviewtitle">Efternamn</div>
 <input type="box" value ="'.$irows2["efternamn"].'" name ="efternamn" id ="overviewboxlong"/>
 <div id ="overviewtitle">Utdelningsadress</div>
