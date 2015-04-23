@@ -52,15 +52,18 @@ require_once(__DIR__ .'./../../db.php');
 		<label for="effekt">Effekt, kW</label><strong id="startDot">*</strong>
 		<input required type="text" value ="" name ="effekt" id = "requiredtextframe"/>
 		</div>
+				<div id = "rowfix">
+		<label for="typ_koldbarare">Typ av köldbärare</label><strong id="startDot">*</strong>
+		<input required type="text" value ="" name ="typ_koldbarare" id = "requiredtextframe"/>
+		</div>
+				<div id = "rowfix">
+		<label for="typ_koldbarare">Mängd köldbärare, kg</label><strong id="startDot">*</strong>
+		<input required type="text" value ="" name ="typ_koldbarare" id = "requiredtextframe"/>
+		</div>
 		 
 		<div id = "rowfix">
 		<label for="typ_koldmedium">Typ av köldmedium</label><strong id="startDot">*</strong>
 		<input required type="text" value ="" name ="typ_koldmedium" id = "requiredtextframe"/>
-		</div>
-		
-		<div id = "rowfix">
-		<label for="typ_koldbarare">Typ av köldbärare</label><strong id="startDot">*</strong>
-		<input required type="text" value ="" name ="typ_koldbarare" id = "requiredtextframe"/>
 		</div>
 		  
 		<div id = "rowfix">

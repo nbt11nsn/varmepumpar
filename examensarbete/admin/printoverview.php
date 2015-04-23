@@ -31,7 +31,7 @@ require_once(__DIR__ .'./../../db.php');
 </form>
 
 <form method="get" action="printoverview.php">
-<button type="submit" id ="overviewbuttonbig">Skriv ut ansökan</button>
+<button type="submit" id ="overviewbuttonbig">Ansökningsformuläret</button>
 </form>
 
 <form method="get" onclick="printDiv('printableArea')">
@@ -115,7 +115,7 @@ echo '<div id="infoframeoverview">
 <input type="box" value ="'.$irows2["fakt_namn"].'" name ="fakt_namn" id ="overviewboxmedium"/>
 </div>
 <div>
-<div id ="overviewtitle">Organisations-/Postnummer(om annan än ovanstående)</div>
+<div id ="overviewtitle">Person-/Organisationsnummer(om annan än ovanstående)</div>
 <input type="box" value ="'.$irows2["fakt_persnum"].'" name ="fakt_persnum" id ="overviewboxmedium"/>
 </div>
 
@@ -177,24 +177,28 @@ echo '<div id="infoframeoverview">
 <h1 id ="overviewareatitle2">Övrigt</h1>
 <div id ="applicantframe">
 
-<div id ="thirdframe">
+<div id ="thirdframe2">
 <div id ="overviewtitle">Borrdjup</div>
-<input type="box" value ="" name ="borrdjup" id ="overviewboxsmini"/>
+<input type="box" value ="DB" name ="borrdjup" id ="overviewboxsmini1"/>
+</div>
+<div id ="thirdframe">
+<div id ="overviewtitle">Köldbärartyp</div>
+<input type="box" value ="DB" name ="kolbarartyp" id ="overviewboxsmini2"/>
 </div>
 
 <div id ="thirdframe">
-<div id ="overviewtitle">Köldbärartyp</div>
-<input type="box" value ="" name ="kolbarartyp" id ="overviewboxsmini"/>
+<div id ="overviewtitle">Köldbärarmängd</div>
+<input type="box" value ="DB" name ="kolbarartyp" id ="overviewboxsmini2"/>
 </div>
 
 <div id ="thirdframe">
 <div id ="overviewtitle">Kölmedietyp</div>
-<input type="box" value ="" name ="koldmedietyp" id ="overviewboxsmini"/>
+<input type="box" value ="DB" name ="koldmedietyp" id ="overviewboxsmini2"/>
 </div>
 
 <div>
 <div id ="overviewtitle">Kölmediemängd</div>
-<input type="box" value ="" name ="koldmediemangd" id ="overviewboxsmini"/>
+<input type="box" value ="DB" name ="koldmediemangd" id ="overviewboxsmini2"/>
 </div>
 
 <div id ="second">

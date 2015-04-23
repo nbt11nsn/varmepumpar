@@ -195,7 +195,13 @@ float: left;
 }
 
 #thirdframe{
-width: 25%;
+border-right: 1px solid black;
+width: 20%;
+float: left;
+}
+#thirdframe2{
+border-right: 1px solid black;
+width: 10%;
 float: left;
 }
 
@@ -226,12 +232,13 @@ border: none;
 margin-left: 5px;
 margin-bottom: 5px;
 }
-#overviewboxsmini{
-width: 170px;
+#overviewboxsmini1{
+width: 50px;
 border: none;
-border-right: 1px solid black;
-margin-left: 1px;
-margin-bottom: 1px;
+}
+#overviewboxsmini2{
+width: 155px;
+border: none;
 }
 #overviewareatitle3{
 text-align: left;

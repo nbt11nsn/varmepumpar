@@ -20,16 +20,34 @@ position: absolute;
 top:210px;
 left:100px;
 }
+
 #overviewbuttonsmall{
 font-size: 18px;
 float: left;
 width: 85px;
 height: 50px;
 }
+#infotextframe{
+width: 800px;
+border: none;
+align: right;
+}
+#infotextframe1{
+border: none;
+width: 430px;
+align: right;
+float:left;
+}
+#infotextframe2{
+width: 250px;
+border: none;
+align: right;
+}
+
 #overviewbuttonbig{
 font-size: 18px;
 float: left;
-width: 150px;
+width: 193px;
 height: 50px;
 }
 
@@ -168,6 +186,14 @@ border-left: 1px solid black;
 border-bottom: 1px solid black;
 }
 
+#applicantframe2{
+width: 800px;
+margin-left: 50px;
+margin-right: 50px;
+border-left: 1px solid black;
+border-bottom: 1px solid black;
+}
+
 #first{
 width: 800px;
 float: left;
@@ -185,7 +211,11 @@ border-right: 1px solid black;
 width: 25%;
 float: left;
 }
-
+#thirdframe2{
+border-right: 1px solid black;
+width: 10%;
+float: left;
+}
 #third{
 }
 #fourth{
@@ -210,12 +240,14 @@ border: none;
 width: 360px;
 border: none;
 }
-#overviewboxsmini{
-width: 275px;
+#overviewboxsmini1{
+width: 50px;
 border: none;
-
 }
-
+#overviewboxsmini2{
+width: 155px;
+border: none;
+}
 #overviewareatitle3{
 text-align: left;
 margin-left: 50px;
@@ -246,6 +278,14 @@ width: 100%;
 margin-bottom: 10px;
 }
 
+#overviewareatitle3{
+font-family: Times New Roman;
+font-weight: bold;
+text-align: left;
+font-size: 20px;
+width: 100%;
+margin-bottom: 10px;
+}
 #infoframeoverview{
   display:inline-block;
   width: 1280px; 
@@ -406,10 +446,7 @@ input[type="button"]:active, input[type="button"]:active {
 
 /* style för label */
 label {
-  padding-bottom: 10px;
-  clear: left;
-  text-align: right;
-  width: 15%;
+  width: 10em;
   font-family: Times New Roman;
   font-weight: bold;
   font-size: 16px;
