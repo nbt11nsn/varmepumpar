@@ -34,16 +34,6 @@ require_once(__DIR__ .'./../../db.php');
 		</div>
 		
 		<div id = "rowfix">
-		<label for="fabrikat">Fabrikat</label><strong id="startDot">*</strong>
-		<input required type="text" value ="" name ="fabrikat" id = "requiredtextframe"/>
-		</div>
-		
-		<div id = "rowfix">
-		<label for="modell">Modell</label><strong id="startDot">*</strong>
-		<input required type="text" value ="" name ="modell" id = "requiredtextframe"/>
-		</div>
-		
-		<div id = "rowfix">
 		<label for="vinkel">Riktning av borrhål(0&deg = rätt ned) </label><strong id="startDot">*</strong>
 		<input required type="text" value ="" name = "vinkel" id = "requiredtextframe"/>
 		</div>
@@ -52,12 +42,14 @@ require_once(__DIR__ .'./../../db.php');
 		<label for="effekt">Effekt, kW</label><strong id="startDot">*</strong>
 		<input required type="text" value ="" name ="effekt" id = "requiredtextframe"/>
 		</div>
+		
+				<div id = "rowfix">
+		<label for="borrdjup">Borrdjup, m</label>
+		<input type="text" value ="" name ="borrdjup" id = "requiredtextframe"/>
+		</div>
+		
 				<div id = "rowfix">
 		<label for="typ_koldbarare">Typ av köldbärare</label><strong id="startDot">*</strong>
-		<input required type="text" value ="" name ="typ_koldbarare" id = "requiredtextframe"/>
-		</div>
-				<div id = "rowfix">
-		<label for="typ_koldbarare">Mängd köldbärare, kg</label><strong id="startDot">*</strong>
 		<input required type="text" value ="" name ="typ_koldbarare" id = "requiredtextframe"/>
 		</div>
 		 
@@ -71,21 +63,6 @@ require_once(__DIR__ .'./../../db.php');
 		<input required type="text" value ="" name ="mangd_koldmedium" id = "requiredtextframe"/>
 		</div>
 		
-		<div id = "rowfix">
-		<label for="volym_koldbararvatska">Total volym köldbärarvätska i kollektorn, liter</label><strong id="startDot">*</strong>
-		<input required type="text" value ="" name ="volym_koldbararvatska" id = "requiredtextframe"/>
-		</div>
-		
-		<div id = "rowfix">
-		<label for="namn_koldbararvatska">Frostskyddsmedel i köldbärarvätskan, namn</label><strong id="startDot">*</strong>
-		<input required type="text" value ="" name ="namn_koldbararvatska" id = "requiredtextframe"/>
-		</div>
-		
-		<div id = "rowfix">
-		<label for="fabrikat_koldbararvatska">Frostskyddsmedel i köldbärarvätskan, fabrikat</label><strong id="startDot">*</strong>
-		<input required type="text" value ="" name ="fabrikat_koldbararvatska" id = "requiredtextframe"/>
-		</div>
-		
 		  	<div>	
 		<input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;">
 		<input type="submit" name ="next" value="Nästa" onclick="document.getElementById('checked4').style.backgroundColor = 'lightgreen';">
@@ -93,24 +70,16 @@ require_once(__DIR__ .'./../../db.php');
  </form>
  
  <?php	
-if(isset($_POST['next'])){
-				
-	$anlaggning=mysqli_real_escape_string($con,$_POST['anlaggning']);
-    $fabrikat=mysqli_real_escape_string($con,$_POST['fabrikat']);
-    $modell=mysqli_real_escape_string($con,$_POST['modell']);	
+if(isset($_POST['next'])){	
+	$anlaggning=mysqli_real_escape_string($con,$_POST['anlaggning']);	
 	$vinkel=mysqli_real_escape_string($con,$_POST['vinkel']);
     $effekt=mysqli_real_escape_string($con,$_POST['effekt']);
-    $typ_koldmedium=mysqli_real_escape_string($con,$_POST['typ_koldmedium']);
+	$borrdjup=mysqli_real_escape_string($con,$_POST['borrdjup']);
 	$typ_koldbarare=mysqli_real_escape_string($con,$_POST['typ_koldbarare']);
-	$mangd_koldmedium=mysqli_real_escape_string($con,$_POST['mangd_koldmedium']);
-	$volym_koldbararvatska=mysqli_real_escape_string($con,$_POST['volym_koldbararvatska']);
-    $namn_koldbararvatska=mysqli_real_escape_string($con,$_POST['namn_koldbararvatska']);
-    $fabrikat_koldbararvatska=mysqli_real_escape_string($con,$_POST['fabrikat_koldbararvatska']);
-	$andel_frostskyddsmedel=mysqli_real_escape_string($con,$_POST['andel_frostskyddsmedel']);    
+    $typ_koldmedium=mysqli_real_escape_string($con,$_POST['typ_koldmedium']);
+	$mangd_koldmedium=mysqli_real_escape_string($con,$_POST['mangd_koldmedium']);  
 	
-		$insertContact = "INSERT INTO varmepump values('3','".$anlaggning."','".$fabrikat."','".$modell."',
-		'".$vinkel."','".$effekt."','".$typ_koldmedium."','".$typ_koldbarare."','".$mangd_koldmedium."','".$volym_koldbararvatska."','".$namn_koldbararvatska."',
-		'".$fabrikat_koldbararvatska."','".$andel_frostskyddsmedel."')";		
+		$insertContact = "INSERT INTO varmepump values('2','".$anlaggning."','".$vinkel."','".$effekt."','".$borrdjup."','".$typ_koldbarare."','".$typ_koldmedium."','".$mangd_koldmedium."')";		
 		 if(mysqli_query($con, $insertContact)){
             echo "<div class='ok'>Informationen har sparats</div>";
         }

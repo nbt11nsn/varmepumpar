@@ -27,7 +27,7 @@ require_once(__DIR__ .'./../../db.php');
     <button type="submit" id ="overviewbuttonsmall">Översikt</button>
 </form>
 <form method="get" action="printoverview.php">
-    <button type="submit" id ="overviewbuttonbig">Ansökningsformuläret</button>
+    <button type="submit" id ="overviewbuttonbig">Formulär</button>
 </form>
 
 		
@@ -46,31 +46,31 @@ echo '<div id="infoframeoverview">
 <input type="text" value ="'.$irows2["fornamn"].' '.$irows2["efternamn"].'" readonly id = "infotextframe2"/>
 
 <input type="text" value ="Adress:" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["adress"].', '.$irows2["postnum"].' '.$irows2["postort"].'" name ="utdelningsadress" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["adress"].', '.$irows2["postnum"].' '.$irows2["postort"].'" name ="utdelningsadress" readonly id ="infotextframe2"/>
 
 <input type="text" value ="Person-/Organisationsnummer:" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["persnum"].'" name ="persnum" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["persnum"].'" name ="persnum" readonly id ="infotextframe2"/>
 
 <input type="text" value ="Telefonnummer:" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["tele"].'" name ="tele" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["tele"].'" name ="tele" readonly id ="infotextframe2"/>
 
 <input type="text" value ="Mobilnummer:" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["alt_tele"].'" name ="mobil" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["alt_tele"].'" name ="mobil" readonly id ="infotextframe2"/>
 
 <input type="text" value ="E-Postadress:" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["epost"].'" name ="epost" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["epost"].'" name ="epost" readonly id ="infotextframe2"/>
 </div>
 
 <h1 id ="overviewareatitle3">Fakturering</h1>
 <div id ="applicantframe2">
 <input type="text" value ="Fakturamottagare:" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["fakt_namn"].'" name ="fakt_namn" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["fakt_namn"].'" name ="fakt_namn" readonly id ="infotextframe2"/>
 
 <input type="text" value ="Person-/Organisationsnummer:" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["fakt_persnum"].'" name ="fakt_persnum" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["fakt_persnum"].'" name ="fakt_persnum" readonly id ="infotextframe2"/>
 
 <input type="text" value ="Utdelningsadress(data,box,etc.):" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["fakt_adress"].', '.$irows2["fakt_postnum"].' '.$irows2["fakt_postort"].'" name ="utdelningsadress" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["fakt_adress"].', '.$irows2["fakt_postnum"].' '.$irows2["fakt_postort"].'" name ="utdelningsadress" readonly id ="infotextframe2"/>
 </div>
 
 
@@ -78,10 +78,10 @@ echo '<div id="infoframeoverview">
 <h1 id ="overviewareatitle3">Fastighet där installation skall ske</h1>
 <div id ="applicantframe2">
 <input type="text" value ="Fastighetsbeteckning:" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["fastighetsbeteckning"].'" name ="fastighetsbeteckning" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["fastighetsbeteckning"].'" name ="fastighetsbeteckning" readonly id ="infotextframe2"/>
 
 <input type="text" value ="Fastighetens adress:" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["fastighet_adress"].', '.$irows2["fastighet_postnr"].' '.$irows2["fastighet_postort"].'" name ="fastighet_adress" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["fastighet_adress"].', '.$irows2["fastighet_postnr"].' '.$irows2["fastighet_postort"].'" name ="fastighet_adress" readonly id ="infotextframe2"/>
 </div>
 
 
@@ -89,13 +89,13 @@ echo '<div id="infoframeoverview">
 <div id ="applicantframe2">
 
 <input type="text" value ="Typ av anläggning:" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["anlaggning"].'" name ="anlaggning" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["anlaggning"].'" name ="anlaggning" readonly id ="infotextframe2"/>
 
 <input type="text" value ="Riktning av borrhål(0&deg = rätt ned):" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["vinkel"].'" name ="vinkel" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["vinkel"].'" name ="vinkel" readonly id ="infotextframe2"/>
 
 <input type="text" value ="Effekt, kW:" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["effekt"].'" name ="effekt" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["effekt"].'" name ="effekt" readonly id ="infotextframe2"/>
 </div>
 
 
@@ -103,41 +103,41 @@ echo '<div id="infoframeoverview">
 <div id ="applicantframe2">
 
 <input type="text" value ="Borrdjup:" readonly id = "infotextframe1"/>
-<input type="box" value ="DB" name ="borrdjup" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["borrdjup"].'" name ="borrdjup" readonly id ="infotextframe2"/>
 
 <input type="text" value ="Köldbärartyp:" readonly id = "infotextframe1"/>
-<input type="box" value ="DB" name ="kolbarartyp" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["typ_koldbarare"].'" name ="typ_koldbarare" readonly id ="infotextframe2"/>
 
 <input type="text" value ="Kölmedietyp:" readonly id = "infotextframe1"/>
-<input type="box" value ="DB" name ="koldmedietyp" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["typ_koldmedium"].'" name ="typ_koldmedium" readonly id ="infotextframe2"/>
 
 <input type="text" value ="Kölmediemängd:" readonly id = "infotextframe1"/>
-<input type="box" value ="DB" name ="koldmediemangd" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["mangd_koldmedium"].'" name ="mangd_koldmedium" readonly id ="infotextframe2"/>
 
 <input type="text" value ="Finns anslutning till kommunalt vatten:" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["q1"].'" name ="q1" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["q1_avlopp"].'" name ="q1" readonly id ="infotextframe2"/>
 
 <input type="text" value ="Finns anslutning till kommunalt avlopp:" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["q2"].'" name ="q2" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["q2_vatten"].'" name ="q2" readonly id ="infotextframe2"/>
 
 <input type="text" value ="Fastigheten ligger inom skyddsområde för dricksvattentäkt:" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["q3"].'" name ="q3" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["q3_skyddsomrade"].'" name ="q3" readonly id ="infotextframe2"/>
 
 <input type="text" value ="Fastigheten har tidigare haft oljeuppvärmning:" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["q4"].'" name ="q4" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["q4_oljeuppvarmning"].'" name ="q4" readonly id ="infotextframe2"/>
 </div>
 
 <h1 id ="overviewareatitle3">Borrare</h1>
 <div id ="applicantframe2">
 
 <input type="text" value ="Brunnsborrare som anlitas:" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["borr_namn"].'" name ="borr_namn" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["borr_namn"].'" name ="borr_namn" readonly id ="infotextframe2"/>
 
 <input type="text" value ="Telefon:" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["borr_tele"].'" name ="borr_tele" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["borr_tele"].'" name ="borr_tele" readonly id ="infotextframe2"/>
 
 <input type="text" value ="Certifierad:" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["borr_certifiering"].'" name ="borr_certifiering" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["borr_certifiering"].'" name ="borr_certifiering" readonly id ="infotextframe2"/>
 
 </div>
 
@@ -145,23 +145,23 @@ echo '<div id="infoframeoverview">
 <div id ="applicantframe2">
 
 <input type="text" value ="VVS-installatör som avses anlitas:" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["install_namn"].'" name ="install_namn" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["install_namn"].'" name ="install_namn" readonly id ="infotextframe2"/>
 
 <input type="text" value ="Telefon:" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["install_tele"].'" name ="install_tele" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["install_tele"].'" name ="install_tele" readonly id ="infotextframe2"/>
 
 <input type="text" value ="Certifierad:" readonly id = "infotextframe1"/>
-<input type="box" value ="'.$irows2["install_certifiering"].'" name ="install_certifiering" id ="infotextframe2"/>
+<input type="box" value ="'.$irows2["install_certifiering"].'" name ="install_certifiering" readonly id ="infotextframe2"/>
 </div>
 
 <h1 id ="overviewareatitle3">Bilagor</h1>
 <div id ="applicantframe2">
 
 <input type="text" value ="Karta skickas via post:" readonly id = "infotextframe1"/>
-<input type="box" value ="" name ="skickakarta" id ="infotextframe2"/>
+<input type="box" value ="" name ="skickakarta" readonly id ="infotextframe2"/>
 
 <input type="text" value ="Bifogad karta:" readonly id = "infotextframe1"/>
-<input type="box" value ="" name ="bifogakarta" id ="infotextframe2"/>
+<input type="box" value ="" name ="bifogakarta" readonly id ="infotextframe2"/>
 </div>';
 		}	
     }

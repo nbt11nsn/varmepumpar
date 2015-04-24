@@ -27,6 +27,14 @@ float: left;
 width: 85px;
 height: 50px;
 }
+
+#overviewbuttonbig{
+font-size: 18px;
+float: left;
+width: 88px;
+height: 50px;
+}
+
 #infotextframe{
 width: 800px;
 border: none;
@@ -42,13 +50,6 @@ float:left;
 width: 250px;
 border: none;
 align: right;
-}
-
-#overviewbuttonbig{
-font-size: 18px;
-float: left;
-width: 193px;
-height: 50px;
 }
 
 #date{
@@ -208,14 +209,15 @@ float: left;
 
 #thirdframe{
 border-right: 1px solid black;
-width: 25%;
+width: 33%;
 float: left;
 }
 #thirdframe2{
 border-right: 1px solid black;
-width: 10%;
+width: 15%;
 float: left;
 }
+
 #third{
 }
 #fourth{
