@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 20 apr 2015 kl 15:09
+-- Tid vid skapande: 27 apr 2015 kl 14:49
 -- Serverversion: 5.6.20
 -- PHP-version: 5.5.15
 
@@ -54,23 +54,17 @@ INSERT INTO `ansokning` (`ID`, `person_id`, `kart_ID`, `installator_ID`, `varmep
 
 CREATE TABLE IF NOT EXISTS `borrfirma` (
 `ID` int(11) NOT NULL,
-  `cert_num` varchar(50) NOT NULL,
   `borr_namn` varchar(50) NOT NULL,
-  `borr_kontaktperson` varchar(50) NOT NULL,
-  `borr_adress` varchar(50) NOT NULL,
-  `borr_postnum` varchar(20) NOT NULL,
-  `borr_postort` varchar(50) NOT NULL,
   `borr_tele` varchar(20) NOT NULL,
-  `borr_alt_tele` varchar(20) NOT NULL,
-  `borr_epost` varchar(50) NOT NULL
+  `borr_certifiering` varchar(10) NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Dumpning av Data i tabell `borrfirma`
 --
 
-INSERT INTO `borrfirma` (`ID`, `cert_num`, `borr_namn`, `borr_kontaktperson`, `borr_adress`, `borr_postnum`, `borr_postort`, `borr_tele`, `borr_alt_tele`, `borr_epost`) VALUES
-(1, '123456789', 'Borr AB', 'Adam Adamsson', 'Gävlegatan 5', '80253', 'Gävle', '0123456789', '02612458', 'Adam@borrfirman.se');
+INSERT INTO `borrfirma` (`ID`, `borr_namn`, `borr_tele`, `borr_certifiering`) VALUES
+(1, 'Borr AB', '0731254878', 'Ja');
 
 -- --------------------------------------------------------
 
@@ -85,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `fakturamottagare` (
   `fakt_adress` varchar(50) NOT NULL,
   `fakt_postnum` varchar(20) NOT NULL,
   `fakt_postort` varchar(20) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Dumpning av Data i tabell `fakturamottagare`
@@ -105,15 +99,19 @@ CREATE TABLE IF NOT EXISTS `fastighet` (
   `fastighetsbeteckning` varchar(50) NOT NULL,
   `fastighet_adress` varchar(30) NOT NULL,
   `fastighet_postnr` varchar(10) NOT NULL,
-  `fastighet_postort` varchar(30) NOT NULL
+  `fastighet_postort` varchar(30) NOT NULL,
+  `q1_avlopp` varchar(10) NOT NULL,
+  `q2_vatten` varchar(10) NOT NULL,
+  `q3_skyddsomrade` varchar(10) NOT NULL,
+  `q4_oljeuppvarmning` varchar(50) NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Dumpning av Data i tabell `fastighet`
 --
 
-INSERT INTO `fastighet` (`ID`, `fastighetsbeteckning`, `fastighet_adress`, `fastighet_postnr`, `fastighet_postort`) VALUES
-(1, 'Eldkvarnen 1', 'Eldgatan 5', '85621', 'Stockholm');
+INSERT INTO `fastighet` (`ID`, `fastighetsbeteckning`, `fastighet_adress`, `fastighet_postnr`, `fastighet_postort`, `q1_avlopp`, `q2_vatten`, `q3_skyddsomrade`, `q4_oljeuppvarmning`) VALUES
+(1, 'Eldkvarnen 1', 'Brunnsgatan 59A', '80252', 'Gävle', 'Ja, inre', 'Ja', 'Ja', 'Ja, cistern tas bort');
 
 -- --------------------------------------------------------
 
@@ -123,21 +121,17 @@ INSERT INTO `fastighet` (`ID`, `fastighetsbeteckning`, `fastighet_adress`, `fast
 
 CREATE TABLE IF NOT EXISTS `installator` (
 `ID` int(11) NOT NULL,
-  `kontaktperson` varchar(50) NOT NULL,
-  `adress` varchar(50) NOT NULL,
-  `postnum` varchar(20) NOT NULL,
-  `postort` varchar(50) NOT NULL,
-  `tele` varchar(20) NOT NULL,
-  `alt_tele` varchar(20) NOT NULL,
-  `epost` varchar(50) NOT NULL
+  `install_namn` varchar(50) NOT NULL,
+  `install_tele` varchar(20) NOT NULL,
+  `install_certifiering` varchar(10) NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Dumpning av Data i tabell `installator`
 --
 
-INSERT INTO `installator` (`ID`, `kontaktperson`, `adress`, `postnum`, `postort`, `tele`, `alt_tele`, `epost`) VALUES
-(1, 'Bertil Bertilsson', 'Bertilsgatan 3', '80254', 'Gävle', '0721548658', '026312548', 'Bertil@installator.se');
+INSERT INTO `installator` (`ID`, `install_namn`, `install_tele`, `install_certifiering`) VALUES
+(1, 'VVS AB', '0768545454', 'Nej');
 
 -- --------------------------------------------------------
 
@@ -177,7 +171,7 @@ CREATE TABLE IF NOT EXISTS `person` (
   `tele` varchar(20) NOT NULL,
   `alt_tele` varchar(20) NOT NULL,
   `epost` varchar(50) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Dumpning av Data i tabell `person`
@@ -195,24 +189,20 @@ INSERT INTO `person` (`ID`, `fornamn`, `efternamn`, `persnum`, `adress`, `postnu
 CREATE TABLE IF NOT EXISTS `varmepump` (
 `ID` int(11) NOT NULL,
   `anlaggning` varchar(50) NOT NULL,
-  `fabrikat` varchar(50) NOT NULL,
-  `modell` varchar(50) NOT NULL,
   `vinkel` varchar(3) NOT NULL,
   `effekt` varchar(100) NOT NULL,
+  `borrdjup` varchar(50) NOT NULL,
+  `typ_koldbarare` varchar(50) NOT NULL,
   `typ_koldmedium` varchar(50) NOT NULL,
-  `mangd_koldmedium` int(100) NOT NULL,
-  `volym_koldbararvatska` varchar(10) NOT NULL,
-  `namn_koldbararvatska` varchar(50) NOT NULL,
-  `fabrikat_koldbararvatska` varchar(50) NOT NULL,
-  `andel_frostskyddsmedel` varchar(5) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+  `mangd_koldmedium` varchar(100) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Dumpning av Data i tabell `varmepump`
 --
 
-INSERT INTO `varmepump` (`ID`, `anlaggning`, `fabrikat`, `modell`, `vinkel`, `effekt`, `typ_koldmedium`, `mangd_koldmedium`, `volym_koldbararvatska`, `namn_koldbararvatska`, `fabrikat_koldbararvatska`, `andel_frostskyddsmedel`) VALUES
-(1, 'Bergvärme', 'Panasonic', 'NE9', '0', '25', 'R410A', 1, '30', 'Propylenglykol', 'monopropylenglykol', '20');
+INSERT INTO `varmepump` (`ID`, `anlaggning`, `vinkel`, `effekt`, `borrdjup`, `typ_koldbarare`, `typ_koldmedium`, `mangd_koldmedium`) VALUES
+(1, 'Ytvärme', '10', '25', '150', 'köldbärare2000', 'köldmedium2000', '50');
 
 --
 -- Index för dumpade tabeller
@@ -284,7 +274,7 @@ MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT för tabell `fakturamottagare`
 --
 ALTER TABLE `fakturamottagare`
-MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT för tabell `fastighet`
 --
@@ -304,12 +294,12 @@ MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT för tabell `person`
 --
 ALTER TABLE `person`
-MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT för tabell `varmepump`
 --
 ALTER TABLE `varmepump`
-MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
