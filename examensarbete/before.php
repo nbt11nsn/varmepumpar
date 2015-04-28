@@ -32,24 +32,28 @@ require_once(__DIR__ .'./../db.php');
 
 	<div id = "rowfix">
 		<label for="namn">Skriv in ditt personnummer alt organisationsnummer </label><strong id="startDot">*</strong>
-		<input required type="text" align="left"  maxlength="50" value = ""  name="persnum" placeholder="ex. 8806087550" id="requiredtextframe"/>
+		<input type="text" align="left"  maxlength="50" value = ""  name="persnum" placeholder="ex. 8806087550" id="requiredtextframe"/>
 		</div>
 	
 	<div>	
 		<input Type="button" value="Tillbaka" onClick="history.go(-1);return true;">
-		<input type="submit" a href = "personalData.php" value="Nästa" name ="next" onclick="document.getElementById('checked').style.backgroundColor = 'lightgreen';">
+		<input type="submit" value="Gör en ansökan" name ="next" onclick="document.getElementById('checked').style.backgroundColor = 'lightgreen';">
 		</div>		
 	</form>
 <?php	
-if(isset($_POST['next'])&&!empty($_POST['persnum'])){
-	$persn=mysqli_real_escape_string($con,$_POST['persnum']);			        
-		$insertContact = "INSERT INTO ansokning values('1','".$persn."','".$persn."','".$persn."','".$persn."','".$persn."','".$persn."',2015-01-01)";		
+
+if(isset($_POST['next'])){
+	$persn=mysqli_real_escape_string($con,$_POST['persnum']);
+	$insertContact = "INSERT INTO ansokning values('".$contractid."','".$persn."','".$persn."','".$persn."','".$persn."','".$persn."','".$persn."',2015-01-01)";	
+		echo $insertContact;		
 		 if(mysqli_query($con, $insertContact)){
             echo "<div class='ok'>Informationen har sparats</div>";
         }
         else{
             echo "<div class='error'>Lyckades inte spara informationen</div>";
-        }		
+	  }		
+
+
 }
 ?>    
 	

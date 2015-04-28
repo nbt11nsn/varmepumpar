@@ -102,10 +102,9 @@ if(isset($_POST['next'])&&!empty($_POST['beteckning'])){
     $q2=mysqli_real_escape_string($con,$_POST['q2']);
     $q3=mysqli_real_escape_string($con,$_POST['q3']);
 	$q4=mysqli_real_escape_string($con,$_POST['q4']);
-
-
-			        
-		$insertContact = "INSERT INTO fastighet values('1','".$beteckning."','".$adress."','".$postnummer."','".$port."','".$q1."','".$q2."','".$q3."','".$q4."')";	
+			        $checkMaxID = "(Select MAX(ID) from ansokning)";
+		$insertContact = "INSERT INTO fastighet values('".$checkMaxID."','".$beteckning."','".$adress."','".$postnummer."','".$port."','".$q1."','".$q2."','".$q3."','".$q4."')";	
+		echo $insertContact;
 		 if(mysqli_query($con, $insertContact)){
             echo "<div class='ok'>Informationen har sparats</div>";
         }

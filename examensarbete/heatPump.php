@@ -79,7 +79,8 @@ if(isset($_POST['next'])){
     $typ_koldmedium=mysqli_real_escape_string($con,$_POST['typ_koldmedium']);
 	$mangd_koldmedium=mysqli_real_escape_string($con,$_POST['mangd_koldmedium']);  
 	
-		$insertContact = "INSERT INTO varmepump values('2','".$anlaggning."','".$vinkel."','".$effekt."','".$borrdjup."','".$typ_koldbarare."','".$typ_koldmedium."','".$mangd_koldmedium."')";		
+		$insertContact = "INSERT INTO varmepump values('".$checkMaxID."','".$anlaggning."','".$vinkel."','".$effekt."','".$borrdjup."','".$typ_koldbarare."','".$typ_koldmedium."','".$mangd_koldmedium."')";		
+		 echo $insertContact;
 		 if(mysqli_query($con, $insertContact)){
             echo "<div class='ok'>Informationen har sparats</div>";
         }

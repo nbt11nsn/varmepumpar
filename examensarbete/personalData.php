@@ -115,15 +115,17 @@ if(isset($_POST['next'])&&!empty($_POST['fornamn'])&&!empty($_POST['efternamn'])
     $fakt_adress=mysqli_real_escape_string($con,$_POST['fakt_adress']);
 	$fakt_postnum=mysqli_real_escape_string($con,$_POST['fakt_postnum']);	
 	$fakt_postort=mysqli_real_escape_string($con,$_POST['fakt_postort']);
-			        
-		$insertContact = "INSERT INTO person values('3','".$fornamn."','".$efternamn."','".$persnummer."','".$adress."','".$postnummer."','".$port."','".$teledag."','".$alttele."','".$epost."')";		
+			$checkMaxID = "(Select MAX(ID) from ansokning)";        
+		$insertContact = "INSERT INTO person values('".$checkMaxID."','".$fornamn."','".$efternamn."','".$persnummer."','".$adress."','".$postnummer."','".$port."','".$teledag."','".$alttele."','".$epost."')";		
+		 echo $insertContact;
 		 if(mysqli_query($con, $insertContact)){
             echo "<div class='ok'>Informationen har sparats</div>";
         }
         else{
             echo "<div class='error'>Lyckades inte spara informationen</div>";
         }		
-		$insertContact2 = "INSERT INTO fakturamottagare values('3','".$fakt_namn."','".$fakt_persnum."','".$fakt_adress."','".$fakt_postnum."','".$fakt_postort."')";		
+		$insertContact2 = "INSERT INTO fakturamottagare values('".$checkMaxID."','".$fakt_namn."','".$fakt_persnum."','".$fakt_adress."','".$fakt_postnum."','".$fakt_postort."')";		
+		 echo $insertContact2;
 		 if(mysqli_query($con, $insertContact2)){
             echo "<div class='ok'>Informationen har sparats</div>";
         }
