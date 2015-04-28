@@ -1,7 +1,7 @@
 
 <?php
 defined('THE_DB') || define('THE_DB', TRUE);
-require_once(__DIR__ .'./../../../db.php');
+require_once(__DIR__ .'./../../db.php');
 echo"<div id = 'huvudmeny'>
   <nav>
     <ul>

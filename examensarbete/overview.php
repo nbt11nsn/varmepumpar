@@ -20,7 +20,7 @@ require_once("include/header.php");
 defined('THE_MENUE') || define('THE_MENUE', TRUE);
 require_once("include/menuebar.php");
 defined('THE_DB') || define('THE_DB', TRUE);
-require_once(__DIR__ .'./../../db.php');
+require_once(__DIR__ .'./../db.php');
 
 ?>
 <form method="get" action="overview.php">
