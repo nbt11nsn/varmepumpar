@@ -1,3 +1,10 @@
+
+/* för testningen */
+#informationtesttext{
+font-size: 20px; 
+font-style: bold;
+}
+/* slut för testningen */
 #printheader{
   width: 1024px; 
   min-height: 300px;

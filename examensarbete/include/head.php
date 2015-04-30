@@ -4,8 +4,10 @@ mb_internal_encoding('UTF-8');
 mb_http_output('UTF-8');
 mb_http_input('UTF-8');
 $contractid = "(SELECT LAST_INSERT_ID() from ansokning)";
-echo $checkMaxID;
+
 ?>
+
+<script type="application/javascript" src="http://jsonip.appspot.com/?callback=getip"></script>
 <meta charset=UTF-8 />
 <title></title>
 <link rel="stylesheet" type="text/css" media="screen" href="css/default.css" />
