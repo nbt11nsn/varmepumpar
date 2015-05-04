@@ -1,14 +1,8 @@
 <!DOCTYPE html>
-<?php
-$cookie_name = "user";
-$cookie_value = "Niklas Doe";
-setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
-?>
-
 <html>
 <head>
 <?php
-
+echo 'Hello '.($_COOKIE['first_name']!='' ? $_COOKIE['first_name'] : 'Guest');
 defined('THE_HEAD') || define('THE_HEAD', TRUE);
 include_once("include/head.php");
 ?>
@@ -17,15 +11,6 @@ include_once("include/head.php");
 <script language="javascript" type="application/javascript" src = "include/print.js"></script>
 </head>
 <body>
-<?php
-if(!isset($_COOKIE[$cookie_name])) {
-    echo "Cookie named '" . $cookie_name . "' is not set!";
-} else {
-    echo "Cookie '" . $cookie_name . "' is set!<br>";
-    echo "Value is: " . $_COOKIE[$cookie_name];
-}
-?>
-
 <?php
 defined('THE_HEADER') || define('THE_HEADER', TRUE);
 require_once("include/header.php");
