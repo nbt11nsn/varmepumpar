@@ -4,7 +4,6 @@
 <head>
 
 <?php
-echo 'Hello '.($_COOKIE['first_name']!='' ? $_COOKIE['first_name'] : 'Guest');
 defined('THE_HEAD') || define('THE_HEAD', TRUE);
 include_once("include/head.php");
 ?>
@@ -33,7 +32,13 @@ require_once(__DIR__ .'./../db.php');
 
 		
 	<?php 
-	$isqlpers = "SELECT * FROM person, fakturamottagare, fastighet, varmepump, borrfirma, installator";
+	$isqlpers = "SELECT * FROM person, fakturamottagare, fastighet, varmepump, borrfirma, installator where 
+	person.ID = ".$_COOKIE['ID']." AND 
+	fakturamottagare.ID = ".$_COOKIE['ID']." AND 
+	fastighet.ID = ".$_COOKIE['ID']." AND 
+	varmepump.ID = ".$_COOKIE['ID']." AND 
+	borrfirma.ID = ".$_COOKIE['ID']." AND 
+	installator.ID = ".$_COOKIE['ID']."";
 	?>
 	<?php 	
 	$iresult = mysqli_query($con, $isqlpers);

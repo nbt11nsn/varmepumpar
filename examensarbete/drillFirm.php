@@ -4,7 +4,6 @@
 <head>
 
 <?php
-echo 'Hello '.($_COOKIE['first_name']!='' ? $_COOKIE['first_name'] : 'Guest');
 defined('THE_HEAD') || define('THE_HEAD', TRUE);
 include_once("include/head.php");
 ?>
@@ -86,9 +85,9 @@ if(isset($_POST['next'])&&!empty($_POST['borr_namn'])&&!empty($_POST['borr_tele'
 	$install_namn=mysqli_real_escape_string($con,$_POST['install_namn']);	
 	$install_tele=mysqli_real_escape_string($con,$_POST['install_tele']);
     $install_certifiering=mysqli_real_escape_string($con,$_POST['install_certifiering']);
-			   $checkMaxID = "(Select MAX(ID) from ansokning)";     
-		$insertContact = "INSERT INTO borrfirma values('".$checkMaxID."','".$borr_namn."','".$borr_tele."','".$borr_certifiering."')";		
-		$insertContact2 = "INSERT INTO installator values('".$checkMaxID."','".$install_namn."','".$install_tele."','".$install_certifiering."')";
+    
+		$insertContact = "INSERT INTO borrfirma values('".$_COOKIE['ID']."','".$borr_namn."','".$borr_tele."','".$borr_certifiering."')";		
+		$insertContact2 = "INSERT INTO installator values('".$_COOKIE['ID']."','".$install_namn."','".$install_tele."','".$install_certifiering."')";
 		$checkMaxID = "(Select MAX(ID) from ansokning)";
 
 		echo $insertContact;

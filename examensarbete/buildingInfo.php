@@ -4,7 +4,6 @@
 <head>
 
 <?php
-echo 'Hello '.($_COOKIE['first_name']!='' ? $_COOKIE['first_name'] : 'Guest');
 defined('THE_HEAD') || define('THE_HEAD', TRUE);
 include_once("include/head.php");
 ?>
@@ -102,9 +101,8 @@ if(isset($_POST['next'])&&!empty($_POST['beteckning'])){
 	$q1=mysqli_real_escape_string($con,$_POST['q1']);
     $q2=mysqli_real_escape_string($con,$_POST['q2']);
     $q3=mysqli_real_escape_string($con,$_POST['q3']);
-	$q4=mysqli_real_escape_string($con,$_POST['q4']);
-			        $checkMaxID = "(Select MAX(ID) from ansokning)";
-		$insertContact = "INSERT INTO fastighet values('".$checkMaxID."','".$beteckning."','".$adress."','".$postnummer."','".$port."','".$q1."','".$q2."','".$q3."','".$q4."')";	
+	$q4=mysqli_real_escape_string($con,$_POST['q4']);			        
+		$insertContact = "INSERT INTO fastighet values('".$_COOKIE['ID']."','".$beteckning."','".$adress."','".$postnummer."','".$port."','".$q1."','".$q2."','".$q3."','".$q4."')";	
 		echo $insertContact;
 		 if(mysqli_query($con, $insertContact)){
             echo "<div class='ok'>Informationen har sparats</div>";

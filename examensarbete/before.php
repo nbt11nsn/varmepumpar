@@ -2,7 +2,7 @@
 <html>
 <head>
 <?php
-echo 'Hello '.($_COOKIE['first_name']!='' ? $_COOKIE['first_name'] : 'Guest');
+
 defined('THE_HEAD') || define('THE_HEAD', TRUE);
 include_once("include/head.php");
 ?>
@@ -46,16 +46,11 @@ require_once(__DIR__ .'./../db.php');
 	</form>
 
 	<?php	
-	$hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
-echo $hostname;
-$REMOTE_ADDR=$hostname;
-$ip= $REMOTE_ADDR;
-echo " Your hostname : " . GetHostByName($ip);
 
 if(isset($_POST['next'])){
 	$test = "test";
 	$persn=mysqli_real_escape_string($con,$test);
-	$insertContact = "INSERT INTO ansokning values('".$contractid."','".$persn."','".$persn."','".$persn."','".$persn."','".$persn."','".$persn."',2015-01-01)";			
+	$insertContact = "INSERT INTO ansokning values('".$_COOKIE['ID']."','".$persn."','".$persn."','".$persn."','".$persn."','".$persn."','".$persn."',2015-01-01)";			
 		 if(mysqli_query($con, $insertContact)){
            
         }

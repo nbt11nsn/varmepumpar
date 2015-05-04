@@ -4,7 +4,6 @@
 <head>
 
 <?php
-echo 'Hello '.($_COOKIE['first_name']!='' ? $_COOKIE['first_name'] : 'Guest');
 defined('THE_HEAD') || define('THE_HEAD', TRUE);
 include_once("include/head.php");
 ?>
@@ -116,8 +115,8 @@ if(isset($_POST['next'])&&!empty($_POST['fornamn'])&&!empty($_POST['efternamn'])
     $fakt_adress=mysqli_real_escape_string($con,$_POST['fakt_adress']);
 	$fakt_postnum=mysqli_real_escape_string($con,$_POST['fakt_postnum']);	
 	$fakt_postort=mysqli_real_escape_string($con,$_POST['fakt_postort']);
-			$checkMaxID = "(Select MAX(ID) from ansokning)";        
-		$insertContact = "INSERT INTO person values('".$checkMaxID."','".$fornamn."','".$efternamn."','".$persnummer."','".$adress."','".$postnummer."','".$port."','".$teledag."','".$alttele."','".$epost."')";		
+	
+		$insertContact = "INSERT INTO person values('".$_COOKIE['ID']."','".$fornamn."','".$efternamn."','".$persnummer."','".$adress."','".$postnummer."','".$port."','".$teledag."','".$alttele."','".$epost."')";		
 		 echo $insertContact;
 		 if(mysqli_query($con, $insertContact)){
             echo "<div class='ok'>Informationen har sparats</div>";
@@ -125,7 +124,7 @@ if(isset($_POST['next'])&&!empty($_POST['fornamn'])&&!empty($_POST['efternamn'])
         else{
             echo "<div class='error'>Lyckades inte spara informationen</div>";
         }		
-		$insertContact2 = "INSERT INTO fakturamottagare values('".$checkMaxID."','".$fakt_namn."','".$fakt_persnum."','".$fakt_adress."','".$fakt_postnum."','".$fakt_postort."')";		
+		$insertContact2 = "INSERT INTO fakturamottagare values('".$_COOKIE['ID']."','".$fakt_namn."','".$fakt_persnum."','".$fakt_adress."','".$fakt_postnum."','".$fakt_postort."')";		
 		 echo $insertContact2;
 		 if(mysqli_query($con, $insertContact2)){
             echo "<div class='ok'>Informationen har sparats</div>";

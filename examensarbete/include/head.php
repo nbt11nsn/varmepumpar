@@ -1,12 +1,39 @@
 <?php
-$first_name = 'David';
-echo mt_rand(1, 10000);
-setcookie('first_name',$first_name,time() + (86400 * 7)); // 86400 = 1 day
 defined('THE_HEAD') or die();
 mb_internal_encoding('UTF-8');
 mb_http_output('UTF-8');
 mb_http_input('UTF-8');
-$contractid = "(SELECT LAST_INSERT_ID() from ansokning)";
+?>
+
+<?php
+$db="varmepumpdb";
+$usr="root";
+$host="localhost";
+$pass="";
+$con = mysqli_connect($host,$usr,$pass,$db) or die("Error: " . mysqli_error($con));
+mysqli_set_charset($con, 'utf8');
+mysqli_select_db($con, 'varmepumpdb');
+
+$isqlpers = "SELECT ID FROM ansokning";
+$myArray = array();
+
+$iresult = mysqli_query($con, $isqlpers);
+	if (mysqli_num_rows($iresult) != 0) {
+      while($irows2 = mysqli_fetch_array($iresult)) {
+	$myArray[] = $irows2['ID'];	
+	}
+}
+
+if(isset($_COOKIE['ID'])){
+} 
+else{
+	$randomnumber = mt_rand(1, 10000);
+		while(in_array($randomnumber, $myArray)) {	
+			$randomnumber = mt_rand(1, 10000);
+	}   
+	setcookie('ID',$randomnumber,time() + 3600);
+	$_COOKIE['ID'] = $randomnumber;
+	}
 ?>
 
 <script type="application/javascript" src="http://jsonip.appspot.com/?callback=getip"></script>

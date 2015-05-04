@@ -4,7 +4,6 @@
 <head>
 
 <?php
-echo 'Hello '.($_COOKIE['first_name']!='' ? $_COOKIE['first_name'] : 'Guest');
 defined('THE_HEAD') || define('THE_HEAD', TRUE);
 include_once("include/head.php");
 ?>
@@ -54,7 +53,7 @@ if(isset($_POST['next'])&&!empty($_POST['kontpers'])&&!empty($_POST['adress'])&&
 	$alttele=mysqli_real_escape_string($con,$_POST['alttele']);
 	$epost=mysqli_real_escape_string($con,$_POST['epost']);
 			        
-		$insertContact = "INSERT INTO installator values('1','".$kontpers."','".$adress."','".$postnummer."','".$port."','".$teledag."','".$alttele."','".$epost."')";		
+		$insertContact = "INSERT INTO installator values('".$_COOKIE['ID']."','".$kontpers."','".$adress."','".$postnummer."','".$port."','".$teledag."','".$alttele."','".$epost."')";		
 		 if(mysqli_query($con, $insertContact)){
             echo "<div class='ok'>Informationen har sparats</div>";
         }
