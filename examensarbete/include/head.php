@@ -27,15 +27,15 @@ $iresult = mysqli_query($con, $isqlpers);
 if(isset($_COOKIE['ID'])){
 } 
 else{
+	//select_last_inserted_ID() istället för ett slumpat tal?
 	$randomnumber = mt_rand(1, 10000);
 		while(in_array($randomnumber, $myArray)) {	
 			$randomnumber = mt_rand(1, 10000);
 	}   
-	setcookie('ID',$randomnumber,time() + 3600);
+	setcookie('ID',$randomnumber,time() + 60);
 	$_COOKIE['ID'] = $randomnumber;
 	}
 ?>
-
 <script type="application/javascript" src="http://jsonip.appspot.com/?callback=getip"></script>
 <meta charset=UTF-8 />
 <title></title>

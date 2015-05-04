@@ -49,21 +49,21 @@ require_once(__DIR__ .'./../db.php');
 		</div>
 		
 				<div id = "rowfix">
-		<label for="typ_koldbarare">Typ av köldbärare</label><strong id="startDot">*</strong>
-		<input required type="text" value ="" name ="typ_koldbarare" id = "requiredtextframe"/>
+		<label for="typ_koldbarare">Typ av köldbärare</label><strong id="startDot">*</strong>		
+		<input required type="text" value ="" name ="typ_koldbarare" placeholder ="Exempel: R134a, R404a, R404c" id = "requiredtextframe"/>
 		</div>
 		 
 		<div id = "rowfix">
 		<label for="typ_koldmedium">Typ av köldmedium</label><strong id="startDot">*</strong>
-		<input required type="text" value ="" name ="typ_koldmedium" id = "requiredtextframe"/>
+		<input required type="text" value ="" name ="typ_koldmedium" placeholder ="Exempel: R600(Butan), R718(Vatten), R744(koldioxid)"id = "requiredtextframe"/>
 		</div>
 		  
 		<div id = "rowfix">
-		<label for="mangd_koldmedium">Mängd köldmedium, kg</label><strong id="startDot">*</strong>
+		<label for="mangd_koldmedium">Mängd köldmedium, kg</label><strong id="startDot">*</strong>		
 		<input required type="text" value ="" name ="mangd_koldmedium" id = "requiredtextframe"/>
 		</div>
 		
-		  	<div>	
+		  <div>	
 		<input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;">
 		<input type="submit" name ="next" value="Nästa" onclick="document.getElementById('checked4').style.backgroundColor = 'lightgreen';">
 		</div>

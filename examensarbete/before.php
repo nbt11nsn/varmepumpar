@@ -41,21 +41,20 @@ require_once(__DIR__ .'./../db.php');
 	
 	<div>	
 		<input Type="button" value="Tillbaka" onClick="history.go(-1);return true;">
-		<input type="submit" value="Påbörja en ansökan" name ="next" onclick="document.getElementById('checked').style.backgroundColor = 'lightgreen';">
+		<input type="submit" value="Påbörja en ansökan" name ="next">
 		</div>		
-	</form>
-
+</form>
 	<?php	
 
 if(isset($_POST['next'])){
-	$test = "test";
-	$persn=mysqli_real_escape_string($con,$test);
-	$insertContact = "INSERT INTO ansokning values('".$_COOKIE['ID']."','".$persn."','".$persn."','".$persn."','".$persn."','".$persn."','".$persn."',2015-01-01)";			
+	$getDate = "(SELECT CURDATE())";
+	$insertContact = "INSERT INTO ansokning values('".$_COOKIE['ID']."',".$getDate.")";		
 		 if(mysqli_query($con, $insertContact)){
-           
+           echo "<div class='error'>Lyckades spara informationen och har ID:".$_COOKIE['ID']." </div>";
+		   
         }
         else{
-            echo "<div class='error'>Lyckades inte spara informationen</div>";
+              echo "<div class='error'>Lyckades inte spara informationen och har ID:".$_COOKIE['ID']." </div>";
 	  }		
 }
 ?>    

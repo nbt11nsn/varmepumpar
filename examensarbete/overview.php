@@ -29,7 +29,6 @@ require_once(__DIR__ .'./../db.php');
 <form method="get" action="printoverview.php">
     <button type="submit" id ="overviewbuttonbig">Formulär</button>
 </form>
-
 		
 	<?php 
 	$isqlpers = "SELECT * FROM person, fakturamottagare, fastighet, varmepump, borrfirma, installator where 

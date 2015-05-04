@@ -49,10 +49,6 @@ Detta är vad som är ett krav att vara ifyllt på kartan för att tillstånd sk
 textruta där kunden kan skriva fritt(max 1000 ord)
 </div>
 
-
-
-
-
 </div>
 	<div id ="pdf_title">
 	<input type='checkbox' class='checkbox_' id = "chkbox";	

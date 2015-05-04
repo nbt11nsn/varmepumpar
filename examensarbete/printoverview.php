@@ -40,7 +40,13 @@ require_once(__DIR__ .'./../db.php');
 
 		
 	<?php 
-	$isqlpers = "SELECT * FROM person, fakturamottagare, fastighet, varmepump, borrfirma, installator";
+	$isqlpers = "SELECT * FROM person, fakturamottagare, fastighet, varmepump, borrfirma, installator where 
+	person.ID = ".$_COOKIE['ID']." AND 
+	fakturamottagare.ID = ".$_COOKIE['ID']." AND 
+	fastighet.ID = ".$_COOKIE['ID']." AND 
+	varmepump.ID = ".$_COOKIE['ID']." AND 
+	borrfirma.ID = ".$_COOKIE['ID']." AND 
+	installator.ID = ".$_COOKIE['ID']."";
 	?>		
 <div id="printableArea">
 <div id ="printheader">
