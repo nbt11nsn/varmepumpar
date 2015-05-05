@@ -1,15 +1,30 @@
-<?php
-  defined('THE_BEFORE') or die();
-?>
 <!DOCTYPE html>
 <html>
+<?php
+  defined('THE_BEFORETEST') or die();
+?>
 <head>
+<?php
+defined('THE_HEAD') || define('THE_HEAD', TRUE);
+include_once("include/head.php");
+?>
 <script language="javascript" type="text/javascript" src = "include/print.js?"></script>
 <script language="javascript" type="text/javascript" src = "include/print.js?"></script>
 <script language="javascript" type="application/javascript" src = "include/print.js"></script>
 </head>
 <body>
 <div id="main-wrapper">
+<?php
+defined('THE_HEADER') || define('THE_HEADER', TRUE);
+require_once("include/header.php");
+?>
+
+<?php
+defined('THE_MENUE') || define('THE_MENUE', TRUE);
+require_once("include/menuebar.php");
+defined('THE_DB') || define('THE_DB', TRUE);
+require_once(__DIR__ .'./../db.php');
+?>
  <div id="infoframe">
     <form action='' method='post' id ='postContracts' enctype="multipart/form-data">
 	<div id ="informationtesttext">
@@ -24,7 +39,7 @@
 		* Känner ni att det saknas frågor?<br> 
 		* Tror ni formuläret kommer hjälpa eller stjälpa etc.<br> <br> 
 		Att ge feedback är helt fritt. Om ni inte kommer på något att skriva så är det bara klicka på "avsluta".
-	</div>	
+	</div>
 		
 	<div>	
 		<input Type="button" value="Tillbaka" onClick="history.go(-1);return true;">
@@ -44,9 +59,11 @@ if(isset($_POST['next'])){
               echo "<div class='error'>Lyckades inte spara informationen och har ID:".$_COOKIE['ID']." </div>";
 	  }		
 }
-?>	
+?>    
+	
  </div>
 </div><!--main-wrapper-->
+
 
 </body>
 </html>

@@ -25,7 +25,20 @@ defined('THE_DB') || define('THE_DB', TRUE);
 require_once(__DIR__ .'./../db.php');
 
 ?>
-	
+
+<form method="get" action="overview.php">
+<button type="submit" id ="overviewbuttonsmall">Översikt</button>
+</form>
+
+<form method="get" action="printoverview.php">
+<button type="submit" id ="overviewbuttonbig">Formulär</button>
+</form>
+
+<form method="get" onclick="printDiv('printableArea')">
+<button type="submit" id ="overviewbuttonsmall">Skriv ut</button>
+</form>
+
+		
 	<?php 
 	$isqlpers = "SELECT * FROM person, fakturamottagare, fastighet, varmepump, borrfirma, installator where 
 	person.ID = ".$_COOKIE['ID']." AND 
@@ -294,13 +307,7 @@ echo '<div id="infoframeoverview">
     }
 		?>
 		</div>
-<form method="get" action="overview.php">
-<button type="submit" id ="overviewbuttonsmall">Översikt</button>
-</form>
 
-<form method="get" onclick="printDiv('printableArea')">
-<button type="submit" id ="overviewbuttonsmall">Skriv ut</button>
-</form>
 <!--main-wrapper-->
 <?php
 defined('THE_FOOTER') || define('THE_FOOTER', TRUE);

@@ -3,7 +3,9 @@ defined('THE_HEAD') or die();
 mb_internal_encoding('UTF-8');
 mb_http_output('UTF-8');
 mb_http_input('UTF-8');
+?>
 
+<?php
 defined('THE_TOPHEADER') || define('THE_TOPHEADER', TRUE);
 include_once("include/topheader.php");
 
@@ -33,7 +35,7 @@ else{
 		while(in_array($randomnumber, $myArray)) {	
 			$randomnumber = mt_rand(1, 10000);
 	}   
-	setcookie('ID',$randomnumber,time() + 1800);
+	setcookie('ID',$randomnumber,time() + 60);
 	$_COOKIE['ID'] = $randomnumber;
 	}
 ?>
@@ -41,3 +43,7 @@ else{
 <meta charset=UTF-8 />
 <title></title>
 <link rel="stylesheet" type="text/css" media="screen" href="css/default.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->

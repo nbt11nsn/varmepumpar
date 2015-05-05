@@ -8,3 +8,9 @@ function printDiv(divName) {
 
      document.body.innerHTML = originalContents;
 }
+
+
+function closed() {
+	alert("Denna sida är för tillfälligt ej synlig på grund av att den ej fungerar som den skall. Vad denna sida skall visa är det som ni ser om ni testar skriva ut formuläret genom knappen skriv ut")
+	
+}

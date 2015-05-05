@@ -1,21 +1,28 @@
-<?php
-  defined('THE_PERSONALDATA') or die();
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
 
+<?php
+defined('THE_HEAD') || define('THE_HEAD', TRUE);
+include_once("include/head.php");
+?>
 </head>
 <body>
-
+<?php
+defined('THE_HEADER') || define('THE_HEADER', TRUE);
+require_once("include/header.php");
+?>
 <div id="main-wrapper">
 <?php
+defined('THE_MENUE') || define('THE_MENUE', TRUE);
+require_once("include/menuebar.php");
 defined('THE_DB') || define('THE_DB', TRUE);
 require_once(__DIR__ .'./../db.php');
 ?>
  <div id="infoframe">
-       <form action='' method='post' id ='postContracts' enctype="multipart/form-data">
-   <h1 id = "smallTitle">Personuppgifter</h1>
+     <form action="" method="post" id ="postContracts" enctype="multipart/form-data">
+ <h1 id = "smallTitle">Personuppgifter</h1>
 <div id="splitscreen">
 <div id="rightscreen">
 	 <div id = "rowfix">
@@ -84,14 +91,15 @@ require_once(__DIR__ .'./../db.php');
 		</div>
 	</div>
 	</div>
-			  <div id ="buttondiv">		
-		<input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;">
-		<input type="submit" name ="Spara" value="Spara" onclick="document.getElementById('checked4').style.backgroundColor = 'lightgreen';">
-		</div>
- </form>
- 
-<?php	
-if(isset($_POST['Spara'])&&!empty($_POST['fornamn'])&&!empty($_POST['efternamn'])&&!empty($_POST['persnummer'])&&!empty($_POST['adress'])&&!empty($_POST['postnummer'])&&!empty($_POST['port'])&&!empty($_POST['teledag'])){
+	
+	<div id= "buttons">	
+	<input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;">
+		<input type="submit" name ="next" value="Nästa" onclick="document.getElementById('checked2').style.backgroundColor = 'lightgreen';">
+		</div>	
+		</div>	
+	</form>
+	<?php	
+if(isset($_POST['next'])&&!empty($_POST['fornamn'])&&!empty($_POST['efternamn'])&&!empty($_POST['persnummer'])&&!empty($_POST['adress'])&&!empty($_POST['postnummer'])&&!empty($_POST['port'])&&!empty($_POST['teledag'])){
 	$fornamn=mysqli_real_escape_string($con,$_POST['fornamn']);
 	$efternamn=mysqli_real_escape_string($con,$_POST['efternamn']);
     $persnummer=mysqli_real_escape_string($con,$_POST['persnummer']);
@@ -126,7 +134,7 @@ if(isset($_POST['Spara'])&&!empty($_POST['fornamn'])&&!empty($_POST['efternamn']
         }		
 }
 
-?>    
+?> 
  </div>
 </div><!--main-wrapper-->
 

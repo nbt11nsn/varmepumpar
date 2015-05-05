@@ -1,10 +1,3 @@
-
-/* fÃ¶r testningen */
-#informationtesttext{
-font-size: 20px; 
-font-style: bold;
-}
-/* slut fÃ¶r testningen */
 #printheader{
   width: 1024px; 
   min-height: 300px;
@@ -13,55 +6,23 @@ font-style: bold;
   text-align: left;
   padding:25px 10%;
 }
+
 #printTitle{
 position: absolute;
-top:280px;
+top:150px;
 left:250px;
-font-size: 33px; 
+font-size: 28px; 
 font-style: bold;
 
 }
 #image{
 position: absolute;
-top:210px;
+top:80px;
 left:100px;
 }
-
-#overviewbuttonsmall{
-font-size: 18px;
-float: left;
-width: 85px;
-height: 50px;
-}
-
-#overviewbuttonbig{
-font-size: 18px;
-float: left;
-width: 160px;
-text-align: center;
-height: 50px;
-}
-
-#infotextframe{
-width: 800px;
-border: none;
-align: right;
-}
-#infotextframe1{
-border: none;
-width: 400px;
-align: right;
-float:left;
-}
-#infotextframe2{
-width: 200px;
-border: none;
-align: right;
-}
-
 #date{
 position: absolute;
-top:370px;
+top:240px;
 left:704px;
 font-size: 20px; 
 }
@@ -75,7 +36,7 @@ font-size: 20px;
 }
 #infotext{
 position: absolute;
-top:400px;
+top:270px;
 left:380px;
 }
 #infotext1{
@@ -88,11 +49,9 @@ float: left;
 }
 
 
-
-
 #invoiceframe { 
-  width: 700px; 
-  min-height: 800px;
+  width: 1000px; 
+  min-height: 600px;
   height: 100%;
   background: #fcfcfc; 
   display: inline-block; 
@@ -102,6 +61,29 @@ float: left;
 background: #efefef; 
 }
 
+#uploadbutton{
+	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+	border-radius: 10px;  	
+	padding: 10px 20px;
+	color: #EA005A; 
+	font: 18px Arial,sans-serif;
+}
+
+#choicebutton{
+	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
+	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
+	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+	border-radius: 10px;  	
+	color: #EA005A;
+	margin-top: 10px;	
+	font: 18px Arial,sans-serif;
+	border: hidden;
+}
+
 input[type="checkbox"] {
  -ms-transform: scale(1.5); /* IE */
   -moz-transform: scale(1.5); /* FF */
@@ -109,6 +91,10 @@ input[type="checkbox"] {
   -o-transform: scale(1.5); /* Opera */
 }
 
+/* #########################FAKTURA SLUT############################# */
+/* #########################INFO BÖRJAN############################# */
+
+/* #########################Exjobbet BÖRJAN############################# */
 fieldset {
 padding-bottom: 10px;
 padding-top: 10px;
@@ -116,8 +102,8 @@ padding-top: 10px;
 }
 
 #frame { 
-  width: 700px; 
-  min-height: 800px;
+  width: 1000px; 
+  min-height: 600px;
   height: 100%;
   background: #fff; 
   text-align: center;
@@ -152,12 +138,18 @@ padding-bottom: 5px;
 margin-left: 50px;
 float: left;
 }
-
+#title{
+text-align: left;
+font-size: 50px; 
+border-bottom: 1px solid #00467F;
+width: 100%;
+margin-bottom: 10px;
+}
 
 #testing{
   display:inline-block;
-  width: 700px; 
-  min-height: 800px;
+  width: 1000px; 
+  min-height: 600px;
   height: 100%;
   background: #fff; 
   text-align: left;
@@ -174,6 +166,7 @@ padding-bottom: 50px;
 
 }
 
+/*overview testet*/
 #forsta{
 display:inline-block;
 padding-right: 200px;
@@ -181,32 +174,29 @@ position:relative;
 }
 
 #applicantframe{
+margin-left: 50px;
+margin-right: 50px;
 border-right: 1px solid black;
 border-left: 1px solid black;
 border-bottom: 1px solid black;
 }
 
-#applicantframe2{
-width: 700px;
-border-left: 1px solid black;
-border-bottom: 1px solid black;
-}
-
 #first{
-width: 800px;
+width: 600px;
 float: left;
 border-right: 1px solid black;
 }
 
 #second{
 border-right: 1px solid black;
+
 width: 50%;
 float: left;
 }
 
 #thirdframe{
 border-right: 1px solid black;
-width: 33%;
+width: 30%;
 float: left;
 }
 #thirdframe2{
@@ -215,29 +205,32 @@ width: 15%;
 float: left;
 }
 
-#third{
-}
-#fourth{
-
+#makespace{
+margin-bottom: 300px;
 }
 
 #overviewboxfull{
-width: 1161px;
+width: 830px;
+max-height: 20px;
 border: none;
-
 }
 #overviewboxlong{
-width: 783px;
+width: 480px;
 border: none;
-
+margin-left: 5px;
+margin-bottom: 5px;
 }
 #overviewboxmedium{
-width: 572px;
+width: 380px;
 border: none;
+margin-left: 5px;
+margin-bottom: 5px;
 }
 #overviewboxsmall{
-width: 360px;
+width: 180px;
 border: none;
+margin-left: 5px;
+margin-bottom: 5px;
 }
 #overviewboxsmini1{
 width: 50px;
@@ -249,6 +242,8 @@ border: none;
 }
 #overviewareatitle3{
 text-align: left;
+margin-left: 50px;
+margin-top: 20px;
 font-size: 20px;
 width: 100%;
 }
@@ -275,19 +270,14 @@ width: 100%;
 margin-bottom: 10px;
 }
 
-#overviewareatitle3{
-/*font-family: Times New Roman;*/
-font-weight: bold;
-text-align: left;
-font-size: 20px;
-width: 100%;
-margin-bottom: 10px;
-}
 #infoframeoverview{
   display:inline-block;
-  width: 700px; 
+  width: 1000px; 
+  min-height: 600px;
+  height: 100%;
   background: #fff; 
   text-align: left;
+  padding:25px 0px;
 }
 
 #buttons{
@@ -309,58 +299,41 @@ input[type="checkbox"]:checked ~ .reveal-if-active {
   overflow: visible;
 }
 
-#header-wrapperTEST{
-  width: 700px;
-  height: 200px;
+#header-wrapper {
+  width: 1000px;
+  height: 100%;
 }
 
-#footer-wrapperTEST{
-  width: 980px;
-  height: 321px;
+#footer-wrapper{
+  width: 1000px;
+  height: 100%;
 }
-
 #radiomargin{
 padding-left: 30px;
 display: flex;
 }
-
 #radiobuttons{
 padding-bottom: 3px;
 padding-top: 5px;
 display: flex;
 }
-input[type="radio"] {
-   height: 18px;
-   width: 18px;
-   display: inline-block;
-   cursor: pointer;
-   vertical-align: middle;
-   background: #FFF;
-   border: 1px solid #d2d2d2;
-   border-radius: 100%;
-}
+
 nav ul{
   list-style:none;
-  width: 700px;
+  width: 1000px;
   position:relative;
   display:inline-block;
 }
 
-#opentextframe{
-text-align: left;
-padding-top: 5px;
-min-width: 400px;
-}
 
-#startDot{
-color: #d81c1c;
-}
-
-#requiredtextframe{	
-text-align: left;
-padding-top: 5px;
-width: 400px;
-}
+#infoframe {
+  width: 1000px; 
+  min-height: 600px;
+  height: 100%;
+  background: #fff; 
+  text-align: left;
+  padding:25px 0px;
+	}
 
 #overview{
   display: inline;
@@ -371,18 +344,16 @@ width: 400px;
   text-align:center;
 }
 	
-#menue {
-  width: 700px; 
+#huvudmeny {
+  width: 100%; 
+  height: auto;
+  padding-bottom:10px;
 }
 #main-wrapper {
-  width: 700px; 
-  height: 861;
+  width: 1000px;
+  height: 100%;
 }
 
-#main-wrapperTEST{
-  width: 700px; 
-  height: 861;
-}
 form *:focus {
   border: 2px solid #000;
   outline: none;
@@ -397,9 +368,7 @@ input, textarea, select{
 #checked{
 background-color: #fff;
 }
-#bot{
-width: 700px;
-}
+
 #upload_div{
 display: inline;
   padding-bottom: 10px;
@@ -414,7 +383,9 @@ padding-top: 30px;
 /* Knappar [typ button,reset eller submit] */
 input[type="button"], input[type="reset"], input[type="submit"] {
   display: inline;
-  margin-left: 15px;
+  margin: 0 5px;
+  width: 10em;
+  padding: 10px;
   text-align:center;
   float: left;
 }
@@ -433,10 +404,13 @@ input[type="button"]:active, input[type="button"]:active {
 
 }
 
-/* style fÃ¶r label */
+/* style för label */
 label {
-  width: 10em;
-  /*font-family: Times New Roman;*/
+  padding-bottom: 10px;
+  clear: left;
+  text-align: right;
+  width: 15%;
+  font-family: Times New Roman;
   font-weight: bold;
   font-size: 16px;
   color: #606060;
@@ -448,12 +422,13 @@ label {
 #upload_form input[type="date"],
 #upload_form select,
 #upload_form input[type="file"]
+
 {
   margin: 0 auto;
   width: 75%;
   float: left;
 }
-/*Ã¥terstÃ¤ll/ladda faktura knappen*/
+/*återställ/ladda faktura knappen*/
 #username{
     width:360px;
 }
@@ -468,10 +443,10 @@ label {
     color: #000;
     font-weight: bold;
     display: inline-block;
-    width: 700px;
+    width: 1000px;
 }
 
-/* dÃ¶lj innehÃ¥ll */
+/* dölj innehåll */
 .hide{
     display:none;
 }
@@ -482,10 +457,10 @@ label {
     color: #000;
     font-weight: bold;
     display: inline-block;
-    width: 700px;
+    width: 1000px;
 }
 
-/* generella instÃ¤llningar fÃ¶r submit */
+/* generella inställningar för submit */
 .submit {
   text-align: center;
   margin-top: 20px;
@@ -536,7 +511,7 @@ b{
     font-weight:bold;
 }
 
-/* generella instÃ¤llningar fÃ¶r body */
+/* generella inställningar för body */
 body{
   background: #F2F2F2; 
   color:#969;
@@ -544,7 +519,7 @@ body{
   text-align: center;
 }
 
-/* Form hÃ¶jd, marginal och padding */
+/* Form höjd, marginal och padding */
 form ul {
   list-style: none;
   margin: 0;
@@ -561,7 +536,7 @@ form * {
   text-align:left;
 }
 
-/* Ã¤ndra fÃ¤rg pÃ¥ border nÃ¤r fÃ¤ltet Ã¤r markerat */
+/* ändra färg på border när fältet är markerat */
 
 
 /*#####################################################*/
@@ -570,15 +545,15 @@ form * {
 /*#####################################################*/
 /*#####################################################*/
 
-/* generella instÃ¤llningar fÃ¶r nav */
+/* generella inställningar för nav */
 nav{
   text-align: left;
-  width: 700px;
+  width: 1000px;
 }
 
 nav ul{
   list-style:none;
-  width: 700px;
+  width: 1000px;
   position:relative;
   display:inline-block;
 }
@@ -601,7 +576,9 @@ nav ul li{
   -moz-box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
   -webkit-box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
 }
-
+nav > ul > li > ul > li:last-child:after{
+  border-radius:0 0 5px 5px;
+}
 nav ul li:after{
   content:'.';
   text-indent:-9999px;
@@ -626,7 +603,16 @@ nav ul li:after{
   -o-transition:0.25s all;
   transition:0.25s all;
 }
-
+nav > ul > li:first-child{
+  border-radius: 5px 0 0 5px;
+}
+nav > ul > li:first-child:after,
+nav > ul > li.selected:first-child:after{
+  box-shadow:1px 0 0 #a3a3a3,2px 0 0 #fff;
+  -moz-box-shadow:1px 0 0 #a3a3a3,2px 0 0 #fff;
+  -webkit-box-shadow:1px 0 0 #a3a3a3,2px 0 0 #fff;
+  border-radius:5px 0 0 5px;
+}
 nav ul li:hover > ul{
   display:block;
 }
@@ -643,4 +629,102 @@ nav ul:hover li.selected:after,
 nav ul:hover li:target:after{
   opacity:0;
 }
+nav > ul > li:last-child{
+  border-radius: 0 5px 5px 0;
+}
+nav > ul > li:last-child:after,
+nav > ul > li.selected:last-child:after{
+  box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff;
+  -moz-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff;
+  -webkit-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff;
+  border-radius:0 5px 5px 0;
+}
+#extendmenuebarbig{
+width: 80px;
+  display:block;
+  text-decoration:none;
+  color: #5d5d5d;
+  font: 18px Arial,sans-serif;
+  padding: 10px 10px; 
+  text-align: center;
+  position: relative;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
+  z-index:2;
+  text-decoration:none;
+  white-space:nowrap;
+}
+#extendmenuebarsmall{
+width: 50px;
+  display:block;
+  text-decoration:none;
+  color: #5d5d5d;
+  font: 18px Arial,sans-serif;
+  padding: 10px 10px; 
+  text-align: center;
+  position: relative;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
+  z-index:2;
+  text-decoration:none;
+  white-space:nowrap;
+}
+nav ul li a{
+width: 40px;
+  display:block;
+  text-decoration:none;
+  color: #5d5d5d;
+  font: 18px Arial,sans-serif;
+  padding: 10px 10px; 
+  text-align: center;
+  position: relative;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
+  z-index:2;
+  text-decoration:none;
+  white-space:nowrap;
+}
 
+
+nav ul ul{
+  position:absolute;
+  top:100%;
+  display:none;
+}
+nav ul ul li{
+  float:none;
+  position:relative;
+  z-index: 10;
+  text-align: center:
+}
+nav ul ul li:last-child{
+  border-radius:0 0 5px 5px !important; 
+}
+
+nav ul a.hemikon{
+  background:url('../../image/home.png') no-repeat center center;
+  display: block;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-indent: -9999px;
+  width: 16px;
+}
+
+nav ul a.logikon{
+  background:url('../../image/logout.png') no-repeat center center;
+  display: block;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-indent: -9999px;
+  width: 16px;
+}
+
+th {
+display: table-cell;
+vertical-align: inherit;
+font-weight: bold;
+text-align: center;
+}
+
+table {
+color: #000;
+}

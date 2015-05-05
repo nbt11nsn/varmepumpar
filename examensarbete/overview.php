@@ -1,36 +1,19 @@
-
+<?php
+  defined('THE_OVERVIEW') or die();
+?>
 <!DOCTYPE html>
 <html>
 <head>
 
-<?php
-defined('THE_HEAD') || define('THE_HEAD', TRUE);
-include_once("include/head.php");
-?>
 <link rel="stylesheet" type="text/css" media="Print"  href="css/print.css">
 <script language="javascript" type="text/javascript" src = "include/print.js?"></script>
 </head>
 <body>
+
 <?php
-defined('THE_HEADER') || define('THE_HEADER', TRUE);
-require_once("include/header.php");
-?>
-<div id="main-wrapper">
-<?php
-defined('THE_MENUE') || define('THE_MENUE', TRUE);
-require_once("include/menuebar.php");
 defined('THE_DB') || define('THE_DB', TRUE);
 require_once(__DIR__ .'./../db.php');
 
-?>
-<form method="get" action="overview.php">
-    <button type="submit" id ="overviewbuttonsmall">Översikt</button>
-</form>
-<form method="get" action="printoverview.php">
-    <button type="submit" id ="overviewbuttonbig">Formulär</button>
-</form>
-		
-	<?php 
 	$isqlpers = "SELECT * FROM person, fakturamottagare, fastighet, varmepump, borrfirma, installator where 
 	person.ID = ".$_COOKIE['ID']." AND 
 	fakturamottagare.ID = ".$_COOKIE['ID']." AND 
@@ -38,12 +21,11 @@ require_once(__DIR__ .'./../db.php');
 	varmepump.ID = ".$_COOKIE['ID']." AND 
 	borrfirma.ID = ".$_COOKIE['ID']." AND 
 	installator.ID = ".$_COOKIE['ID']."";
-	?>
-	<?php 	
+	
 	$iresult = mysqli_query($con, $isqlpers);
 	if (mysqli_num_rows($iresult) != 0) {
       while($irows2 = mysqli_fetch_assoc($iresult)) {
-echo '<div id="infoframeoverview">	
+echo '	
 <h1 id ="overviewareatitle3">Sökande</h1>
 <div id ="applicantframe2">
 
@@ -167,17 +149,20 @@ echo '<div id="infoframeoverview">
 
 <input type="text" value ="Bifogad karta:" readonly id = "infotextframe1"/>
 <input type="box" value ="" name ="bifogakarta" readonly id ="infotextframe2"/>
-</div>';
+';
 		}	
     }
 		?>
-		</div>
+		<form method="get" action="overviewPage.php">
+    <button type="submit" id ="overviewbuttonsmall">Översikt</button>
+</form>
+<form method="get" onclick="closed()">
+    <button type="submit" id ="overviewbuttonbig">Utskriftsvänlig vy</button>
+</form>
 
-</div><!--main-wrapper-->
-<?php
-defined('THE_FOOTER') || define('THE_FOOTER', TRUE);
-require_once("include/footer.php");
-?>
+<form method="get" onclick="printDiv('printableArea')">
+<button type="submit" id ="overviewbuttonsmall">Skriv ut</button>
+</form>
 </body>
 </html>
 

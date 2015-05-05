@@ -1,15 +1,22 @@
-<?php
-  defined('THE_HEATPUMP') or die();
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
 
+<?php
+defined('THE_HEAD') || define('THE_HEAD', TRUE);
+include_once("include/head.php");
+?>
 </head>
 <body>
-
+<?php
+defined('THE_HEADER') || define('THE_HEADER', TRUE);
+require_once("include/header.php");
+?>
 <div id="main-wrapper">
 <?php
+defined('THE_MENUE') || define('THE_MENUE', TRUE);
+require_once("include/menuebar.php");
 defined('THE_DB') || define('THE_DB', TRUE);
 require_once(__DIR__ .'./../db.php');
 ?>
@@ -56,14 +63,14 @@ require_once(__DIR__ .'./../db.php');
 		<input required type="text" value ="" name ="mangd_koldmedium" id = "requiredtextframe"/>
 		</div>
 		
-		  <div id ="buttondiv">		
+		  <div>	
 		<input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;">
-		<input type="submit" name ="Spara" value="Spara" onclick="document.getElementById('checked4').style.backgroundColor = 'lightgreen';">
+		<input type="submit" name ="next" value="Nästa" onclick="document.getElementById('checked4').style.backgroundColor = 'lightgreen';">
 		</div>
  </form>
  
  <?php	
-if(isset($_POST['Spara'])){	
+if(isset($_POST['next'])){	
 	$anlaggning=mysqli_real_escape_string($con,$_POST['anlaggning']);	
 	$vinkel=mysqli_real_escape_string($con,$_POST['vinkel']);
     $effekt=mysqli_real_escape_string($con,$_POST['effekt']);
@@ -81,7 +88,7 @@ if(isset($_POST['Spara'])){
             echo "<div class='error'>Lyckades inte spara informationen</div>";
         }	
 }
-?>     
+?>    
  </div>
 </div><!--main-wrapper-->
 
