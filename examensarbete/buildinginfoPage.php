@@ -8,8 +8,6 @@ include_once("include/head.php");
 ?>
  </head>
 		<body>
- 
- 
 <div id="middlediv">
  
 <div id="sidebarleft">

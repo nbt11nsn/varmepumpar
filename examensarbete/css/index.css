@@ -39,16 +39,15 @@ height: 50px;
 
 #infotextframe{
 width: 400px;
-
 align: right;
 }
 #infotextframe1{
-width: 400px;
+width: 258px;
 align: right;
 float:left;
 }
 #infotextframe2{
-width: 200px;
+width: 400px;
 align: right;
 }
 
@@ -443,7 +442,7 @@ width: 400px;
   text-align:center;
 }
 	
-#menue {
+#menuBar {
   width: 700px; 
 }
 #main-wrapper {
@@ -528,6 +527,12 @@ label {
 /*återställ/ladda faktura knappen*/
 #username{
     width:360px;
+}
+a:active { 
+    background-color: yellow;
+}
+a:visited {
+    color: green;
 }
 
 /* ############### name attribute .<name> ############### */

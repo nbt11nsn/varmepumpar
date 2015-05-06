@@ -2,7 +2,8 @@
 <?php
 defined('THE_MENUE') or die();
 
-echo"<div id ='menue'>
+echo"<div id ='menuBar'>
+
   <nav>
     <ul>
 	  <li><a href='beforePage.php' id ='extendmenuebarsmall'>Inför ansökan</a></li>
