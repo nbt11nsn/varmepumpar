@@ -6,7 +6,7 @@ font-style: bold;
 }
 /* slut för testningen */
 #printheader{
-  width: 1024px; 
+    width: 1140px; 
   min-height: 300px;
   height: 100%;
   background: #fff; 
@@ -15,7 +15,7 @@ font-style: bold;
 }
 #printTitle{
 position: absolute;
-top:280px;
+top:170px;
 left:250px;
 font-size: 33px; 
 font-style: bold;
@@ -23,13 +23,13 @@ font-style: bold;
 }
 #image{
 position: absolute;
-top:210px;
+top:100px;
 left:100px;
 }
 
 #overviewbuttonsmall{
 font-size: 18px;
-float: left;
+float: right;
 width: 85px;
 height: 50px;
 }
@@ -44,23 +44,20 @@ height: 50px;
 #infotextframe{
 width: 800px;
 border: none;
-align: right;
 }
 #infotextframe1{
 border: none;
 width: 430px;
-align: right;
 float:left;
 }
 #infotextframe2{
 width: 250px;
 border: none;
-align: right;
 }
 
 #date{
 position: absolute;
-top:370px;
+top:250px;
 left:704px;
 font-size: 20px; 
 }
@@ -74,7 +71,7 @@ font-size: 20px;
 }
 #infotext{
 position: absolute;
-top:400px;
+top:270px;
 left:380px;
 }
 #infotext1{

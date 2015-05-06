@@ -5,64 +5,57 @@ font-size: 20px;
 font-style: bold;
 }
 /* slut för testningen */
+
+/* utskriftsfunktioner */
 #printheader{
-  width: 1024px; 
-  min-height: 300px;
-  height: 100%;
+  width: 500px; 
+  height: 250px;
   background: #fff; 
   text-align: left;
   padding:25px 10%;
 }
+
 #printTitle{
 position: absolute;
-top:280px;
-left:250px;
-font-size: 33px; 
+top:370px;
+left:700px;
+font-size: 23px; 
 font-style: bold;
-
 }
+
 #image{
 position: absolute;
-top:210px;
-left:100px;
-}
-
-#overviewbuttonsmall{
-font-size: 18px;
-float: left;
-width: 85px;
-height: 50px;
+top:340px;
+left:600px;
 }
 
 #overviewbuttonbig{
 font-size: 18px;
 float: left;
-width: 160px;
+width: 221px;
 text-align: center;
 height: 50px;
 }
 
 #infotextframe{
-width: 800px;
-border: none;
+width: 400px;
+
 align: right;
 }
 #infotextframe1{
-border: none;
 width: 400px;
 align: right;
 float:left;
 }
 #infotextframe2{
 width: 200px;
-border: none;
 align: right;
 }
 
 #date{
 position: absolute;
-top:370px;
-left:704px;
+top:420px;
+left:1000px;
 font-size: 20px; 
 }
 #question{
@@ -75,8 +68,8 @@ font-size: 20px;
 }
 #infotext{
 position: absolute;
-top:400px;
-left:380px;
+top:450px;
+left:680px;
 }
 #infotext1{
 float: left;
@@ -87,7 +80,12 @@ padding-left: 100px;
 float: left;
 }
 
-
+#overviewbuttonsmall{
+font-size: 18px;
+float: left;
+width: 85px;
+height: 50px;
+}
 
 
 #invoiceframe { 
@@ -153,7 +151,6 @@ margin-left: 50px;
 float: left;
 }
 
-
 #testing{
   display:inline-block;
   width: 700px; 
@@ -175,87 +172,168 @@ padding-bottom: 50px;
 }
 
 #forsta{
+background-color: black;
 display:inline-block;
-padding-right: 200px;
-position:relative;
+padding-right: 100px;
 }
 
+
+/*alla som påverkas av border--början*/
 #applicantframe{
-border-right: 1px solid black;
-border-left: 1px solid black;
-border-bottom: 1px solid black;
-}
-
-#applicantframe2{
 width: 700px;
-border-left: 1px solid black;
-border-bottom: 1px solid black;
+}
+#applicantframe1{
+padding-bottom: 5px;
+border: 1px solid black;
+width: 695px;
+height: 418px;
+}
+#applicantframe2{
+padding-bottom: 5px;
+border: 1px solid black;
+width: 695px;
+height: 100px;
 }
 
-#first{
-width: 800px;
+#applicantframe3{
+padding-bottom: 5px;
+border: 1px solid black;
+width: 695px;
+height: 206px;
+}
+
+#applicantframe4{
+padding-bottom: 5px;
+border: 1px solid black;
+width: 695px;
+height: 47px;
+}
+
+#first3{
+width: 350px;
 float: left;
-border-right: 1px solid black;
-}
 
-#second{
-border-right: 1px solid black;
-width: 50%;
+}
+#second2{
+width: 340px;
+float: left;
+
+}
+#third{
+width: 695px;
+}
+#first{
+width:395;
+float: left;
+
+}
+#firstsecond{
+width: 280px;
 float: left;
 }
 
 #thirdframe{
-border-right: 1px solid black;
-width: 33%;
+width: 199px;
 float: left;
 }
+
 #thirdframe2{
-border-right: 1px solid black;
-width: 15%;
+width: 97px;
 float: left;
 }
 
-#third{
-}
 #fourth{
-
 }
 
 #overviewboxfull{
-width: 1161px;
 border: none;
+border-bottom: 1px solid black;
+width: 678px;
 
 }
 #overviewboxlong{
-width: 783px;
 border: none;
-
+border-bottom: 1px solid black;
+border-right: 1px solid black;
+width: 381px;
 }
+
 #overviewboxmedium{
-width: 572px;
 border: none;
+border-bottom: 1px solid black;
+border-right: 1px solid black;
+width: 333px;
+}
+#overviewboxmedium2{
+border: none;
+border-bottom: 1px solid black;
+width: 329px;
 }
 #overviewboxsmall{
-width: 360px;
 border: none;
+border-bottom: 1px solid black;
+width: 281px;
 }
 #overviewboxsmini1{
-width: 50px;
 border: none;
+border-bottom: 1px solid black;
+border-right: 1px solid black;
+width: 80px;
 }
 #overviewboxsmini2{
-width: 155px;
 border: none;
+border-bottom: 1px solid black;
+border-right: 1px solid black;
+width: 182px;
 }
-#overviewareatitle3{
+#overviewboxsmini3{
+border: none;
+border-bottom: 1px solid black;
+border-right: 1px solid black;
+width: 184px;
+}
+#overviewtitle{
+border-right: 1px solid black;
 text-align: left;
-font-size: 20px;
-width: 100%;
+font-size: 18px;
+width: 397px;
+}
+#overviewtitlemini{
+border: none;
+text-align: left;
+font-size: 18px;
+width: 200px;
+}
+#overviewtitlemini2{
+text-align: left;
+font-size: 18px;
+width: 97px;
+}
+#overviewtitle2{
+text-align: left;
+font-size: 18px;
+width: 297px;
+}
+#overviewtitle3{
+border-right: 1px solid black;
+width: 349px;
+text-align: left;
+font-size: 18px;
+}
+#overviewtitle3left{
+border-right: 1px solid black;
+width: 345px;
+text-align: left;
+font-size: 18px;
+}
+#overviewtitle4{
+width: 600px;
+text-align: left;
+font-size: 18px;
 }
 
 #overviewareatitle2{
 text-align: left;
-margin-left: 50px;
 margin-top: 20px;
 font-size: 20px;
 width: 100%;
@@ -263,32 +341,26 @@ width: 100%;
 
 #overviewareatitle{
 text-align: left;
-margin-left: 50px;
 font-size: 20px;
-width: 100%;
+width: 300px;
 }
-#overviewtitle{
-border-top: 1px solid black;
-text-align: left;
-font-size: 20px;
-width: 100%;
-margin-bottom: 10px;
-}
-
 #overviewareatitle3{
 /*font-family: Times New Roman;*/
 font-weight: bold;
 text-align: left;
 font-size: 20px;
-width: 100%;
+width: 300px;
+margin-top: 10px;
 margin-bottom: 10px;
 }
 #infoframeoverview{
   display:inline-block;
-  width: 700px; 
+  width: 695px; 
   background: #fff; 
   text-align: left;
 }
+/*alla som påverkas av border--slut*/
+
 
 #buttons{
   display:inline-block;

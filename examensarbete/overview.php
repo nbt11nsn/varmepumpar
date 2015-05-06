@@ -27,7 +27,7 @@ require_once(__DIR__ .'./../db.php');
       while($irows2 = mysqli_fetch_assoc($iresult)) {
 echo '	
 <h1 id ="overviewareatitle3">Sökande</h1>
-<div id ="applicantframe2">
+<div id ="applicantframe">
 
 <input type="text" value ="Namn:" readonly id = "infotextframe1"/>
 <input type="text" value ="'.$irows2["fornamn"].' '.$irows2["efternamn"].'" readonly id = "infotextframe2"/>
@@ -49,7 +49,7 @@ echo '
 </div>
 
 <h1 id ="overviewareatitle3">Fakturering</h1>
-<div id ="applicantframe2">
+<div id ="applicantframe">
 <input type="text" value ="Fakturamottagare:" readonly id = "infotextframe1"/>
 <input type="box" value ="'.$irows2["fakt_namn"].'" name ="fakt_namn" readonly id ="infotextframe2"/>
 
@@ -63,7 +63,7 @@ echo '
 
 
 <h1 id ="overviewareatitle3">Fastighet där installation skall ske</h1>
-<div id ="applicantframe2">
+<div id ="applicantframe">
 <input type="text" value ="Fastighetsbeteckning:" readonly id = "infotextframe1"/>
 <input type="box" value ="'.$irows2["fastighetsbeteckning"].'" name ="fastighetsbeteckning" readonly id ="infotextframe2"/>
 
@@ -73,7 +73,7 @@ echo '
 
 
 <h1 id ="overviewareatitle3">Anläggning</h1>
-<div id ="applicantframe2">
+<div id ="applicantframe">
 
 <input type="text" value ="Typ av anläggning:" readonly id = "infotextframe1"/>
 <input type="box" value ="'.$irows2["anlaggning"].'" name ="anlaggning" readonly id ="infotextframe2"/>
@@ -87,7 +87,7 @@ echo '
 
 
 <h1 id ="overviewareatitle3">Övrigt</h1>
-<div id ="applicantframe2">
+<div id ="applicantframe">
 
 <input type="text" value ="Borrdjup:" readonly id = "infotextframe1"/>
 <input type="box" value ="'.$irows2["borrdjup"].'" name ="borrdjup" readonly id ="infotextframe2"/>
@@ -115,7 +115,7 @@ echo '
 </div>
 
 <h1 id ="overviewareatitle3">Borrare</h1>
-<div id ="applicantframe2">
+<div id ="applicantframe">
 
 <input type="text" value ="Brunnsborrare som anlitas:" readonly id = "infotextframe1"/>
 <input type="box" value ="'.$irows2["borr_namn"].'" name ="borr_namn" readonly id ="infotextframe2"/>
@@ -129,7 +129,7 @@ echo '
 </div>
 
 <h1 id ="overviewareatitle3">Installatör</h1>
-<div id ="applicantframe2">
+<div id ="applicantframe">
 
 <input type="text" value ="VVS-installatör som avses anlitas:" readonly id = "infotextframe1"/>
 <input type="box" value ="'.$irows2["install_namn"].'" name ="install_namn" readonly id ="infotextframe2"/>
@@ -142,7 +142,7 @@ echo '
 </div>
 
 <h1 id ="overviewareatitle3">Bilagor</h1>
-<div id ="applicantframe2">
+<div id ="applicantframe">
 
 <input type="text" value ="Karta skickas via post:" readonly id = "infotextframe1"/>
 <input type="box" value ="" name ="skickakarta" readonly id ="infotextframe2"/>
@@ -153,16 +153,12 @@ echo '
 		}	
     }
 		?>
-		<form method="get" action="overviewPage.php">
-    <button type="submit" id ="overviewbuttonsmall">Översikt</button>
-</form>
-<form method="get" onclick="closed()">
-    <button type="submit" id ="overviewbuttonbig">Utskriftsvänlig vy</button>
+<form method="get" action="overviewPage.php">
+<button type="submit" id ="overviewbuttonsmall">Översikt</button>
 </form>
 
-<form method="get" onclick="printDiv('printableArea')">
-<button type="submit" id ="overviewbuttonsmall">Skriv ut</button>
-</form>
+<button type="submit" id ="overviewbuttonbig" onclick =window.open("gammalt/printoverview.php")>Utskriftsvänlig vy(ny sida)</button></a>
+
 </body>
 </html>
 

@@ -33,7 +33,7 @@ else{
 		while(in_array($randomnumber, $myArray)) {	
 			$randomnumber = mt_rand(1, 10000);
 	}   
-	setcookie('ID',$randomnumber,time() + 1800);
+	setcookie('ID',$randomnumber,time() + 3600);
 	$_COOKIE['ID'] = $randomnumber;
 	}
 ?>

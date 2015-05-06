@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <?php
 defined('THE_HEAD') || define('THE_HEAD', TRUE);
 include_once("include/head.php");
@@ -12,27 +11,12 @@ include_once("include/head.php");
 </head>
 <body>
 
-<?php
-defined('THE_HEADER') || define('THE_HEADER', TRUE);
-require_once("include/header.php");
-?>
-
 <div id="main-wrapper">
 <?php
-defined('THE_MENUE') || define('THE_MENUE', TRUE);
-require_once("include/menuebar.php");
 defined('THE_DB') || define('THE_DB', TRUE);
-require_once(__DIR__ .'./../db.php');
+require_once(__DIR__ .'./../../db.php');
 
 ?>
-
-<form method="get" action="overview.php">
-<button type="submit" id ="overviewbuttonsmall">Översikt</button>
-</form>
-
-<form method="get" action="printoverview.php">
-<button type="submit" id ="overviewbuttonbig">Formulär</button>
-</form>
 
 <form method="get" onclick="printDiv('printableArea')">
 <button type="submit" id ="overviewbuttonsmall">Skriv ut</button>
@@ -94,7 +78,7 @@ echo '<div id="infoframeoverview">
 </div>
 
 <div>
-<div id ="overviewtitle">Person-/Organisationsnummer</div>
+<div id ="overviewtitle">Person-/Orgnr</div>
 <input type="box" value ="'.$irows2["persnum"].'" name ="persnum" readonly id ="overviewboxsmall"/>
 <div id ="overviewtitle">Telefonnummer</div>
 <input type="box" value ="'.$irows2["tele"].'" name ="tele" readonly id ="overviewboxsmall"/>
@@ -121,7 +105,7 @@ echo '<div id="infoframeoverview">
 <input type="box" value ="'.$irows2["fakt_namn"].'" name ="fakt_namn" readonly id ="overviewboxmedium"/>
 </div>
 <div>
-<div id ="overviewtitle">Person-/Organisationsnummer(om annan än ovanstående)</div>
+<div id ="overviewtitle">Person-/Orgnr(om annan än ovanstående)</div>
 <input type="box" value ="'.$irows2["fakt_persnum"].'" name ="fakt_persnum" readonly id ="overviewboxmedium"/>
 </div>
 
