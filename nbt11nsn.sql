@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.7.1
+-- version 3.4.11.1deb2+deb7u1
 -- http://www.phpmyadmin.net
 --
--- Värd: 127.0.0.1
--- Tid vid skapande: 27 apr 2015 kl 14:49
--- Serverversion: 5.6.20
--- PHP-version: 5.5.15
+-- Värd: localhost
+-- Skapad: 07 maj 2015 kl 16:27
+-- Serverversion: 5.5.43
+-- PHP-version: 5.4.39-0+deb7u2
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,10 +17,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Databas: `varmepumpdb`
+-- Databas: `nbt11nsn`
 --
-CREATE DATABASE IF NOT EXISTS `varmepumpdb` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `varmepumpdb`;
 
 -- --------------------------------------------------------
 
@@ -28,23 +26,22 @@ USE `varmepumpdb`;
 -- Tabellstruktur `ansokning`
 --
 
+DROP TABLE IF EXISTS `ansokning`;
 CREATE TABLE IF NOT EXISTS `ansokning` (
-`ID` int(11) NOT NULL,
-  `person_id` varchar(20) NOT NULL,
-  `kart_ID` varchar(20) NOT NULL,
-  `installator_ID` varchar(20) NOT NULL,
-  `varmepump_ID` varchar(20) NOT NULL,
-  `borrfirma_ID` varchar(20) NOT NULL,
-  `fastighet_ID` varchar(20) NOT NULL,
-  `datum` date NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `datum` date NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9740 ;
 
 --
 -- Dumpning av Data i tabell `ansokning`
 --
 
-INSERT INTO `ansokning` (`ID`, `person_id`, `kart_ID`, `installator_ID`, `varmepump_ID`, `borrfirma_ID`, `fastighet_ID`, `datum`) VALUES
-(1, '8806087550', '8806087550', '8806087550', '8806087550', '8806087550', '8806087550', '0000-00-00');
+INSERT INTO `ansokning` (`ID`, `datum`) VALUES
+(771, '2015-05-04'),
+(3173, '2015-05-04'),
+(8176, '2015-05-04'),
+(9089, '2015-05-07');
 
 -- --------------------------------------------------------
 
@@ -52,19 +49,24 @@ INSERT INTO `ansokning` (`ID`, `person_id`, `kart_ID`, `installator_ID`, `varmep
 -- Tabellstruktur `borrfirma`
 --
 
+DROP TABLE IF EXISTS `borrfirma`;
 CREATE TABLE IF NOT EXISTS `borrfirma` (
-`ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `borr_namn` varchar(50) NOT NULL,
   `borr_tele` varchar(20) NOT NULL,
-  `borr_certifiering` varchar(10) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+  `borr_certifiering` varchar(10) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9740 ;
 
 --
 -- Dumpning av Data i tabell `borrfirma`
 --
 
 INSERT INTO `borrfirma` (`ID`, `borr_namn`, `borr_tele`, `borr_certifiering`) VALUES
-(1, 'Borr AB', '0731254878', 'Ja');
+(771, 'rew', 'ewr', 'Nej'),
+(3173, '232132321321312', 'd', 'Ja'),
+(8176, 'dsasads', '214214', 'Nej'),
+(9089, 'hgfhfg', 'gfhfg', 'Nej');
 
 -- --------------------------------------------------------
 
@@ -72,21 +74,26 @@ INSERT INTO `borrfirma` (`ID`, `borr_namn`, `borr_tele`, `borr_certifiering`) VA
 -- Tabellstruktur `fakturamottagare`
 --
 
+DROP TABLE IF EXISTS `fakturamottagare`;
 CREATE TABLE IF NOT EXISTS `fakturamottagare` (
-`ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `fakt_namn` varchar(50) NOT NULL,
   `fakt_persnum` varchar(50) NOT NULL,
   `fakt_adress` varchar(50) NOT NULL,
   `fakt_postnum` varchar(20) NOT NULL,
-  `fakt_postort` varchar(20) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+  `fakt_postort` varchar(20) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9740 ;
 
 --
 -- Dumpning av Data i tabell `fakturamottagare`
 --
 
 INSERT INTO `fakturamottagare` (`ID`, `fakt_namn`, `fakt_persnum`, `fakt_adress`, `fakt_postnum`, `fakt_postort`) VALUES
-(1, 'Måns Lundh', '2512147885', 'Pizzagatan 3', '87548', 'Fribbeland');
+(771, 'rew', 'rew', 'rew', 'wre', 'rwe'),
+(3173, '', '', '', '', ''),
+(8176, '', '', '', '', ''),
+(9089, 'gfg', 'fdgd', 'f', '', 'g');
 
 -- --------------------------------------------------------
 
@@ -94,8 +101,9 @@ INSERT INTO `fakturamottagare` (`ID`, `fakt_namn`, `fakt_persnum`, `fakt_adress`
 -- Tabellstruktur `fastighet`
 --
 
+DROP TABLE IF EXISTS `fastighet`;
 CREATE TABLE IF NOT EXISTS `fastighet` (
-`ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `fastighetsbeteckning` varchar(50) NOT NULL,
   `fastighet_adress` varchar(30) NOT NULL,
   `fastighet_postnr` varchar(10) NOT NULL,
@@ -103,15 +111,40 @@ CREATE TABLE IF NOT EXISTS `fastighet` (
   `q1_avlopp` varchar(10) NOT NULL,
   `q2_vatten` varchar(10) NOT NULL,
   `q3_skyddsomrade` varchar(10) NOT NULL,
-  `q4_oljeuppvarmning` varchar(50) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+  `q4_oljeuppvarmning` varchar(50) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9740 ;
 
 --
 -- Dumpning av Data i tabell `fastighet`
 --
 
 INSERT INTO `fastighet` (`ID`, `fastighetsbeteckning`, `fastighet_adress`, `fastighet_postnr`, `fastighet_postort`, `q1_avlopp`, `q2_vatten`, `q3_skyddsomrade`, `q4_oljeuppvarmning`) VALUES
-(1, 'Eldkvarnen 1', 'Brunnsgatan 59A', '80252', 'Gävle', 'Ja, inre', 'Ja', 'Ja', 'Ja, cistern tas bort');
+(771, 'wre', 'rew', 'rew', 'rew', 'Ja, yttre', 'Nej', 'Nej', 'Ja, cistern kvar'),
+(3173, '11111111', '', '', '', 'Ja, inre', 'Ja', 'Ja', 'Ja, cistern tas bort'),
+(4784, 'fsdfdfsddfsfdsfsd', '', '', '', 'Ja, yttre', 'Nej', 'Nej', 'Ja, cistern kvar'),
+(8176, 'asdads', '', '', '', 'Nej', 'Nej', 'Nej', 'Nej'),
+(9089, 'retert', 'rter', 'rettre', 'ret', 'Ja, inre', 'Ja', 'Ja', 'Ja, cistern tas bort');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellstruktur `information`
+--
+
+DROP TABLE IF EXISTS `information`;
+CREATE TABLE IF NOT EXISTS `information` (
+  `ID` int(20) NOT NULL AUTO_INCREMENT,
+  `infotext` text NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9875 ;
+
+--
+-- Dumpning av Data i tabell `information`
+--
+
+INSERT INTO `information` (`ID`, `infotext`) VALUES
+(9874, 'sdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfdssdasfdfsdfsdfds');
 
 -- --------------------------------------------------------
 
@@ -119,19 +152,24 @@ INSERT INTO `fastighet` (`ID`, `fastighetsbeteckning`, `fastighet_adress`, `fast
 -- Tabellstruktur `installator`
 --
 
+DROP TABLE IF EXISTS `installator`;
 CREATE TABLE IF NOT EXISTS `installator` (
-`ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `install_namn` varchar(50) NOT NULL,
   `install_tele` varchar(20) NOT NULL,
-  `install_certifiering` varchar(10) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+  `install_certifiering` varchar(10) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9740 ;
 
 --
 -- Dumpning av Data i tabell `installator`
 --
 
 INSERT INTO `installator` (`ID`, `install_namn`, `install_tele`, `install_certifiering`) VALUES
-(1, 'VVS AB', '0768545454', 'Nej');
+(771, 'rew', 'wre', 'Nej'),
+(3173, 'rwererwerewewrewrew', '111111', 'Nej'),
+(8176, 'adsads', '214412', 'Nej'),
+(9089, 'fghfgh', 'fghfgh', 'Nej');
 
 -- --------------------------------------------------------
 
@@ -139,12 +177,14 @@ INSERT INTO `installator` (`ID`, `install_namn`, `install_tele`, `install_certif
 -- Tabellstruktur `karta`
 --
 
+DROP TABLE IF EXISTS `karta`;
 CREATE TABLE IF NOT EXISTS `karta` (
-`ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `namn` varchar(50) NOT NULL,
   `url` varchar(100) NOT NULL,
   `svar` varchar(3) NOT NULL,
-  `agarid` int(11) NOT NULL
+  `agarid` int(11) NOT NULL,
+  PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
@@ -160,8 +200,9 @@ INSERT INTO `karta` (`ID`, `namn`, `url`, `svar`, `agarid`) VALUES
 -- Tabellstruktur `person`
 --
 
+DROP TABLE IF EXISTS `person`;
 CREATE TABLE IF NOT EXISTS `person` (
-`ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `fornamn` varchar(50) NOT NULL,
   `efternamn` varchar(50) NOT NULL,
   `persnum` varchar(12) NOT NULL,
@@ -170,15 +211,19 @@ CREATE TABLE IF NOT EXISTS `person` (
   `postort` varchar(50) NOT NULL,
   `tele` varchar(20) NOT NULL,
   `alt_tele` varchar(20) NOT NULL,
-  `epost` varchar(50) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+  `epost` varchar(50) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9740 ;
 
 --
 -- Dumpning av Data i tabell `person`
 --
 
 INSERT INTO `person` (`ID`, `fornamn`, `efternamn`, `persnum`, `adress`, `postnum`, `postort`, `tele`, `alt_tele`, `epost`) VALUES
-(1, 'Niklas', 'Sjögren', '8806087550', 'Brunnsgatan 59A', '80252', 'Gävle', '0730384158', '', 'Niklas@hotmail.com');
+(771, 'wre', 'rew', 'rew', 'rew', 'ewr', 'rew', 'rew', 'rew', 'erw'),
+(3173, '111111111', '222222222', '3fds', 'dfsdf', 'dfs', 'dsf', 'fds', 'fds', 'fds'),
+(8176, 'adsdas', 'adssda', '124142142', 'adsdas', '412412', 'dasdas', '142214', '', ''),
+(9089, 'niklas', 'sjögren', '8806087550', 'dfs', 'dfs', 'dsf', 'dsf', 'dfs', 'fd');
 
 -- --------------------------------------------------------
 
@@ -186,120 +231,29 @@ INSERT INTO `person` (`ID`, `fornamn`, `efternamn`, `persnum`, `adress`, `postnu
 -- Tabellstruktur `varmepump`
 --
 
+DROP TABLE IF EXISTS `varmepump`;
 CREATE TABLE IF NOT EXISTS `varmepump` (
-`ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `anlaggning` varchar(50) NOT NULL,
   `vinkel` varchar(3) NOT NULL,
   `effekt` varchar(100) NOT NULL,
   `borrdjup` varchar(50) NOT NULL,
   `typ_koldbarare` varchar(50) NOT NULL,
   `typ_koldmedium` varchar(50) NOT NULL,
-  `mangd_koldmedium` varchar(100) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+  `mangd_koldmedium` varchar(100) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9740 ;
 
 --
 -- Dumpning av Data i tabell `varmepump`
 --
 
 INSERT INTO `varmepump` (`ID`, `anlaggning`, `vinkel`, `effekt`, `borrdjup`, `typ_koldbarare`, `typ_koldmedium`, `mangd_koldmedium`) VALUES
-(1, 'Ytvärme', '10', '25', '150', 'köldbärare2000', 'köldmedium2000', '50');
+(771, 'Bergvärme', 'rew', 'rew', 'rew', 'rew', 'rwe', 'rew'),
+(3173, 'Bergvärme', '21', '213213', '', '142241', 'asddas', '214421'),
+(8176, 'Bergvärme', '424', '241112', '', 'adsdas', 'ffasfsa', '214'),
+(9089, 'Bergvärme', 'gff', 'gfdfdg', 'gfdgf', 'dgfdfg', 'dfgfd', 'hgfg');
 
---
--- Index för dumpade tabeller
---
-
---
--- Index för tabell `ansokning`
---
-ALTER TABLE `ansokning`
- ADD PRIMARY KEY (`ID`);
-
---
--- Index för tabell `borrfirma`
---
-ALTER TABLE `borrfirma`
- ADD PRIMARY KEY (`ID`);
-
---
--- Index för tabell `fakturamottagare`
---
-ALTER TABLE `fakturamottagare`
- ADD PRIMARY KEY (`ID`);
-
---
--- Index för tabell `fastighet`
---
-ALTER TABLE `fastighet`
- ADD PRIMARY KEY (`ID`);
-
---
--- Index för tabell `installator`
---
-ALTER TABLE `installator`
- ADD PRIMARY KEY (`ID`);
-
---
--- Index för tabell `karta`
---
-ALTER TABLE `karta`
- ADD PRIMARY KEY (`ID`);
-
---
--- Index för tabell `person`
---
-ALTER TABLE `person`
- ADD PRIMARY KEY (`ID`);
-
---
--- Index för tabell `varmepump`
---
-ALTER TABLE `varmepump`
- ADD PRIMARY KEY (`ID`);
-
---
--- AUTO_INCREMENT för dumpade tabeller
---
-
---
--- AUTO_INCREMENT för tabell `ansokning`
---
-ALTER TABLE `ansokning`
-MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT för tabell `borrfirma`
---
-ALTER TABLE `borrfirma`
-MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT för tabell `fakturamottagare`
---
-ALTER TABLE `fakturamottagare`
-MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT för tabell `fastighet`
---
-ALTER TABLE `fastighet`
-MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT för tabell `installator`
---
-ALTER TABLE `installator`
-MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT för tabell `karta`
---
-ALTER TABLE `karta`
-MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT för tabell `person`
---
-ALTER TABLE `person`
-MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT för tabell `varmepump`
---
-ALTER TABLE `varmepump`
-MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
