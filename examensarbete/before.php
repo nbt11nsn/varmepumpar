@@ -16,12 +16,9 @@
 		Efter att ansökan är klar och ni klickat på "skicka in ansökan" som kommer finnas på översiktssidan 
 		så kommer en sida upp där ni kan ge feedback om ni har något att tillägga.<br><br> 
 		
-		Några synpunkter skulle kunna vara:<br> 
-		* Var det något som var svårt att förstå?<br> 
-		* Kände ni att det var lätt att fylla i rätt information(t.ex för kölmedium, köldbärare)?<br> 
-		* Känner ni att det saknas frågor?<br> 
-		* Tror ni formuläret kommer hjälpa eller stjälpa etc.<br> <br> 
-		Att ge feedback är helt fritt. Om ni inte kommer på något att skriva så är det bara klicka på "avsluta".
+		Som sagt så är detta ett test och informationen som skrivs kommer INTE att resultera i en riktig ansökan.<br>
+		När ni är klar och klickat på "skicka ansökan" som finns under fliken översikt så kommer ni komma till en sida där några frågor ställs och möjlighet till feedback finns att lämna.
+		
 	</div>	
 		
 	<div id ="buttondiv2">	
@@ -34,11 +31,11 @@ if(isset($_POST['next'])){
 	$getDate = "(SELECT CURDATE())";
 	$insertContact = "INSERT INTO ansokning values('".$_COOKIE['ID']."',".$getDate.")";		
 		 if(mysqli_query($con, $insertContact)){
-           echo "<div class='error'>Lyckades spara informationen och har ID:".$_COOKIE['ID']." </div>";
+           echo "<div class='error'>Ett ID har skapats för din ansökan. Du kan nu gå vidare genom att klicka på flikarna</div>";
 		   
         }
         else{
-              echo "<div class='error'>Lyckades inte spara informationen och har ID:".$_COOKIE['ID']." </div>";
+              echo "<div class='error'>Du har redan påbörjat en ansökan. Du kan gå vidare genom att klicka på flikarna</div>";
 	  }		
 }
 ?>	

@@ -99,7 +99,7 @@ if(isset($_POST['Spara'])&&!empty($_POST['beteckning'])){
             echo "<div class='ok'>Informationen har sparats</div>";
         }
         else{
-            echo "<div class='error'>Lyckades inte spara informationen</div>";
+            echo "<div class='error'>Du har redan sparat denna information i databasen</div>";
         }		
 }
 ?> 
