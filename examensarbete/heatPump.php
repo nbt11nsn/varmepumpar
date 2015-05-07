@@ -73,7 +73,6 @@ if(isset($_POST['Spara'])){
 	$mangd_koldmedium=mysqli_real_escape_string($con,$_POST['mangd_koldmedium']);  
 	
 		$insertContact = "INSERT INTO varmepump values('".$_COOKIE['ID']."','".$anlaggning."','".$vinkel."','".$effekt."','".$borrdjup."','".$typ_koldbarare."','".$typ_koldmedium."','".$mangd_koldmedium."')";		
-		 echo $insertContact;
 		 if(mysqli_query($con, $insertContact)){
             echo "<div class='ok'>Informationen har sparats</div>";
         }

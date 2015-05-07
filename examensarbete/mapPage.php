@@ -5,6 +5,9 @@
 <?php
 defined('THE_HEAD') || define('THE_HEAD', TRUE);
 include_once("include/head.php");
+defined('THE_TOPHEADER') || define('THE_TOPHEADER', TRUE);
+include_once("include/topheader.php");
+
 ?>
  </head>
 		<body>
@@ -23,6 +26,8 @@ include_once("include/sidebar.php");
 <?php
 defined('THE_HEADER') || define('THE_HEADER', TRUE);
 include_once("include/header.php");
+defined('THE_MENUE4') || define('THE_MENUE4', TRUE);
+require_once("include/menuebar4.php");
 ?>
 </div><!-- End #top --> 
 <div id ="bot">
@@ -30,10 +35,7 @@ include_once("include/header.php");
 defined('THE_MAP') || define('THE_MAP', TRUE);
 require_once("map.php");
 ?>
-		  <div id ="buttondiv">		
-		<input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;">
-		<input type="submit" name ="Spara" value="Spara" onclick="document.getElementById('checked4').style.backgroundColor = 'lightgreen';">
-		</div>
+
  </div> <!-- End #bot --> 
  </div> <!-- End #sidebarright --> 
  </div> <!-- End #middlediv --> 

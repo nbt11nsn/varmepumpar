@@ -94,8 +94,7 @@ if(isset($_POST['Spara'])&&!empty($_POST['beteckning'])){
     $q2=mysqli_real_escape_string($con,$_POST['q2']);
     $q3=mysqli_real_escape_string($con,$_POST['q3']);
 	$q4=mysqli_real_escape_string($con,$_POST['q4']);			        
-		$insertContact = "INSERT INTO fastighet values('".$_COOKIE['ID']."','".$beteckning."','".$adress."','".$postnummer."','".$port."','".$q1."','".$q2."','".$q3."','".$q4."')";	
-		echo $insertContact;
+		$insertContact = "INSERT INTO fastighet values('".$_COOKIE['ID']."','".$beteckning."','".$adress."','".$postnummer."','".$port."','".$q1."','".$q2."','".$q3."','".$q4."')";			
 		 if(mysqli_query($con, $insertContact)){
             echo "<div class='ok'>Informationen har sparats</div>";
         }

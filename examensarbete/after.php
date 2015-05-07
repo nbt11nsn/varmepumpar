@@ -15,9 +15,12 @@ require_once(__DIR__ .'./../db.php');
 ?>
 
 <div id="infoframe">
-VAD HÄNDER NUDÅ?
-DET FÅR NI VETA NÄR DENNA SIDAN ÄR KLAR!
+Tack så mycket för att du gjorde deltog i testet.<br>
+Har du några synpunkter får du gärna skriva i dessa i textrutan nedanför.<br> 
+Både positiva och negativa synpunkter kommer att bidra till en bättre slutprodukt. 
 </div>
+<textarea id ="txtarea" name="txtarea" rows="10" cols="70" placeholder="Skriv dina/era kommentarer i denna ruta" onkeyup="countChar(this)">
+</textarea>
 </div><!--main-wrapper-->
 
 

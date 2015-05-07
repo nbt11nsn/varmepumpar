@@ -44,9 +44,6 @@ require_once(__DIR__ .'./../db.php');
 	?>		
 <div id="printableArea">
 <div id ="printheader">
-<div id="image">
-<img src="images/gavle.png" width="60" height="120" alt="My Pic">
-</div>
 <div id ="printTitle">Tillstånd för inrättande av värmepumpsanläggning, ansökan</div>
 
 <div id ="date">Datum: <?php

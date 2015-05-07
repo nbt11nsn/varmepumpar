@@ -11,13 +11,13 @@ padding:0;
 }
 
 #extendmenuebarmini{
+  color: #000000;
   width: 30px;
   display:block;
   font-size: 12px; 
   padding: 10px 10px; 
   text-align: center;
   position: relative;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
   z-index:2;
   text-decoration:none;
   white-space:nowrap;
@@ -27,7 +27,7 @@ padding:0;
   display:block;
   font-size: 12px; 
   font-style: bold;
-  color: #5d5d5d;
+  color: #000000;
   padding: 10px 10px; 
   text-align: center;
   position: relative;
@@ -41,11 +41,10 @@ padding:0;
   display:block;
   font-size: 12px; 
   font-style: bold;
-  color: #5d5d5d;
+  color: #000000;
   padding: 10px 10px; 
   text-align: center;
   position: relative;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
   z-index:2;
   text-decoration:none;
   white-space:nowrap;

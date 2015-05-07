@@ -14,7 +14,7 @@ defined('THE_DB') || define('THE_DB', TRUE);
 require_once(__DIR__ .'./../db.php');
 ?>
  <div id="infoframe">
-       <form action='' method='post' id ='postContracts' enctype="multipart/form-data">
+            <form action='' method='post' id ='postContracts' enctype="multipart/form-data">
    <h1 id = "smallTitle">Personuppgifter</h1>
 <div id="splitscreen">
 <div id="rightscreen">
@@ -86,7 +86,7 @@ require_once(__DIR__ .'./../db.php');
 	</div>
 			  <div id ="buttondiv">		
 		<input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;">
-		<input type="submit" name ="Spara" value="Spara" onclick="document.getElementById('checked4').style.backgroundColor = 'lightgreen';">
+		<input type="submit" name ="Spara" value="Spara">
 		</div>
  </form>
  
@@ -109,7 +109,6 @@ if(isset($_POST['Spara'])&&!empty($_POST['fornamn'])&&!empty($_POST['efternamn']
 	$fakt_postort=mysqli_real_escape_string($con,$_POST['fakt_postort']);
 	
 		$insertContact = "INSERT INTO person values('".$_COOKIE['ID']."','".$fornamn."','".$efternamn."','".$persnummer."','".$adress."','".$postnummer."','".$port."','".$teledag."','".$alttele."','".$epost."')";		
-		 echo $insertContact;
 		 if(mysqli_query($con, $insertContact)){
             echo "<div class='ok'>Informationen har sparats</div>";
         }
@@ -117,7 +116,6 @@ if(isset($_POST['Spara'])&&!empty($_POST['fornamn'])&&!empty($_POST['efternamn']
             echo "<div class='error'>Lyckades inte spara informationen</div>";
         }		
 		$insertContact2 = "INSERT INTO fakturamottagare values('".$_COOKIE['ID']."','".$fakt_namn."','".$fakt_persnum."','".$fakt_adress."','".$fakt_postnum."','".$fakt_postort."')";		
-		 echo $insertContact2;
 		 if(mysqli_query($con, $insertContact2)){
             echo "<div class='ok'>Informationen har sparats</div>";
         }

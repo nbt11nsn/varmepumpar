@@ -4,9 +4,6 @@ mb_internal_encoding('UTF-8');
 mb_http_output('UTF-8');
 mb_http_input('UTF-8');
 
-defined('THE_TOPHEADER') || define('THE_TOPHEADER', TRUE);
-include_once("include/topheader.php");
-
 $db="varmepumpdb";
 $usr="root";
 $host="localhost";
@@ -33,7 +30,7 @@ else{
 		while(in_array($randomnumber, $myArray)) {	
 			$randomnumber = mt_rand(1, 10000);
 	}   
-	setcookie('ID',$randomnumber,time() + 3600);
+	setcookie('ID',$randomnumber,time() + (1440*28));//Cookien kommer finnas tillgänglig i 1 månad
 	$_COOKIE['ID'] = $randomnumber;
 	}
 ?>

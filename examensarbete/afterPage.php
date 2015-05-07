@@ -5,6 +5,9 @@
 <?php
 defined('THE_HEAD') || define('THE_HEAD', TRUE);
 include_once("include/head.php");
+defined('THE_TOPHEADER') || define('THE_TOPHEADER', TRUE);
+include_once("include/topheader.php");
+
 ?>
  </head>
 		<body>
@@ -23,6 +26,8 @@ include_once("include/sidebar.php");
 <?php
 defined('THE_HEADER') || define('THE_HEADER', TRUE);
 include_once("include/header.php");
+defined('THE_MENUE8') || define('THE_MENUE8', TRUE);
+require_once("include/menuebar8.php");
 ?>
 </div><!-- End #top --> 
 <div id ="bot">

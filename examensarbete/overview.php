@@ -153,8 +153,8 @@ echo '
 		}	
     }
 		?>
-<form method="get" action="overviewPage.php">
-<button type="submit" id ="overviewbuttonsmall">Översikt</button>
+<form method="get" action="afterPage.php">
+<button type="submit" id ="overviewbuttonsmall">Skicka ansökan</button>
 </form>
 
 <button type="submit" id ="overviewbuttonbig" onclick =window.open("gammalt/printoverview.php")>Utskriftsvänlig vy(ny sida)</button></a>

@@ -19,7 +19,7 @@ require_once(__DIR__ .'./../../db.php');
 ?>
 
 <form method="get" onclick="printDiv('printableArea')">
-<button type="submit" id ="overviewbuttonsmall">Skriv ut</button>
+<button type="submit" id ="overviewbuttonsmall">Skriv ut formuläret</button>
 </form>
 
 		

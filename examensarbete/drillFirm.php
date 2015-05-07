@@ -10,7 +10,10 @@
 <body>
 
 <div id="main-wrapper">
-
+<?php
+defined('THE_DB') || define('THE_DB', TRUE);
+require_once(__DIR__ .'./../db.php');
+?>
  <div id="infoframe">
       <form action='' method='post' id ='postContracts' enctype="multipart/form-data">
 	  <div id = "splitscreen">
@@ -60,7 +63,7 @@
 		</div>
 		</div>
 		</div>
-				  <div id ="buttondiv">		
+			  <div id ="buttondiv">		
 		<input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;">
 		<input type="submit" name ="Spara" value="Spara" onclick="document.getElementById('checked4').style.backgroundColor = 'lightgreen';">
 		</div>
@@ -78,10 +81,6 @@ if(isset($_POST['Spara'])&&!empty($_POST['borr_namn'])&&!empty($_POST['borr_tele
     
 		$insertContact = "INSERT INTO borrfirma values('".$_COOKIE['ID']."','".$borr_namn."','".$borr_tele."','".$borr_certifiering."')";		
 		$insertContact2 = "INSERT INTO installator values('".$_COOKIE['ID']."','".$install_namn."','".$install_tele."','".$install_certifiering."')";
-		$checkMaxID = "(Select MAX(ID) from ansokning)";
-
-		echo $insertContact;
-		echo $insertContact2;
 		 if(mysqli_query($con, $insertContact) && mysqli_query($con, $insertContact2)){
             echo "<div class='ok'>Informationen har sparats</div>";
         }
@@ -92,7 +91,6 @@ if(isset($_POST['Spara'])&&!empty($_POST['borr_namn'])&&!empty($_POST['borr_tele
 ?>        
 
 </div><!--main-wrapper-->
-
 </body>
 </html>
 

@@ -5,6 +5,9 @@
 <?php
 defined('THE_HEAD') || define('THE_HEAD', TRUE);
 include_once("include/head.php");
+defined('THE_TOPHEADER') || define('THE_TOPHEADER', TRUE);
+include_once("include/topheader.php");
+
 ?>
  </head>
 		<body>

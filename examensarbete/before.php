@@ -5,8 +5,6 @@
 <html>
 <head>
 <script language="javascript" type="text/javascript" src = "include/print.js?"></script>
-<script language="javascript" type="text/javascript" src = "include/print.js?"></script>
-<script language="javascript" type="application/javascript" src = "include/print.js"></script>
 </head>
 <body>
 <div id="main-wrapper">
@@ -14,7 +12,7 @@
     <form action='' method='post' id ='postContracts' enctype="multipart/form-data">
 	<div id ="informationtesttext">
 		Tack för att du tar dig tid till att testa detta formulär som är en utvecklad e-tjänst för ansökan om tillstånd för värmepumpsanläggning. 
-		Detta är endast ett betatest så vissa designfel och funktionsfel kan uppkomma<br><br> 
+		Detta är endast ett betatest så vissa funktionsfel kan uppkomma<br><br> 
 		Efter att ansökan är klar och ni klickat på "skicka in ansökan" som kommer finnas på översiktssidan 
 		så kommer en sida upp där ni kan ge feedback om ni har något att tillägga.<br><br> 
 		
@@ -26,8 +24,7 @@
 		Att ge feedback är helt fritt. Om ni inte kommer på något att skriva så är det bara klicka på "avsluta".
 	</div>	
 		
-	<div>	
-		<input Type="button" value="Tillbaka" onClick="history.go(-1);return true;">
+	<div id ="buttondiv2">	
 		<input type="submit" value="Påbörja en ansökan" name ="next">
 		</div>		
 </form>
