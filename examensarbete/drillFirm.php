@@ -65,7 +65,7 @@ require_once(__DIR__ .'./../db.php');
 		</div>
 			  <div id ="buttondiv">		
 		<input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;">
-		<input type="submit" name ="Spara" value="Spara" onclick="document.getElementById('checked4').style.backgroundColor = 'lightgreen';">
+		<input type="submit" name ="Spara" value="Spara">
 		</div>
  </form>
  
@@ -85,7 +85,7 @@ if(isset($_POST['Spara'])&&!empty($_POST['borr_namn'])&&!empty($_POST['borr_tele
             echo "<div class='ok'>Informationen har sparats</div>";
         }
         else{
-            echo "<div class='error'>Lyckades inte spara informationen</div>";
+            echo "<div class='error'>Du har redan sparat denna information</div>";
         }	
 }
 ?>        

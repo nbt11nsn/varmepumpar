@@ -54,7 +54,11 @@ require_once(__DIR__ .'./../db.php');
 	</div>	
 
 	 <div id = "rowfix">	
-		<label for="port">Fastigheten ligger inom skyddsområde för dricksvattentäkt</label><strong id="startDot">*</strong>
+	 		<div id ="protectionarea">	
+		<button type="submit" onclick =window.open("http://gis.gavle.se/pub/vattenskydd/lo/App/Vs1.aspx")>Kolla upp det här</button>
+		</div>
+		<label for="port">Ligger fastigheten inom skyddsområde för dricksvattentäkt?</label><strong id="startDot">*</strong>		
+		
 		<div id ="radiobuttons">
 		<INPUT required TYPE="radio" NAME="q1" VALUE="Ja, inre">Ja, inre
 		<div id="radiomargin">
@@ -80,7 +84,7 @@ require_once(__DIR__ .'./../db.php');
 	</div>		
 		  <div id ="buttondiv">		
 		<input Type="button" VALUE="Tillbaka" onClick="history.go(-1);return true;">
-		<input type="submit" name ="Spara" value="Spara" onclick="document.getElementById('checked4').style.backgroundColor = 'lightgreen';">
+		<input type="submit" name ="Spara" value="Spara">
 		</div>	
 		</form>
 		
@@ -99,7 +103,7 @@ if(isset($_POST['Spara'])&&!empty($_POST['beteckning'])){
             echo "<div class='ok'>Informationen har sparats</div>";
         }
         else{
-            echo "<div class='error'>Du har redan sparat denna information i databasen</div>";
+            echo "<div class='error'>Du har redan sparat denna information</div>";
         }		
 }
 ?> 

@@ -148,6 +148,7 @@ padding-top: 10px;
 
 #rowfix{
 padding-bottom: 15px;
+width: 550px;
 }
 
 #chkbox{
@@ -509,6 +510,12 @@ display: inline;
 
 #pdf_title{
 padding-top: 30px;
+text-align: left;
+font-weight: bold;
+}
+
+#protectionarea{
+float: right;
 text-align: left;
 font-weight: bold;
 }

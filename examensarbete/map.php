@@ -46,14 +46,14 @@ Detta är de krav som måste vara ifyllda på kartan för att tillstånd skall b
 </div>
 </div>
 
-	<div id ="pdf_title">	
-	<label for="godkännande">Är du osäker på om du bor inom vattenskyddat område?</label>
-	<button type="submit" onclick =window.open("http://gis.gavle.se/pub/vattenskydd/lo/App/Vs1.aspx")>Kolla upp det här</button></	
-	</div>
+	 		<div id ="pdf_title">	
+			<label for="godkännande" >Är du osäker på om du bor inom vattenskyddat område?</label>	
+		<button type="submit" onclick =window.open("http://gis.gavle.se/pub/vattenskydd/lo/App/Vs1.aspx")>Kolla upp det här</button>
+		</div>
 
 	<div id ="pdf_title">
 	<input required type='checkbox' class='checkbox_' id = "chkbox";	
-	<label for="godkännande" >Jag är införstådd i vad som måste fyllas i på kartan för att inte behöva skicka in kompletterande uppgifter. Jag är även införstådd i att detta måste vara tydligt markerat på kartan</label>	
+	<label for="godkännande" >Jag är införstådd i vad som måste fyllas i på kartan för att inte behöva skicka in kompletterande uppgifter. Jag är även införstådd i att detta måste vara tydligt markerat på kartan.</label>	
 	</div>
 
 </div><!--main-wrapper-->

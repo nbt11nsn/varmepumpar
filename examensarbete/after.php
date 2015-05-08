@@ -24,7 +24,7 @@ Har du några synpunkter får du gärna skriva i dessa i textrutan nedanför. Ex
 		* Var det något ni störde er på?<br> 		
 		* Tror ni formuläret kommer bidra till mindre antal kompletteringar?<br> <br> 
 		
-		Att ge feedback är helt fritt. Både positiva och negativa synpunkter kommer att bidra till en bättre slutprodukt. 
+		Att ge feedback är helt frivilligt. Både positiva och negativa synpunkter kommer att bidra till en bättre slutprodukt. 
 </div>
 <textarea id ="txtarea" name="infotext" rows="10" cols="70" placeholder="Skriv dina/era kommentarer i denna ruta" onkeyup="countChar(this)">
 </textarea>
@@ -45,7 +45,6 @@ if(isset($_POST['send'])){
         }		
 }
 ?> 
-
 </body>
 </html>
 

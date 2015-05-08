@@ -141,13 +141,13 @@ echo '
 <input type="box" value ="'.$irows2["install_certifiering"].'" name ="install_certifiering" readonly id ="infotextframe2"/>
 </div>
 
-<h1 id ="overviewareatitle3">Bilagor</h1>
+<h1 id ="overviewareatitle3">Karta</h1>
 <div id ="applicantframe">
 
 <input type="text" value ="Karta skickas via post:" readonly id = "infotextframe1"/>
 <input type="box" value ="" name ="skickakarta" readonly id ="infotextframe2"/>
 
-<input type="text" value ="Bifogad karta:" readonly id = "infotextframe1"/>
+<input type="text" value ="Jag är medveten om de krav som ställs för ifyllnad på kartan:" readonly id = "infotextframe1"/>
 <input type="box" value ="" name ="bifogakarta" readonly id ="infotextframe2"/>
 ';
 		}	

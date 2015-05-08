@@ -245,7 +245,7 @@ echo '<div id="infoframeoverview">
 </div>
 </div>
 
-<h1 id ="overviewareatitle2">Bilagor</h1>
+<h1 id ="overviewareatitle2">Karta</h1>
 <div id ="applicantframe">
 
 <div id ="second">
@@ -254,7 +254,7 @@ echo '<div id="infoframeoverview">
 </div>
 
 <div>
-<div id ="overviewtitle">Bifogad karta</div>
+<div id ="overviewtitle">Jag är medveten om de krav som ställs för ifyllnad på kartan</div>
 <input type="box" value ="" name ="bifogakarta" readonly id ="overviewboxmedium"/>
 </div>
 </div>

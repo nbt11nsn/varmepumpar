@@ -20,15 +20,15 @@ require_once(__DIR__ .'./../db.php');
 <div id="rightscreen">
 	 <div id = "rowfix">
 		<label for="fornamn">Förnamn </label><strong id="startDot">*</strong>
-		<input required type="text" align="left"  maxlength="50" value = "" name="fornamn" placeholder="ex. Niklas" id="requiredtextframe"/>
+		<input required type="text" align="left"  maxlength="50" value = "" name="fornamn"  id="requiredtextframe"/>
 		</div>
 	 <div id = "rowfix">
 		<label for="efternamn">Efternamn </label><strong id="startDot">*</strong>
-		<input required type="text" align="left"  maxlength="50" value = "" name="efternamn" placeholder="ex. Sjögren" id="requiredtextframe"/>
+		<input required type="text" align="left"  maxlength="50" value = "" name="efternamn"  id="requiredtextframe"/>
 		</div>
 	 <div id = "rowfix">			
 		<label for="persnummer">Person-/Organisationsnummer</label><strong id="startDot">*</strong>
-		<input required type="text" value = "" name = "persnummer" placeholder="ÅÅMMDDXXX" id = "requiredtextframe"/>
+		<input required type="text" value = "" name = "persnummer" placeholder="ÅÅMMDDXXXX" id = "requiredtextframe"/>
 		</div>
 	 <div id = "rowfix">	
 		<label for="adress">Utdelningsadress</label><strong id="startDot">*</strong>
@@ -52,7 +52,7 @@ require_once(__DIR__ .'./../db.php');
 		</div>
 	 <div id = "rowfix">	
 		<label for="epost">E-postadress</label>
-		<input type="text" value = "" name = "epost" placeholder="ex. Niklas@hotmail.com" id = "opentextframe"/>	
+		<input type="text" value = "" name = "epost" id = "opentextframe"/>	
 		</div>
 		</div>
 
@@ -67,7 +67,7 @@ require_once(__DIR__ .'./../db.php');
 		</div>
 			 <div id = "rowfix">			
 		<label for="fakt_persnum">Person-/Organisationsnummer</label>
-		<input type="text" value = "" name = "fakt_persnum" placeholder="ÅÅMMDDXXX" id = "requiredtextframe"/>
+		<input type="text" value = "" name = "fakt_persnum" placeholder="ÅÅMMDDXXXX" id = "requiredtextframe"/>
 		</div>
 			 <div id = "rowfix">	
 		<label for="fakt_adress">Utdelningsadress</label>
@@ -110,17 +110,17 @@ if(isset($_POST['Spara'])&&!empty($_POST['fornamn'])&&!empty($_POST['efternamn']
 	
 		$insertContact = "INSERT INTO person values('".$_COOKIE['ID']."','".$fornamn."','".$efternamn."','".$persnummer."','".$adress."','".$postnummer."','".$port."','".$teledag."','".$alttele."','".$epost."')";		
 		 if(mysqli_query($con, $insertContact)){
-            echo "<div class='ok'>Informationen har sparats</div>";
+            echo "<div class='ok'>Informationen för ansökande har sparats</div>";
         }
         else{
-            echo "<div class='error'>Lyckades inte spara informationen</div>";
+            echo "<div class='error'>Du har redan sparat denna information</div>";
         }		
 		$insertContact2 = "INSERT INTO fakturamottagare values('".$_COOKIE['ID']."','".$fakt_namn."','".$fakt_persnum."','".$fakt_adress."','".$fakt_postnum."','".$fakt_postort."')";		
 		 if(mysqli_query($con, $insertContact2)){
-            echo "<div class='ok'>Informationen har sparats</div>";
+            echo "<div class='ok'>Informationen för fakturamottagare har sparats</div>";
         }
         else{
-            echo "<div class='error'>Lyckades inte spara informationen</div>";
+            echo "<div class='error'>Du har redan sparat denna information</div>";
         }		
 }
 

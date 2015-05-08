@@ -34,7 +34,6 @@ else{
 	$_COOKIE['ID'] = $randomnumber;
 	}
 ?>
-<script type="application/javascript" src="http://jsonip.appspot.com/?callback=getip"></script>
 <meta charset=UTF-8 />
 <title></title>
 <link rel="stylesheet" type="text/css" media="screen" href="css/default.css" />

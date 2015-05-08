@@ -254,16 +254,12 @@ echo '<div id="infoframeoverview">
 </div>
 </div>
 
-<h1 id ="overviewareatitle2">Bilagor</h1>
+<h1 id ="overviewareatitle2">Karta</h1>
 <div id ="applicantframe4">
 
-<div id ="first3">
-<div id ="overviewtitle3">Karta skickas via post</div>
-<input type="box" value ="" name ="install_namn" readonly id ="overviewboxmedium"/>
-</div>
-<div id ="second2">
-<div id ="overviewtitle3left">Bifogad karta</div>
-<input type="box" value ="" name ="install_tele" readonly id ="overviewboxmedium2"/>
+<div id ="third">
+<div id ="overviewtitle4">Karta skickas via post</div>
+<input type="box" value ="" name ="karta" readonly id ="overviewboxfull"/>
 </div>
 </div>
 
