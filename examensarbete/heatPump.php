@@ -52,7 +52,7 @@ require_once(__DIR__ .'./../db.php');
 		</div>
 		  
 		<div id = "rowfix">
-		<label for="mangd_koldmedium">Mängd köldmedium, kg</label><strong id="startDot">*</strong>		
+		<label for="mangd_koldmedium">Mängd köldmedium</label><strong id="startDot">*</strong>		
 		<input required type="text" value ="" name ="mangd_koldmedium" id = "requiredtextframe"/>
 		</div>
 		
