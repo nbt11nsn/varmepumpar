@@ -43,12 +43,12 @@ require_once(__DIR__ .'./../db.php');
 		
 				<div id = "rowfix">
 		<label for="typ_koldbarare">Typ av köldbärare</label><strong id="startDot">*</strong>		
-		<input required type="text" value ="" name ="typ_koldbarare" placeholder ="Ex. E-THERM KBS BIO " id = "requiredtextframe"/>
+		<input required type="text" value ="" name ="typ_koldbarare" placeholder ="ex. E-THERM KBS BIO " id = "requiredtextframe"/>
 		</div>
 		 
 		<div id = "rowfix">
 		<label for="typ_koldmedium">Typ av köldmedium</label><strong id="startDot">*</strong>
-		<input required type="text" value ="" name ="typ_koldmedium" placeholder ="Ex. R600(Butan), R718(Vatten), R744(koldioxid)"id = "requiredtextframe"/>
+		<input required type="text" value ="" name ="typ_koldmedium" placeholder ="ex. R600(Butan), R718(Vatten), R744(koldioxid)" id = "requiredtextframe"/>
 		</div>
 		  
 		<div id = "rowfix">
