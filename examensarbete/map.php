@@ -1,10 +1,14 @@
 <?php
-  defined('THE_MAP') or die();
+  defined('THE_MAP') or die(); 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
+
 <script language="javascript" type="text/javascript" src = "include/print.js?"></script>
+
+<?php echo "<script> closed(); </script>"; 
+?>
 </head>
 <body>
 
