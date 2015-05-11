@@ -65,7 +65,18 @@ border: none;
 font-weight: bold;
 width: 370px;
 }
-
+#infotextframe3{
+border: none;
+width: 313px;
+font-size: 0.9em;
+float:left;
+}
+#infotextframe4{
+border: none;
+width: 313px;
+font-size: 0.8em;
+float:left;
+}
 #date{
 position: absolute;
 top:420px;
@@ -378,6 +389,15 @@ border-bottom: 1px solid black;
 font-weight: bold;
 text-align: left;
 font-size: 20px;
+width: 300px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+#overviewareatitle4{
+border-bottom: 1px solid black;
+font-weight: bold;
+text-align: left;
+font-size: 17px;
 width: 300px;
 margin-top: 10px;
 margin-bottom: 10px;

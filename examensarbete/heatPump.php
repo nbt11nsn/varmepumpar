@@ -74,10 +74,10 @@ if(isset($_POST['Spara'])){
 	
 		$insertContact = "INSERT INTO varmepump values('".$_COOKIE['ID']."','".$anlaggning."','".$vinkel."','".$effekt."','".$borrdjup."','".$typ_koldbarare."','".$typ_koldmedium."','".$mangd_koldmedium."')";		
 		 if(mysqli_query($con, $insertContact)){
-            echo "<div class='ok'>Informationen har sparats</div>";
+            echo "<div class='ok'>Informationen har sparats. Du kan gå vidare genom att klicka på flikarna</div>";
         }
         else{
-            echo "<div class='error'>Du har redan sparat denna information</div>";
+            echo "<div class='error'>Du har redan sparat denna information. Du kan gå vidare genom att klicka på flikarna</div>";
         }	
 }
 ?>     

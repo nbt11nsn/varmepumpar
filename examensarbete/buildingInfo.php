@@ -100,10 +100,10 @@ if(isset($_POST['Spara'])&&!empty($_POST['beteckning'])){
 	$q4=mysqli_real_escape_string($con,$_POST['q4']);			        
 		$insertContact = "INSERT INTO fastighet values('".$_COOKIE['ID']."','".$beteckning."','".$adress."','".$postnummer."','".$port."','".$q1."','".$q2."','".$q3."','".$q4."')";			
 		 if(mysqli_query($con, $insertContact)){
-            echo "<div class='ok'>Informationen har sparats</div>";
+            echo "<div class='ok'>Informationen har sparats. Du kan gå vidare genom att klicka på flikarna</div>";
         }
         else{
-            echo "<div class='error'>Du har redan sparat denna information</div>";
+            echo "<div class='error'>Du har redan sparat denna information. Du kan gå vidare genom att klicka på flikarna</div>";
         }		
 }
 ?> 

@@ -48,7 +48,7 @@ echo '
 <input type="box" value ="'.$irows2["epost"].'" name ="epost" readonly id ="infotextframe2"/>
 </div>
 
-<h1 id ="overviewareatitle3">Fakturering</h1>
+<h1 id ="overviewareatitle4">Fakturering(om annan än ovanstående)</h1>
 <div id ="applicantframe">
 <input type="text" value ="Fakturamottagare:" readonly id = "infotextframe1"/>
 <input type="box" value ="'.$irows2["fakt_namn"].'" name ="fakt_namn" readonly id ="infotextframe2"/>
@@ -107,10 +107,10 @@ echo '
 <input type="text" value ="Finns anslutning till kommunalt avlopp:" readonly id = "infotextframe1"/>
 <input type="box" value ="'.$irows2["q2_vatten"].'" name ="q2" readonly id ="infotextframe2"/>
 
-<input type="text" value ="Fastigheten ligger inom skyddsområde för dricksvattentäkt:" readonly id = "infotextframe1"/>
+<input type="text" value ="Ligger inom skyddsområde för dricksvattentäkt:" readonly id = "infotextframe3"/>
 <input type="box" value ="'.$irows2["q3_skyddsomrade"].'" name ="q3" readonly id ="infotextframe2"/>
 
-<input type="text" value ="Fastigheten har tidigare haft oljeuppvärmning:" readonly id = "infotextframe1"/>
+<input type="text" value ="Fastigheten har tidigare haft oljeuppvärmning:" readonly id = "infotextframe3"/>
 <input type="box" value ="'.$irows2["q4_oljeuppvarmning"].'" name ="q4" readonly id ="infotextframe2"/>
 </div>
 
@@ -147,7 +147,7 @@ echo '
 <input type="text" value ="Karta skickas via post:" readonly id = "infotextframe1"/>
 <input type="box" value ="" name ="skickakarta" readonly id ="infotextframe2"/>
 
-<input type="text" value ="Jag är medveten om de krav som ställs för ifyllnad på kartan:" readonly id = "infotextframe1"/>
+<input type="text" value ="Jag har läst kraven som ställs för ifyllnad på kartan:" readonly id = "infotextframe4"/>
 <input type="box" value ="" name ="bifogakarta" readonly id ="infotextframe2"/>
 ';
 		}	

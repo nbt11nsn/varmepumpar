@@ -110,17 +110,17 @@ if(isset($_POST['Spara'])&&!empty($_POST['fornamn'])&&!empty($_POST['efternamn']
 	
 		$insertContact = "INSERT INTO person values('".$_COOKIE['ID']."','".$fornamn."','".$efternamn."','".$persnummer."','".$adress."','".$postnummer."','".$port."','".$teledag."','".$alttele."','".$epost."')";		
 		 if(mysqli_query($con, $insertContact)){
-            echo "<div class='ok'>Informationen för ansökande har sparats</div>";
+            echo "<div class='ok'>Informationen har sparats. Du kan gå vidare genom att klicka på flikarna</div>";
         }
         else{
-            echo "<div class='error'>Du har redan sparat denna information</div>";
+            echo "<div class='error'>Du har redan sparat denna information. Du kan gå vidare genom att klicka på flikarna</div>";
         }		
 		$insertContact2 = "INSERT INTO fakturamottagare values('".$_COOKIE['ID']."','".$fakt_namn."','".$fakt_persnum."','".$fakt_adress."','".$fakt_postnum."','".$fakt_postort."')";		
 		 if(mysqli_query($con, $insertContact2)){
-            echo "<div class='ok'>Informationen för fakturamottagare har sparats</div>";
+            echo "";
         }
         else{
-            echo "<div class='error'>Du har redan sparat denna information</div>";
+            echo "";
         }		
 }
 

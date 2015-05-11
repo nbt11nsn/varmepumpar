@@ -82,10 +82,10 @@ if(isset($_POST['Spara'])&&!empty($_POST['borr_namn'])&&!empty($_POST['borr_tele
 		$insertContact = "INSERT INTO borrfirma values('".$_COOKIE['ID']."','".$borr_namn."','".$borr_tele."','".$borr_certifiering."')";		
 		$insertContact2 = "INSERT INTO installator values('".$_COOKIE['ID']."','".$install_namn."','".$install_tele."','".$install_certifiering."')";
 		 if(mysqli_query($con, $insertContact) && mysqli_query($con, $insertContact2)){
-            echo "<div class='ok'>Informationen har sparats</div>";
+            echo "<div class='ok'>Informationen har sparats. Du kan gå vidare genom att klicka på flikarna</div>";
         }
         else{
-            echo "<div class='error'>Du har redan sparat denna information</div>";
+            echo "<div class='error'>Du har redan sparat denna information. Du kan gå vidare genom att klicka på flikarna</div>";
         }	
 }
 ?>        

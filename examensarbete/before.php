@@ -13,7 +13,7 @@
 	<div id ="informationtesttext">
 		Tack för att du tar dig tid till att testa detta formulär som är en utvecklad e-tjänst för ansökan om tillstånd för värmepumpsanläggning. <br><br> 
 		
-		Detta är endast ett betatest så vissa funktionsfel kan uppkomma.Även den informationen som skrivs kommer INTE att resultera i en riktig ansökan.<br><br>
+		Detta är endast ett betatest så vissa funktionsfel kan uppkomma. Även den informationen som skrivs kommer INTE att resultera i en riktig ansökan.<br><br>
 		När du är klar och klickat på "skicka ansökan" som finns under fliken "Översikt"" så kommer du att komma till en sida där några frågor ställs och möjlighet till feedback finns att lämna.
 		<br><br>OBS! Om det är någon fråga du inte kan svara på så skriv "Vet ej".
 	</div>	
