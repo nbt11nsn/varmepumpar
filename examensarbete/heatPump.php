@@ -20,9 +20,9 @@ require_once(__DIR__ .'./../db.php');
 		<div id = "rowfix">
 		<label for="anlaggning">Typ av anläggning</label><strong id="startDot">*</strong>
 		<select name ="anlaggning">
-		<option value="Bergvärme">Bergvärme</option>
-		<option value="Ytvärme">Ytvärme</option>
+		<option value="Bergvärme">Bergvärme</option>		
 		<option value="Sjövärme">Sjövärme</option>
+		<option value="Ytvärme">Ytvärme</option>
 		</select>
 		</div>
 		

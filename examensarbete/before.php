@@ -18,9 +18,12 @@
 		<br><br>OBS! Om inte alla delar är ifyllda och sparade så kommer ingen information att synas i fliken "Översikt"<br>Om det är någon fråga du inte kan svara på så skriv "Vet ej".
 	</div>	
 		
+
+
+
 	<div id ="buttondiv2">	
 		<input type="submit" value="Påbörja en ansökan" name ="next">
-		</div>		
+		</div>	
 </form>
 	<?php	
 
@@ -28,7 +31,7 @@ if(isset($_POST['next'])){
 	$getDate = "(SELECT CURDATE())";
 	$insertContact = "INSERT INTO ansokning values('".$_COOKIE['ID']."',".$getDate.")";		
 		 if(mysqli_query($con, $insertContact)){
-           echo "<div class='ok'>Ett ID har skapats för din ansökan. Du kan nu gå vidare genom att klicka på flikarna</div>";
+		   header("Location: buildingInfoPage.php");
 		   
         }
         else{
